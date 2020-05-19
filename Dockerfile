@@ -34,9 +34,11 @@ COPY scripts/steamcmd-7dtd.script ${SERVER_HOME}/
 
 # This is most likely going to be the largest layer created; all the game files for the
 # dedicated server.
-RUN echo "Downloading and installing 7dtd server with steamcmd..." && \
+RUN echo "Downloading and installing steamcmd..." && \
     wget http://media.steampowered.com/installer/steamcmd_linux.tar.gz && \
-    tar -zxvf steamcmd_linux.tar.gz && \
+    tar -zxvf steamcmd_linux.tar.gz
+
+RUN echo "Downloading and installing 7dtd server with steamcmd..." && \
     ${SERVER_HOME}/steamcmd.sh +runscript steamcmd-7dtd.script
 
 # Install custom startserver script.
