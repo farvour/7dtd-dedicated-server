@@ -35,11 +35,11 @@ RUN echo "Downloading and installing 7dtd server with steamcmd..." && \
     ${SERVER_HOME}/steamcmd.sh +runscript steamcmd-7dtd.script
 
 # Install custom startserver script.
-COPY scripts/startserver-1.sh ${SERVER_INSTALL_DIR}/
+COPY --chown=zed:root scripts/startserver-1.sh ${SERVER_INSTALL_DIR}/
 
 # Mods and mods related tasks.
-COPY xpath_mods/* ${SERVER_INSTALL_DIR}/Mods/
-COPY server_fixes_v19_22_32/* ${SERVER_INSTALL_DIR}/Mods/
+COPY --chown=zed:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
+COPY --chown=zed:root server_fixes_v19_22_32/ ${SERVER_INSTALL_DIR}/Mods/
 
 # Default telnet administrative port.
 EXPOSE 8081
