@@ -6,9 +6,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 # Top level directory where everything related to the 7dtd server is installed to.
 # Since you can bind-mount data volumes for worlds, saves or other things, this
 # doesn't really have to change, but is here for clarity and customization in case.
-ARG SERVER_HOME=/zed
-ARG SERVER_INSTALL_DIR=/zed/7dtd-dedicated-server
-ARG SERVER_DATA_DIR=/zed/7dtd-data
+ENV SERVER_HOME=/zed
+ENV SERVER_INSTALL_DIR=/zed/7dtd-dedicated-server
+ENV SERVER_DATA_DIR=/zed/7dtd-data
 
 # Steam still requires 32-bit cross compilation libraries.
 RUN echo "Installing necessary system packages to support steam CLI installation..." && \
@@ -63,4 +63,6 @@ EXPOSE 8082
 # Default game port.
 EXPOSE 26900
 
-ENTRYPOINT ["${SERVER_INSTALL_DIR}/7dtd-dedicated-server/startserver-1.sh", "-configfile=serverconfig.xml"]
+COPY scripts/entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]

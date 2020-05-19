@@ -3,10 +3,7 @@ version: "3.8"
 
 services:
   7dtd-server:
-    image: gitlab.com/farvour/7-days-to-die-docker-server:latest
-    build:
-      context: .
-      cache_from: [gitlab.com/farvour/7-days-to-die-docker-server:latest]
+    build: .
     volumes:
       - type: volume # You could also bind-mount this to your local FS.
         source: 7dtd-data
