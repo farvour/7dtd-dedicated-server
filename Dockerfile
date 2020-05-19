@@ -1,4 +1,5 @@
-FROM ubuntu/bionic
+FROM ubuntu:bionic
+LABEL maintainer="Thomas Farvour <tom@farvour.com>"
 
 # Top level directory where everything related to the 7dtd server is installed to.
 # Since you can bind-mount data volumes for worlds, saves or other things, this
@@ -12,16 +13,19 @@ RUN echo "Installing necessary system packages to support steam CLI installation
     apt-get update && \
     apt-get install -y bash htop tmux lib32gcc1 pigz wget
 
+# Create a non-privileged user to run with.
+RUN useradd -u 7999 -d ${SERVER_HOME} zed
+
 RUN echo "Create server directories..." && \
     mkdir -p ${SERVER_HOME} && \
     mkdir -p ${SERVER_INSTALL_DIR} && \
     mkdir -p ${SERVER_INSTALL_DIR}/Mods && \
-    mkdir -p ${SERVER_DATA_DIR}
-
-# Create a non-privileged user to run with.
-RUN useradd -u 7999 -d ${SERVER_HOME} zed
+    mkdir -p ${SERVER_DATA_DIR} && \
+    chown -R zed ${SERVER_HOME}
 
 USER zed
+
+WORKDIR ${SERVER_HOME}
 
 COPY scripts/steamcmd-7dtd.script ${SERVER_HOME}/
 
