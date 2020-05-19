@@ -1,6 +1,8 @@
 FROM ubuntu:bionic
 LABEL maintainer="Thomas Farvour <tom@farvour.com>"
 
+ARG DEBIAN_FRONTEND=noninteractive
+
 # Top level directory where everything related to the 7dtd server is installed to.
 # Since you can bind-mount data volumes for worlds, saves or other things, this
 # doesn't really have to change, but is here for clarity and customization in case.
@@ -11,7 +13,8 @@ ARG SERVER_DATA_DIR=/zed/7dtd-data
 # Steam still requires 32-bit cross compilation libraries.
 RUN echo "Installing necessary system packages to support steam CLI installation..." && \
     apt-get update && \
-    apt-get install -y bash htop tmux lib32gcc1 pigz wget
+    apt-get install -y bash expect htop tmux lib32gcc1 pigz telnet wget && \
+    rm -rf /var/lib/apt/lists/*
 
 # Create a non-privileged user to run with.
 RUN useradd -u 7999 -d ${SERVER_HOME} zed
