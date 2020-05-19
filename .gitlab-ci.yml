@@ -6,6 +6,7 @@ services:
   - docker:19.03.8-dind
 
 build:7-days-to-die-docker-server:latest:
+  stage: build
   tags: [gitlab-org-docker]
   script:
     - /bin/true
