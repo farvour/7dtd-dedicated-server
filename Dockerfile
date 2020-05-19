@@ -4,23 +4,32 @@ FROM ubuntu/bionic
 # Since you can bind-mount data volumes for worlds, saves or other things, this
 # doesn't really have to change, but is here for clarity and customization in case.
 ARG SERVER_HOME=/zed
+ARG SERVER_INSTALL_DIR=/zed/7dtd-dedicated-server
+ARG SERVER_DATA_DIR=/zed/7dtd-data
 
 # Steam still requires 32-bit cross compilation libraries.
 RUN echo "Installing necessary system packages to support steam CLI installation..." && \
     apt-get update && \
     apt-get install -y htop lib32gcc1 pigz wget
 
-RUN echo "Create server home directory..." && \
-    mkdir -p ${SERVER_HOME}
+RUN echo "Create server directories..." && \
+    mkdir -p ${SERVER_HOME} && \
+    mkdir -p ${SERVER_INSTALL_DIR} && \
+    mkdir -p ${SERVER_DATA_DIR}
 
 # Create a non-privileged user to run with.
 RUN useradd -u 7999 -d ${SERVER_HOME} zed
 
 USER zed
 
+COPY scripts/steamcmd-7dtd.script ${SERVER_HOME}/
+
 RUN echo "Downloading and installing 7dtd server with steamcmd..." && \
     wget http://media.steampowered.com/installer/steamcmd_linux.tar.gz && \
-    tar -zxvf steamcmd_linux.tar.gz
+    tar -zxvf steamcmd_linux.tar.gz && \
+    ${SERVER_HOME}/steamcmd.sh +runscript steamcmd-7dtd.script
+
+COPY scripts/startserver-1.sh ${SERVER_INSTALL_DIR}/
 
 # Default telnet administrative port.
 EXPOSE 8081
