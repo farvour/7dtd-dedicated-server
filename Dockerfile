@@ -29,6 +29,8 @@ WORKDIR ${SERVER_HOME}
 
 COPY scripts/steamcmd-7dtd.script ${SERVER_HOME}/
 
+# This is most likely going to be the largest layer created; all the game files for the
+# dedicated server.
 RUN echo "Downloading and installing 7dtd server with steamcmd..." && \
     wget http://media.steampowered.com/installer/steamcmd_linux.tar.gz && \
     tar -zxvf steamcmd_linux.tar.gz && \
@@ -40,6 +42,12 @@ COPY --chown=zed:root scripts/startserver-1.sh ${SERVER_INSTALL_DIR}/
 # Mods and mods related tasks.
 COPY --chown=zed:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
 COPY --chown=zed:root server_fixes_v19_22_32/ ${SERVER_INSTALL_DIR}/Mods/
+
+# Configuration.
+COPY --chown=zed:root config/serverconfig.xml ${SERVER_DATA_DIR}/
+
+# Default web UI control panel port.
+EXPOSE 8080
 
 # Default telnet administrative port.
 EXPOSE 8081

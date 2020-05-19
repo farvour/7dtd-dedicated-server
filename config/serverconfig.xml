@@ -3,31 +3,31 @@
   <property name="ServerPort" value="26900" />
   <!-- Port you want the server to listen on. -->
 
-  <property name="ServerVisibility" value="{{ server_config_visibility }}" />
+  <property name="ServerVisibility" value="0" />
   <!-- Visibility of this server: 2 = public, 1 = only shown to friends, 0 = not listed. As you are never friend of a dedicated server setting this to "1" will only work when the first player connects manually by IP. -->
 
-  <property name="ServerName" value="{{ server_config_name }}" />
+  <property name="ServerName" value="Krampusnacht | PvE | 18.4 Stable | Mods" />
   <!-- Whatever you want the name of the server to be. -->
 
-  <property name="ServerPassword" value="{{ server_config_password }}" />
+  <property name="ServerPassword" value="" />
   <!-- Password to gain entry to the server -->
 
-  <property name="ServerMaxPlayerCount" value="{{ server_config_max_player_count }}" />
+  <property name="ServerMaxPlayerCount" value="8" />
   <!-- Maximum Concurrent Players -->
 
-  <property name="ServerReservedSlots" value="{{ server_config_reserved_slots }}" />
+  <property name="ServerReservedSlots" value="0" />
   <!-- Out of the MaxPlayerCount this many slots can only be used by players with a specific permission level -->
 
   <property name="ServerReservedSlotsPermission" value="100" />
   <!-- Required permission level to use reserved slots above -->
 
-  <property name="ServerAdminSlots" value="{{ server_config_admin_slots }}" />
+  <property name="ServerAdminSlots" value="2" />
   <!-- This many admins can still join even if the server has reached MaxPlayerCount -->
 
   <property name="ServerAdminSlotsPermission" value="0" />
   <!-- Required permission level to use the admin slots above -->
 
-  <property name="ServerDescription" value="{{ server_config_desc }}" />
+  <property name="ServerDescription" value="KrazyKrampus' 7 Days to Die Server. Server is a PvE, custom random generated map w/ loot enhancements, spawning mods, stack mods, XUi changes + more. All respectful players are welcome to join." />
   <!-- Whatever you want the server description to be, will be shown in the server browser. -->
 
   <property name="ServerWebsiteURL" value="" />
@@ -36,76 +36,76 @@
   <property name="ServerDisabledNetworkProtocols" value="SteamNetworking" />
   <!-- Networking protocols that should not be used. Separated by comma. Possible values: LiteNetLib, SteamNetworking. Dedicated servers should disable SteamNetworking if there is no NAT router in between your users and the server or when port-forwarding is set up correctly -->
 
-  <property name="ServerMaxWorldTransferSpeedKiBs" value="{{ server_max_world_xfer_kibs }}" />
+  <property name="ServerMaxWorldTransferSpeedKiBs" value="1200" />
   <!-- Maximum (!) speed in kiB/s the world is transferred at to a client on first connect if it does not have the world yet. Maximum is about 1300 kiB/s, even if you set a higher value. -->
 
-  <property name="GameWorld" value="{{ server_config_game_world }}" />
+  <property name="GameWorld" value="Longview" />
   <!-- RWG (see WorldGenSeed and WorldGenSize options below) or any already existing world name in the Worlds folder (currently shipping with Navezgane) -->
 
-  <property name="WorldGenSeed" value="{{ server_config_gen_seed }}" />
+  <property name="WorldGenSeed" value="Longview" />
   <!-- If RWG this is the seed for the generation of the new world. If a world with the resulting name already exists it will simply load it -->
 
-  <property name="WorldGenSize" value="{{ server_config_game_world_size }}" />
+  <property name="WorldGenSize" value="8192" />
   <!-- If RWG this controls the width and height of the created world. It is also used in combination with WorldGenSeed to create the internal RWG seed thus also creating a unique map name even if using the same WorldGenSeed. Has to be between 2048 and 16384, though large map sizes will take long to generate / download / load -->
 
-  <property name="GameName" value="{{ server_config_game_name }}" />
+  <property name="GameName" value="Krampus1" />
   <!-- Whatever you want the game name to be. This affects the save game name as well as the seed used when placing decoration (trees etc) in the world. It does not control the generic layout of the world if creating an RWG world -->
 
-  <property name="GameDifficulty" value="{{ server_config_game_difficulty }}" />
+  <property name="GameDifficulty" value="2" />
   <!-- 0 - 5, 0=easiest, 5=hardest -->
 
-  <property name="GameMode" value="{{ server_config_game_mode }}" />
+  <property name="GameMode" value="GameModeSurvival" />
   <!-- GameModeSurvival -->
 
-  <property name="ZombieMove" value="{{ server_config_zombies_move }}" />
+  <property name="ZombieMove" value="0" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
 
-  <property name="ZombieMoveNight" value="{{ server_config_zombies_move_night }}" />
+  <property name="ZombieMoveNight" value="2" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
 
-  <property name="ZombieFeralMove" value="{{ server_config_zombies_feral_move }}" />
+  <property name="ZombieFeralMove" value="3" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
 
-  <property name="ZombieBMMove" value="{{ server_config_zombies_bloodmoon_move }}" />
+  <property name="ZombieBMMove" value="3" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
 
-  <property name="BuildCreate" value="{{ 'true' if server_config_cheat_mode else 'false' }}" />
+  <property name="BuildCreate" value="false" />
   <!-- cheat mode on/off -->
 
-  <property name="DayNightLength" value="{{ server_config_day_night_length }}" />
+  <property name="DayNightLength" value="60" />
   <!-- real time minutes per in game day: 60 minutes -->
 
-  <property name="DayLightLength" value="{{ server_config_day_light_length }}" />
+  <property name="DayLightLength" value="18" />
   <!-- in game hours the sun shines per day: 18 hours day light per in game day -->
 
-  <property name="PlayerKillingMode" value="{{ server_config_player_killing_mode }}" />
+  <property name="PlayerKillingMode" value="0" />
   <!-- Player Killing Settings (0 = No Killing, 1 = Kill Allies Only, 2 = Kill Strangers Only, 3 = Kill Everyone) -->
 
-  <property name="PersistentPlayerProfiles" value="{{ 'true' if server_config_persistent_profiles else 'false' }}" />
+  <property name="PersistentPlayerProfiles" value="false" />
   <!-- If disabled a player can join with any selected profile. If true they will join with the last profile they joined with -->
 
-  <property name="PlayerSafeZoneLevel" value="{{ server_config_player_safe_zone_level }}" />
+  <property name="PlayerSafeZoneLevel" value="5" />
   <!-- If a player is less or equal this level he will create a safe zone (no enemies) when spawned -->
 
-  <property name="PlayerSafeZoneHours" value="{{ server_config_player_safe_zone_hours }}" />
+  <property name="PlayerSafeZoneHours" value="24" />
   <!-- Hours in world time this safe zone exists -->
 
-  <property name="ControlPanelEnabled" value="{{ 'true' if server_config_admin_controlpanel_enabled else 'false' }}" />
+  <property name="ControlPanelEnabled" value="true" />
   <!-- Enable/Disable the web control panel -->
 
-  <property name="ControlPanelPort" value="{{ server_config_admin_controlpanel_port }}" />
+  <property name="ControlPanelPort" value="8080" />
   <!-- Port of the control panel webpage -->
 
-  <property name="ControlPanelPassword" value="{{ server_config_admin_controlpanel_password }}" />
+  <property name="ControlPanelPassword" value="password" />
   <!-- Password to gain entry to the control panel -->
 
   <property name="TelnetEnabled" value="true" />
   <!-- Enable/Disable the telnet -->
 
-  <property name="TelnetPort" value="{{ server_config_admin_telnet_port }}" />
+  <property name="TelnetPort" value="8081" />
   <!-- Port of the telnet server -->
 
-  <property name="TelnetPassword" value="{{ server_config_admin_password }}" />
+  <property name="TelnetPassword" value="password" />
   <!-- Password to gain entry to telnet interface. If no password is set the server will only listen on the local loopback interface -->
 
   <property name="TelnetFailedLoginLimit" value="10" />
@@ -120,79 +120,79 @@
   <property name="AdminFileName" value="serveradmin.xml" />
   <!-- Server admin file name. Path relative to the SaveGameFolder -->
 
-  <property name="DropOnDeath" value="{{ server_config_drop_on_death }}" />
+  <property name="DropOnDeath" value="0" />
   <!-- 0 = nothing, 1 = everything, 2 = toolbelt only, 3 = backpack only, 4 = delete all -->
 
-  <property name="DropOnQuit" value="{{ server_config_drop_on_quit }}" />
+  <property name="DropOnQuit" value="0" />
   <!-- 0 = nothing, 1 = everything, 2 = toolbelt only, 3 = backpack only -->
 
-  <property name="BloodMoonFrequency" value="{{ server_config_blood_moon_frequency }}" />
+  <property name="BloodMoonFrequency" value="7" />
   <!-- What frequency (in days) should a blood moon take place -->
 
-  <property name="BloodMoonRange" value="{{ server_config_blood_moon_range }}" />
+  <property name="BloodMoonRange" value="0" />
   <!-- How many days can the actual blood moon day randomly deviate from the above setting. Setting this to 0 makes blood moons happen exactly each Nth day as specified in BloodMoonFrequency -->
 
-  <property name="BloodMoonWarning" value="{{ server_config_blood_moon_warning }}" />
+  <property name="BloodMoonWarning" value="9" />
   <!-- The Hour number that the red day number begins on a blood moon day. Setting this to -1 makes the red never show. -->
 
-  <property name="LandClaimCount" value="{{ server_config_landclaim_count }}" />
+  <property name="LandClaimCount" value="4" />
   <!-- Maximum allowed land claims per player. -->
 
-  <property name="BlockDamagePlayer" value="{{ server_config_block_damage_player }}" />
+  <property name="BlockDamagePlayer" value="100" />
   <!-- How much damage do players to blocks (percentage in whole numbers) -->
 
-  <property name="BlockDamageAI" value="{{ server_config_block_damage_ai }}" />
+  <property name="BlockDamageAI" value="100" />
   <!-- How much damage do AIs to blocks (percentage in whole numbers) -->
 
-  <property name="BlockDamageAIBM" value="{{ server_config_block_damage_aibm }}" />
+  <property name="BlockDamageAIBM" value="90" />
   <!-- How much damage do AIs during blood moons to blocks (percentage in whole numbers) -->
 
-  <property name="XPMultiplier" value="{{ server_config_xp_multiplier }}" />
+  <property name="XPMultiplier" value="100" />
   <!-- XP gain multiplier (percentage in whole numbers) -->
 
-  <property name="BloodMoonEnemyCount" value="{{ server_config_blood_moon_enemy_count }}" />
+  <property name="BloodMoonEnemyCount" value="14" />
   <!-- The number of zombies spawned during blood moons per player. -->
 
-  <property name="EnemySpawnMode" value="{{ 'true' if server_config_enemy_spawning else 'false' }}" />
+  <property name="EnemySpawnMode" value="true" />
   <!-- Enable/Disable enemy spawning -->
 
-  <property name="EnemyDifficulty" value="{{ server_config_enemy_difficulty }}" />
+  <property name="EnemyDifficulty" value="0" />
   <!-- 0 = Normal, 1 = Feral -->
 
-  <property name="LootAbundance" value="{{ server_config_loot_abundance }}" />
+  <property name="LootAbundance" value="50" />
   <!-- percentage in whole numbers -->
 
-  <property name="LootRespawnDays" value="{{ server_config_loot_respawn_days }}" />
+  <property name="LootRespawnDays" value="30" />
   <!-- days in whole numbers -->
 
-  <property name="LandClaimSize" value="{{ server_config_landclaim_size }}" />
+  <property name="LandClaimSize" value="80" />
   <!-- Size in blocks that is protected by a keystone -->
 
-  <property name="LandClaimDeadZone" value="{{ server_config_landclaim_deadzone }}" />
+  <property name="LandClaimDeadZone" value="200" />
   <!-- Keystones must be this many blocks apart (unless you are friends with the other player) -->
 
-  <property name="LandClaimExpiryTime" value="{{ server_config_landclaim_expiry_time }}" />
+  <property name="LandClaimExpiryTime" value="14" />
   <!-- The number of days a player can be offline before their claims expire and are no longer protected -->
 
-  <property name="LandClaimDecayMode" value="{{ server_config_landclaim_decay_mode }}" />
+  <property name="LandClaimDecayMode" value="2" />
   <!-- Controls how offline players land claims decay. All claims have full protection for the first 24hrs. 0=Linear, 1=Exponential, 2=Full protection until claim is expired. -->
 
-  <property name="LandClaimOnlineDurabilityModifier" value="{{ server_config_landclaim_online_durability_modifier }}" />
+  <property name="LandClaimOnlineDurabilityModifier" value="4" />
   <!-- How much protected claim area block hardness is increased when a player is online. 0 means infinite (no damage will ever be taken). Default is 4x -->
 
-  <property name="LandClaimOfflineDurabilityModifier" value="{{ server_config_landclaim_offline_durability_modifier }}" />
+  <property name="LandClaimOfflineDurabilityModifier" value="0" />
   <!-- How much protected claim area block hardness is increased when a player is offline. 0 means infinite (no damage will ever be taken). Default is 4x -->
 
-  <property name="PartySharedKillRange" value="{{ server_config_party_shared_kill_range }}" />
+  <property name="PartySharedKillRange" value="200" />
   <!-- The distance you must be within to receive party shared kill xp and quest party kill objective credit. -->
 
-  <property name="AirDropFrequency" value="{{ server_config_airdrop_frequency }}" />
+  <property name="AirDropFrequency" value="72" />
   <!-- How often airdrop occur in game-hours, 0 == never -->
 
-  <property name="AirDropMarker" value="{{ 'true' if server_config_airdrop_marker else 'false' }}" />
+  <property name="AirDropMarker" value="true" />
   <!-- Sets if a marker is added to map/compass for air drops. -->
 
-  <property name="MaxSpawnedZombies" value="{{ server_config_max_spawned_zombies }}" />
+  <property name="MaxSpawnedZombies" value="60" />
   <!-- Making this number too large (more than about 80) may cause servers to run at poor framerates which will effect lag and play quality for clients. -->
 
   <!--
@@ -200,12 +200,12 @@
   NOTE: That this doesn't cause more animals to spawn arbitrarily: The biome spawning system only spawns a certain number of animals in a given
   area, but if you have lots of players that are all spread out then you may be hitting the limit and can increase it.
   -->
-  <property name="MaxSpawnedAnimals" value="{{ server_config_max_spawned_animals }}" />
+  <property name="MaxSpawnedAnimals" value="60" />
 
-  <property name="ServerMaxAllowedViewDistance" value="{{ server_config_max_allowed_view_distance }}" />
+  <property name="ServerMaxAllowedViewDistance" value="9" />
   <!-- Max viewdistance a client may request (6 - 12). High impact on memory usage and performance. -->
 
-  <property name="EACEnabled" value="{{ 'true' if server_config_eac else 'false' }}" />
+  <property name="EACEnabled" value="true" />
   <!-- Enables/Disables EasyAntiCheat -->
 
   <property name="HideCommandExecutionLog" value="0" />
@@ -214,16 +214,16 @@
   <property name="MaxUncoveredMapChunksPerPlayer" value="131072" />
   <!-- Override how many chunks can be uncovered on the ingame map by each player. Resulting max map file size limit per player is (x * 512 Bytes), uncovered area is (x * 256 m²). Default 131072 means max 32 km² can be uncovered at any time -->
 
-  <property name="BedrollDeadZoneSize" value="{{ server_config_player_bedroll_deadzone_size }}" />
+  <property name="BedrollDeadZoneSize" value="30" />
   <!-- Size of bedroll deadzone, no zombies will spawn inside this area, and any cleared sleeper volumes that touch a bedroll deadzone will not spawn after they've been cleared. -->
 
-  <property name="BedrollExpiryTime" value="{{ server_config_player_bedroll_expiry_time }}" />
+  <property name="BedrollExpiryTime" value="30" />
   <!-- Number of days a bedroll stays active after owner was last online -->
 
-  <property name="SaveGameFolder" value="{{ server_savegame_dir }}" />
+  <property name="SaveGameFolder" value="/zed/7dtd-data/Saves" />
   <!-- use this to override the default save game path -->
 
-  <property name="UserDataFolder" value="{{ server_savegame_dir }}" />
+  <property name="UserDataFolder" value="/zed/7dtd-data/Saves" />
   <!-- this overrides where user data for the game is stored -->
 
   <property name="ServerLoginConfirmationText" value="" />

@@ -28,9 +28,14 @@
 
 <adminTools>
   <admins>
-    <admin steamID="76561198003021188" permission_level="0" /> <!-- KrazyKrampus -->
-    <admin steamID="76561198889951492" permission_level="1" /> <!-- Amalee215 -->
-    <admin steamID="76561198839118278" permission_level="50" /> <!-- GreenMonkeymax -->
+    <!-- KrazyKrampus -->
+    <admin steamID="76561198003021188" permission_level="0" />
+
+    <!-- Amalee215 -->
+    <admin steamID="76561198889951492" permission_level="1" />
+
+    <!-- GreenMonkeymax -->
+    <admin steamID="76561198839118278" permission_level="50" />
   </admins>
 
   <permissions>
