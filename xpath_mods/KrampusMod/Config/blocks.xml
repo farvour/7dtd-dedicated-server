@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <!-- Use 'poured concrete' texture for the asphalt instead of topSoil. -->
+  <!-- <set xpath="/blocks/block[@name='terrAsphalt']/property[@name='Texture']/@value">1</set> -->
+
+  <!-- Use a different sound for the autoTurret (pistol is loud & obnoxious). -->
+  <set xpath="/blocks/block[@name='autoTurret']/property[@name='FireSound']/@value">mp5_s_fire</set>
+  <set xpath="/blocks/block[@name='autoTurret']/property[@name='BlockDamage']/@value">0</set>
+
+  <!-- Use silenced sound for shotgunTurret (default is loud & obnoxious). -->
+  <set xpath="/blocks/block[@name='shotgunTurret']/property[@name='FireSound']/@value">pump_shotgun_s_fire</set>
+  <set xpath="/blocks/block[@name='shotgunTurret']/property[@name='BlockDamage']/@value">0</set>
+</configs>

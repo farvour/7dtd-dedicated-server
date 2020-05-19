@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <ModInfo>
+    <Name value="KrampusMod_Vehicles" />
+    <Description value="Increases the speeds of vehicles and more." />
+    <Author value="KrazyKrampus" />
+    <Version value="1.1" />
+    <Website value="" />
+  </ModInfo>
+</xml>

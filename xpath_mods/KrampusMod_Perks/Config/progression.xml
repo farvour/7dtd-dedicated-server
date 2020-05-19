@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <!-- One-shot ore more often! -->
+  <set xpath="/progression/perks/perk[@name='perkArtOfMiningComplete']/effect_group/passive_effect[@name='BlockDamage']/requirement[@name='RandomRoll']/@value">50</set>
+</configs>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>7 Days to Die Map</title>
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+	<!-- jQuery UI -->
+	<link rel="stylesheet" href="jquery-ui/jquery-ui.min.css" type="text/css" />
+	<script type="text/javascript" src="jquery-ui/jquery-ui.min.js"></script>
+	
+	<!-- Tablesorter -->
+	<!-- <link rel="stylesheet" href="js/tablesorter/css/theme.default.min.css" type="text/css" /> -->
+	<script type="text/javascript" src="js/tablesorter/js/jquery.tablesorter.combined.min.js"></script>
+	<!-- <link rel="stylesheet" href="js/tablesorter/css/jquery.tablesorter.pager.min.css" type="text/css" /> -->
+	<script type="text/javascript" src="js/tablesorter/js/extras/jquery.tablesorter.pager.min.js"></script>	
+	<script type="text/javascript" src="js/tablesorter/js/widgets/widget-formatter.min.js"></script>	
+
+	<!-- Leaflet -->
+	<link rel="stylesheet prefetch" href="leaflet/leaflet.css">
+	<script type="text/javascript" src="leaflet/leaflet.js"></script>
+
+	<!-- Leaflet MarkerCluster -->
+	<link rel="stylesheet" href="leaflet/markercluster/MarkerCluster.css" />
+	<link rel="stylesheet" href="leaflet/markercluster/MarkerCluster.Default.css" />
+	<script type="text/javascript" src="leaflet/markercluster/leaflet.markercluster.js"></script>
+
+	<!-- Leaflet Zoomslider -->
+	<link rel="stylesheet" href="leaflet/zoomslider/L.Control.Zoomslider.css" />
+	<script type="text/javascript" src="leaflet/zoomslider/L.Control.Zoomslider.js"></script>
+
+	<!-- Leaflet MiniMap -->
+	<link rel="stylesheet" href="leaflet/minimap/Control.MiniMap.css" />
+	<script type="text/javascript" src="leaflet/minimap/Control.MiniMap.js"></script>
+	
+	<!-- Leaflet Measure -->
+	<link rel="stylesheet" href="leaflet/measure/leaflet-measure.css" />
+	<script type="text/javascript" src="leaflet/measure/leaflet-measure.min.js"></script>
+	
+	<!-- Own JS stuff -->
+	<script type="text/javascript" src="js/leaflet.layer.sdtdtiles.js"></script>
+	<script type="text/javascript" src="js/leaflet.regionlayer.js"></script>
+	<script type="text/javascript" src="js/leaflet.layer.landclaims.js"></script>
+	<script type="text/javascript" src="js/leaflet.control.coordinates.js"></script>
+	<script type="text/javascript" src="js/leaflet.control.reloadtiles.js"></script>
+	<script type="text/javascript" src="js/leaflet.control.gametime.js"></script>
+	<script type="text/javascript" src="js/inventory_dialog.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/stats.js"></script>
+	<script type="text/javascript" src="js/tabs.js"></script>
+	<script type="text/javascript" src="js/permissions.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/log.js"></script>
+	<script type="text/javascript" src="js/players.js"></script>
+
+	<!-- Own stylesheet -->
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+<body>
+
+
+	<div class="adminwrapper">
+		<div class="adminnavbarhidebutton">
+			<img src="img/expand.png" alt="Expand Menu" width="10">
+			Menu
+			<img src="img/expand.png" alt="Expand Menu" width="10">
+		</div>
+		<div class="adminnavbar">
+			<div id="serverstats">
+				<span id="stats_time">-</span><br/>
+				<span id="stats_players">-</span> Players<br />
+				<span id="stats_hostiles">-</span> Hostiles<br />
+				<span id="stats_animals">-</span> Animals
+			</div>
+
+			<div id="adminmenu">
+				Menu
+				<ul>
+					<li><a href="#tab_map" data-permission="web.map">Map</a></li>
+					<li><a href="#tab_players" data-permission="webapi.getplayerlist">Players</a></li> <!-- data-permission="web.players" -->
+					<li><a href="#tab_log" data-permission="webapi.getlog">Log <span id="newlogcount"></span></a></li>
+				</ul>
+			</div>
+			
+			<div id="userstate">
+				<div id="userstate_loggedin">
+					Logged in as:<br/>
+					<a id="username" href="" target="_blank"></a><br/>
+					<a href="/session/logout">Sign out</a>
+				</div>
+				<div id="userstate_loggedout">
+					Not logged in<br/>
+					<center>
+					<a href="/session/login">
+						<img src="img/steamlogin.png" title="Sign in through Steam">
+					</a>
+					</center>
+				</div>
+			</div>
+		</div>
+
+		<div id="admincontent">
+			<h1 id="nopermissionwarning" style="display:none">An error occured or you have not logged in.  Try logging in with the Steam login in the lower left!</h1>
+			
+			<div id="tab_map" class="adminmap"></div>
+			
+			<div id="tab_players" class="adminplayers">
+				<!-- Current AJAX url: <span id="players_url"></span> -->
+				<table class="players_tablesorter">
+					<thead>
+						<tr class="players_columns">
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td class="players_pager" colspan="5">
+								<img src="js/tablesorter/css/images/first.png" class="players_first"/>
+								<img src="js/tablesorter/css/images/prev.png" class="players_prev"/>
+								<span class="players_pagedisplay"></span> <!-- this can be any element, including an input -->
+								<img src="js/tablesorter/css/images/next.png" class="players_next"/>
+								<img src="js/tablesorter/css/images/last.png" class="players_last"/>
+								<select class="players_pagesize">
+									<option value="10">10</option>
+									<option value="25">25</option>
+									<option value="50">50</option>
+									<option value="100">100</option>
+									<option value="200">200</option>
+								</select>
+							</td>
+						</tr>
+					</tfoot>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+			
+			
+			<div id="tab_log" class="adminlog">
+				<table>
+					<tr>
+						<th>Date/Time</th>
+						<th>Uptime</th>
+						<th>Severity</th>
+						<th>Message</th>
+					</tr>
+				</table>
+				<a id="markasread">Mark as read</a>
+			</div>
+			
+		</div>
+
+	</div>
+	
+
+	<div id="playerInventoryDialog" title="Player inventory">
+		Player: <span id="invPlayerName"></span><br/>
+		SteamID: <span id="invSteamId"></span><br/>
+		<br/>
+		<table>
+			<tr>
+				<td>
+					Inventory:<br/>
+					<table class="invTable" id="bagTable">
+					</table>
+					<br/>
+				</td>
+				<td rowspan="2">
+					Equipment:<br/>
+					<table class="invTable" id="equipmentTable">
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Belt:<br/>
+					<table class="invTable" id="beltTable">
+					</table>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+	
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
+

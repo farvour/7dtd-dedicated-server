@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <!-- Add new steel bars centered and standard block types for placement. -->
+  <append xpath="/blocks">
+    <block name="krampusModSteelBarsCentered">
+      <property name="CustomIcon" value="ironBars" />
+      <property name="DisplayType" value="blockHardened" />
+      <property name="Material" value="Msteel" />
+      <property name="Shape" value="New" />
+      <property name="LightOpacity" value="0" />
+      <!-- All models are free assets from Unity store by KrazyFX -->
+      <!-- <property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBarsCentered_X" /> -->
+      <!-- <property name="Model" value="#@modfolder:Resources/krampusModSteelBars.unity3d?SteelBarsCentered_X" /> -->
+      <property name="Model" value="iron_bars_centered" />
+      <property name="Texture" value="312" />
+      <property name="UseGlobalUV" value="Local" />
+      <property name="ImposterExcludeAndStop" value="true" />
+      <property name="Place" value="TowardsPlacer" />
+      <property name="AllowAllRotations" value="true" />
+      <property name="Collide" value="movement,melee,rocket" />
+      <property class="RepairItems">
+        <property name="resourceForgedSteel" value="15" />
+      </property>
+      <drop event="Harvest" name="resourceScrapIron" count="48" tag="allHarvest" />
+      <drop event="Destroy" count="0" />
+      <drop event="Fall" name="scrapMetalPile" count="1" prob="0.8" stick_chance="1" />
+      <property name="Group" value="Building,advBuilding" />
+      <property name="EconomicValue" value="20" />
+      <property name="DescriptionKey" value="krampusModSteelBarsDesc" />
+      <property name="FilterTags" value="fdecor,fother,fwindows,fdoors" />
+      <property name="SortOrder1" value="7060" />
+      <property name="SortOrder2" value="0061" />
+    </block>
+
+    <block name="krampusModSteelBars">
+      <property name="CustomIcon" value="ironBars" />
+      <property name="DisplayType" value="blockHardened" />
+      <property name="Material" value="Msteel" />
+      <property name="Shape" value="New" />
+      <property name="LightOpacity" value="0" />
+      <!-- <property name="Model" value="#@modfolder:Resources/SteelBars.unity3d?SteelBars_X" /> -->
+      <!-- <property name="Model" value="#@modfolder:Resources/krampusModSteelBars.unity3d?SteelBars_X" /> -->
+      <property name="Model" value="iron_bars" />
+      <property name="Texture" value="312" />
+      <property name="UseGlobalUV" value="Local" />
+      <property name="ImposterExcludeAndStop" value="true" />
+      <property name="Place" value="TowardsPlacerInverted" />
+      <property name="AllowAllRotations" value="true" />
+      <property name="Collide" value="movement,melee,rocket" />
+      <property class="RepairItems">
+        <property name="resourceForgedSteel" value="15" />
+      </property>
+      <drop event="Harvest" name="resourceScrapIron" count="48" tag="allHarvest" />
+      <drop event="Destroy" count="0" />
+      <drop event="Fall" name="scrapMetalPile" count="1" prob="0.8" stick_chance="1" />
+      <property name="Group" value="Building,advBuilding" />
+      <property name="EconomicValue" value="20" />
+      <property name="DescriptionKey" value="krampusModSteelBarsDesc" />
+      <property name="FilterTags" value="fdecor,fother,fwindows,fdoors" />
+      <property name="SortOrder1" value="7060" />
+      <property name="SortOrder2" value="0060" />
+    </block>
+  </append>
+
+  <!-- Ensures that ironBars upgrade to steel! -->
+  <append xpath="/blocks/block[@name='ironBarsCentered']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="krampusModSteelBarsCentered" />
+      <property name="Item" value="resourceForgedSteel" />
+      <property name="ItemCount" value="15" />
+      <property name="UpgradeHitCount" value="5" />
+    </property>
+  </append>
+
+  <append xpath="/blocks/block[@name='ironBars']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="krampusModSteelBars" />
+      <property name="Item" value="resourceForgedSteel" />
+      <property name="ItemCount" value="15" />
+      <property name="UpgradeHitCount" value="5" />
+    </property>
+  </append>
+</configs>

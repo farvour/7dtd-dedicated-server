@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <ModInfo>
+    <Name value="KrampusMod_LeftHUD" />
+    <Description value="Replaces the left HUD with custom buff timers, UI bars and full details about character stats. Adapted from stedman420's implementation of the LeftHUD SimpleUI mod." />
+    <Author value="KrazyKrampus, stedman420" />
+    <Version value="1.1" />
+    <Website value="" />
+  </ModInfo>
+</xml>

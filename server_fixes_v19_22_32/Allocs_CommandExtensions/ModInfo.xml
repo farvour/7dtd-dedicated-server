@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Allocs command extensions" />
+		<Description value="Additional commands for server operation" />
+		<Author value="Christian 'Alloc' Illy" />
+		<Version value="20" />
+		<Website value="http://7dtd.illy.bz" />
+	</ModInfo>
+</xml>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Allocs server fixes" />
+		<Description value="Common functions" />
+		<Author value="Christian 'Alloc' Illy" />
+		<Version value="23" />
+		<Website value="http://7dtd.illy.bz" />
+	</ModInfo>
+</xml>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <append xpath="/styles/global">
+    <style_entry name="krampusMod_green" value="10,120,5,255" />
+    <style_entry name="krampusMod_green_half_alpha" value="10,120,5,128" />
+    <style_entry name="krampusMod_green_3q_alpha" value="10,120,5,192" />
+    <style_entry name="krampusMod_green_light" value="102,255,102,255" />
+    <style_entry name="krampusMod_yellow" value="255,255,115,255" />
+    <style_entry name="krampusMod_yellow_half_alpha" value="255,255,115,128" />
+    <style_entry name="krampusMod_yellow_3q_alpha" value="255,255,115,192" />
+    <style_entry name="krampusMod_pink" value="255,51,255,255" />
+    <style_entry name="krampusMod_pink_half_alpha" value="255,51,255,128" />
+    <style_entry name="krampusMod_pink_3q_alpha" value="255,51,255,192" />
+    <style_entry name="krampusMod_pink_light" value="255,204,255,255" />
+    <style_entry name="krampusMod_red" value="255,0,0,255" />
+  </append>
+  <append xpath="/styles">
+    <style name="KrampusMod_ItemStack">
+      <style_entry name="select_color" value="[beige]" />
+      <style_entry name="press_color" value="[limeGreen]" />
+      <style_entry name="final_pressed_color" value="[lightGrey]" />
+      <style_entry name="background_color" value="[darkGrey]" />
+      <style_entry name="highlight_color" value="[hoverColor]" />
+      <style_entry name="holding_color" value="[green]" />
+      <style_entry name="width" value="64" />
+      <style_entry name="height" value="64" />
+      <style_entry name="hover_icon_grow" value="1.5" />
+      <style_entry name="on_press" value="true" />
+      <style_entry name="sound_volume" value="0.75" />
+      <style_entry name="pickup_sound" value="[pickup_click]" />
+      <style_entry name="place_sound" value="[place_click]" />
+    </style>
+  </append>
+</configs>

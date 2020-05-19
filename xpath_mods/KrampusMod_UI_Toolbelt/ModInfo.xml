@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <ModInfo>
+    <Name value="KrampusMod_UI_Toolbelt" />
+    <Description value="Refactors the toolbelt and XP bar a bit. Adapted from stedman420's implementation of the SimpleUI-Toolbelt mod." />
+    <Author value="KrazyKrampus, stedman420" />
+    <Version value="1.1" />
+    <Website value="" />
+  </ModInfo>
+</xml>

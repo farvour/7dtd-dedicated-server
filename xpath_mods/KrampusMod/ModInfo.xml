@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <ModInfo>
+    <Name value="KrampusMod" />
+    <Description value="A generic/canary mod for making isolated changes in the game." />
+    <Author value="KrazyKrampus" />
+    <Version value="0.2" />
+    <Website value="" />
+  </ModInfo>
+</xml>

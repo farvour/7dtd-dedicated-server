@@ -10,11 +10,12 @@ ARG SERVER_DATA_DIR=/zed/7dtd-data
 # Steam still requires 32-bit cross compilation libraries.
 RUN echo "Installing necessary system packages to support steam CLI installation..." && \
     apt-get update && \
-    apt-get install -y htop lib32gcc1 pigz wget
+    apt-get install -y bash htop tmux lib32gcc1 pigz wget
 
 RUN echo "Create server directories..." && \
     mkdir -p ${SERVER_HOME} && \
     mkdir -p ${SERVER_INSTALL_DIR} && \
+    mkdir -p ${SERVER_INSTALL_DIR}/Mods && \
     mkdir -p ${SERVER_DATA_DIR}
 
 # Create a non-privileged user to run with.
@@ -29,7 +30,12 @@ RUN echo "Downloading and installing 7dtd server with steamcmd..." && \
     tar -zxvf steamcmd_linux.tar.gz && \
     ${SERVER_HOME}/steamcmd.sh +runscript steamcmd-7dtd.script
 
+# Install custom startserver script.
 COPY scripts/startserver-1.sh ${SERVER_INSTALL_DIR}/
+
+# Mods and mods related tasks.
+COPY xpath_mods/* ${SERVER_INSTALL_DIR}/Mods/
+COPY server_fixes_v19_22_32/* ${SERVER_INSTALL_DIR}/Mods/
 
 # Default telnet administrative port.
 EXPOSE 8081
