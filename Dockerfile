@@ -57,3 +57,5 @@ EXPOSE 8082
 
 # Default game port.
 EXPOSE 26900
+
+ENTRYPOINT ["${SERVER_INSTALL_DIR}/7dtd-dedicated-server/startserver-1.sh", "-configfile=serverconfig.xml"]
