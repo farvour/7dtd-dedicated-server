@@ -19,6 +19,7 @@ before_script:
 build:7-days-to-die-docker-server:latest:
   stage: build
   script:
-    - docker build --cache-from $CI_REGISTRY_IMAGE:latest --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --tag $CI_REGISTRY_IMAGE:latest .
-    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
-    - docker push $CI_REGISTRY_IMAGE:latest
+    - echo "Shared runners do not have enough capacity to do actual builds with the game install."
+    # - docker build --cache-from $CI_REGISTRY_IMAGE:latest --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA --tag $CI_REGISTRY_IMAGE:latest .
+    # - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+    # - docker push $CI_REGISTRY_IMAGE:latest
