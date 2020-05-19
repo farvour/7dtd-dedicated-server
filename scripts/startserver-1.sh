@@ -36,7 +36,7 @@ export LD_LIBRARY_PATH=.
 
 if [ "$(uname -m)" = "x86_64" ]; then
   ./7DaysToDieServer.x86_64 \
-    -logfile $(pwd)/output-log__$(date +%Y-%m-%d__%H-%M-%S).log \
+    -logfile /dev/stdout \
     -quit \
     -batchmode \
     -nographics \
