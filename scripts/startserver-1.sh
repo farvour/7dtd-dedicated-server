@@ -40,7 +40,7 @@ if [ "$(uname -m)" = "x86_64" ]; then
     -quit \
     -batchmode \
     -nographics \
-    -dedicated $PARAMS
+    -dedicated $PARAMS | tee ${SERVER_DATA_DIR}/output-log__$(date +%Y-%m-%d__%H-%M-%S).log
 else
   echo "7 Days to Die only supports 64 bit operating systems!"
   exit 1
