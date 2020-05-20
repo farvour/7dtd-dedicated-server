@@ -220,10 +220,10 @@
   <property name="BedrollExpiryTime" value="30" />
   <!-- Number of days a bedroll stays active after owner was last online -->
 
-  <property name="SaveGameFolder" value="/zed/7dtd-data/Saves" />
+  <property name="SaveGameFolder" value="/app/7dtd/data/Saves" />
   <!-- use this to override the default save game path -->
 
-  <property name="UserDataFolder" value="/zed/7dtd-data/Saves" />
+  <property name="UserDataFolder" value="/app/7dtd/data/Saves" />
   <!-- this overrides where user data for the game is stored -->
 
   <property name="ServerLoginConfirmationText" value="" />
