@@ -17,11 +17,9 @@ RUN echo "Installing necessary system packages to support steam CLI installation
     rm -rf /var/lib/apt/lists/*
 
 ENV PROC_UID 7999
-ENV PROC_GID 7999
 
 RUN echo "Create a non-privileged user to run with." && \
-    groupadd -g ${PROC_GID} nogroup && \
-    useradd -u ${PROC_UID} -d ${SERVER_HOME} -g ${PROC_GID} nobody
+    useradd -u ${PROC_UID} -d ${SERVER_HOME} -g nogroup nobody
 
 RUN echo "Create server directories..." && \
     mkdir -p ${SERVER_HOME} && \
