@@ -19,16 +19,16 @@ RUN echo "Installing necessary system packages to support steam CLI installation
 ENV PROC_UID 7999
 
 RUN echo "Create a non-privileged user to run with." && \
-    useradd -u ${PROC_UID} -d ${SERVER_HOME} -g nogroup nobody
+    useradd -u ${PROC_UID} -d ${SERVER_HOME} -g nogroup z
 
 RUN echo "Create server directories..." && \
     mkdir -p ${SERVER_HOME} && \
     mkdir -p ${SERVER_INSTALL_DIR} && \
     mkdir -p ${SERVER_INSTALL_DIR}/Mods && \
     mkdir -p ${SERVER_DATA_DIR} && \
-    chown -R nobody ${SERVER_HOME}
+    chown -R z ${SERVER_HOME}
 
-USER nobody
+USER z
 
 WORKDIR ${SERVER_HOME}
 
@@ -43,14 +43,14 @@ RUN echo "Downloading and installing 7dtd server with steamcmd..." && \
     ${SERVER_HOME}/steamcmd.sh +runscript steamcmd-7dtd.script
 
 # Install custom startserver script.
-COPY --chown=nobody:root scripts/startserver-1.sh ${SERVER_INSTALL_DIR}/
+COPY --chown=z:root scripts/startserver-1.sh ${SERVER_INSTALL_DIR}/
 
 # Mods and mods related tasks.
-COPY --chown=nobody:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
-COPY --chown=nobody:root server_fixes_v19_22_32/ ${SERVER_INSTALL_DIR}/Mods/
+COPY --chown=z:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
+COPY --chown=z:root server_fixes_v19_22_32/ ${SERVER_INSTALL_DIR}/Mods/
 
 # Install custom configuration.
-COPY --chown=nobody:root config/serverconfig.xml ${SERVER_INSTALL_DIR}/
+COPY --chown=z:root config/serverconfig.xml ${SERVER_INSTALL_DIR}/
 
 # Default web UI control panel port.
 EXPOSE 8080/tcp
