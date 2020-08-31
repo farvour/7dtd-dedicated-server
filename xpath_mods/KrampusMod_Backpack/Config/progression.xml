@@ -12,5 +12,5 @@
   <set xpath="/progression/perks/perk[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">96</set>
 
   <!-- Be a better knife guy. -->
-  <set xpath="/progression/perks/perk[@name='perkNightStalkerComplete']/effect_group/passive_effect[@name='EntityDamage']/@value">10</set>
+  <!-- <set xpath="/progression/perks/perk[@name='perkNightStalkerComplete']/effect_group/passive_effect[@name='EntityDamage']/@value">10</set> -->
 </configs>

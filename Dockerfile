@@ -47,7 +47,7 @@ COPY --chown=z:root scripts/startserver-1.sh ${SERVER_INSTALL_DIR}/
 
 # Mods and mods related tasks.
 COPY --chown=z:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
-COPY --chown=z:root server_fixes_v19_22_32/ ${SERVER_INSTALL_DIR}/Mods/
+# COPY --chown=z:root server_fixes_v19_22_32/ ${SERVER_INSTALL_DIR}/Mods/
 
 # Custom prefabs.
 COPY --chown=z:root custom_prefabs/ ${SERVER_INSTALL_DIR}/Data/Prefabs/
