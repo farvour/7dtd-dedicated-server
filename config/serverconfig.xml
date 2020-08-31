@@ -159,7 +159,7 @@
   <!-- days in whole numbers -->
   <property name="AirDropFrequency" value="72"/>
   <!-- How often airdrop occur in game-hours, 0 == never -->
-  <property name="AirDropMarker" value="false"/>
+  <property name="AirDropMarker" value="true"/>
   <!-- Sets if a marker is added to map/compass for air drops. -->
 
   <!-- Multiplayer -->
