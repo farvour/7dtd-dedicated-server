@@ -3,7 +3,7 @@
   <!-- Add new steel bars centered and standard block types for placement. -->
   <append xpath="/blocks">
     <block name="krampusModSteelBarsCentered">
-      <property name="CustomIcon" value="ironBars" />
+      <property name="CustomIcon" value="ironBarsCentered" />
       <property name="DisplayType" value="blockHardened" />
       <property name="Material" value="Msteel" />
       <property name="Shape" value="New" />
@@ -33,7 +33,7 @@
     </block>
 
     <block name="krampusModSteelBars">
-      <property name="CustomIcon" value="ironBars" />
+      <property name="CustomIcon" value="ironBarsCentered" />
       <property name="DisplayType" value="blockHardened" />
       <property name="Material" value="Msteel" />
       <property name="Shape" value="New" />

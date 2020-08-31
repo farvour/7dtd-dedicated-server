@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
+  <!-- Ensure the target bar is always visible. -->
+  <setattribute xpath="/windows/window[@name='windowTargetBar']" name="visibility">always</setattribute>
+
   <append xpath="/windows">
     <!-- Left HUD - Temp, Stamina, Health, Food and Water -->
     <window name="KrampusMod_HUDLeftStatBars">
@@ -48,26 +51,56 @@
           <filledsprite depth="3" name="background" color="0,0,0,255" width="280" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
         </rect>
 
-        <rect controller="CharacterFrameWindow">
-          <!-- Hide default panel. -->
-          <panel name="header" height="10" depth="1" pos="9999,9999" backgroundspritename="ui_game_panel_header">
-            <label depth="2" name="characterName" pos="42,-6" width="140" height="32" text="" font_size="32" />
-            <label depth="2" name="levelNumber" pos="240,-10" width="80" height="28" text="" color="[lightGrey]" />
+        <!-- Hide default panel. -->
+        <rect controller="CharacterFrameWindow" pos="9999,9999">
+          <panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+            <sprite depth="2" name="windowIcon" style="icon32px" pos="5,-5" sprite="ui_game_symbol_character" />
+            <label depth="2" name="characterName" pos="42,-6" width="150" height="32" text="" font_size="32" />
+            <sprite depth="2" name="windowIcon" width="26" height="26" pos="200,-8" sprite="ui_game_symbol_trophy" />
+            <label depth="2" name="levelNumber" pos="240,-10" width="80" height="28" text="" />
           </panel>
+
+          <rect depth="2" name="searchControls" width="327" height="43">
+            <sprite depth="6" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="327" height="43" color="[black]" type="sliced" fillcenter="false" />
+            <sprite depth="1" color="[mediumGrey]" type="sliced" globalopacity="true" />
+            <button depth="4" name="characterButton" style="icon30px, press" pos="22,-22" sprite="ui_game_symbol_character" pivot="center" tooltip="Description" tooltip_key="lblWornEquipment" sound="[paging_click]" selected="true" />
+            <button depth="4" name="statButton" style="icon30px, press" pos="65,-22" sprite="ui_game_symbol_ping" pivot="center" tooltip="Stats" sound="[paging_click]" tooltip_key="lblCharacterStats1" />
+            <button depth="4" name="coreStatButton" style="icon30px, press" pos="108,-22" sprite="ui_game_symbol_trophy" pivot="center" tooltip="Stats" sound="[paging_click]" tooltip_key="lblCharacterStats2" />
+
+            <!-- <panel pos="220,0" width="104" height="43" disableautobackground="true"> -->
+            <!-- <button depth="4" name="pageDown" style="icon30px, press" pos="20,-22" sprite="ui_game_symbol_arrow_left" pivot="center" sound="[paging_click]"/> -->
+            <!-- <rect depth="4" name="background" pos="37,-7"> -->
+            <!-- <sprite name="background" style="icon30px" color="[black]" type="sliced" /> -->
+            <!-- <label depth="5" name="pageNumber" pos="0, -3" width="30" height="28" text="1" font_size="26" justify="center"/> -->
+            <!-- </rect> -->
+            <!-- <button depth="4" name="pageUp" style="icon30px, press" pos="84,-22" sprite="ui_game_symbol_arrow_right" pivot="center" sound="[paging_click]"/> -->
+            <!-- </panel> -->
+          </rect>
 
           <!-- Hide default character frame window. -->
           <rect visible="{showcharacter}" pos="9999,9999">
-            <panel name="previewFrame" depth="0" pos="0,0" width="10" on_press="true" on_hover="true" disableautobackground="true" snap="false">
+            <!--#$-IGS BEGIN: Disabling snap for the character preview frame area. Moving the previewFrame down to make space for a new level header. -$#-->
+            <panel name="previewFrame" depth="0" pos="0,-86" width="257" on_press="true" on_hover="true" disableautobackground="true" snap="false">
+              <!--*#$-IGS END.-$#-->
               <rect>
-                <texture depth="2" name="playerPreview" material="Materials/Transparent Colored" size="8,8" globalopacity="false" />
+                <sprite depth="6" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="327" height="704" color="[black]" type="sliced" fillcenter="false" />
+                <sprite depth="1" color="[darkGrey]" type="sliced" width="256" />
+                <!-- <sprite depth="1" color="[lightGrey]" type="sliced" pos="3,-3" width="381" height="739" />
+					<sprite depth="1" color="[darkGrey]" type="sliced" width="304" height="697" pos="6,-5"/> -->
+                <texture depth="2" name="playerPreview" material="Materials/Transparent Colored" size="255,702" globalopacity="false" />
               </rect>
+            </panel>
+            <panel name="equipment" depth="10" pos="256, -89" width="70" height="699" disableautobackground="true">
+              <grid name="inventory" rows="10" cols="1" cell_width="70" cell_height="70" controller="EquipmentStackGrid" repeat_content="true">
+                <equipment_stack name="0" />
+              </grid>
             </panel>
           </rect>
 
           <!-- Custom detailed character window stats (food, water, etc). -->
           <rect name="rect_Default" visible="{statvisible}">
             <!-- FOOD -->
-            <rect width="280" height="20" pos="0,-44" controller="HUDStatBar" stat_type="Food">
+            <!-- <rect width="280" height="20" pos="0,-44" controller="HUDStatBar" stat_type="Food">
               <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
               <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
               <filledsprite depth="3" name="background" color="0,0,0,150" type="filled" fill="1" />
@@ -76,10 +109,10 @@
               <label depth="6" name="TextContent" pos="-6,-2" font_size="16" color="[white]" justify="right" pivot="topleft" text="{playermodifiedcurrentfood}/{playerfood}" height="20" controller="PlayerStatsWindow" />
               <filledsprite depth="8" name="background" color="0,0,0,255" width="280" fillcenter="false" type="filled" fill="1" />
               <filledsprite depth="3" name="background" color="0,0,0,255" width="280" fillcenter="false" type="filled" fill="1" />
-            </rect>
+            </rect> -->
 
             <!-- WATER -->
-            <rect width="280" height="20" pos="282,-44" controller="HUDStatBar" stat_type="Water">
+            <!-- <rect width="280" height="20" pos="282,-44" controller="HUDStatBar" stat_type="Water">
               <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
               <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
               <filledsprite depth="3" name="background" color="0,0,0,128" type="filled" fill="1" />
@@ -88,17 +121,17 @@
               <label depth="6" name="TextContent" pos="-6,-2" font_size="16" color="[white]" justify="right" pivot="topleft" text="{playermodifiedcurrentwater}/{playerwater}" height="20" controller="PlayerStatsWindow" />
               <filledsprite depth="8" name="background" color="0,0,0,255" width="280" fillcenter="false" type="filled" fill="1" />
               <filledsprite depth="3" name="background" color="0,0,0,255" width="280" fillcenter="false" type="filled" fill="1" />
-            </rect>
+            </rect> -->
           </rect>
         </rect>
       </rect>
 
       <!-- Hide the stock buff pop-out list. -->
       <rect name="hud" pos="9999,9999" side="left" controller="BuffPopoutList" pivot="BottomLeft">
-        <panel width="168" height="43" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0">
-          <sprite depth="3" pos="0,0" name="Background" sprite="ui_game_popup" height="43" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
-          <sprite depth="4" name="Icon" size="36,32" pos="-58,0" pivot="center" color="[transparent]" />
-          <label depth="6" name="TextContent" pos="0,0" font_size="28" color="[white]" justify="center" height="30" pivot="center" />
+        <panel width="168" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" style="press" sound="[recipe_click]" on_hover="true">
+          <sprite depth="3" pos="0,0" name="Background" sprite="ui_game_popup" height="46" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
+          <sprite depth="4" name="Icon" size="40,40" pos="-54,0" pivot="center" color="[transparent]" />
+          <label depth="6" name="TextContent" pos="0,0" font_size="28" color="[white]" justify="center" height="40" pivot="center" />
         </panel>
       </rect>
     </window>
