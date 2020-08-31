@@ -26,7 +26,7 @@
     </window>
 
     <!-- Toolbelt -->
-    <window name="KrampusMod_windowToolbelt" width="603" height="78" depth="5" anchor="CenterBottom" pos="-313, 92" backgroundcolor="[black]" controller="ToolbeltWindow" visible="{toolbeltvisible}" cursor_area="true" xp_fill_speed="2.5">
+    <window name="KrampusMod_windowToolbelt" width="603" height="78" depth="5" anchor="CenterBottom" pos="-313, 92" backgroundcolor="[black]" controller="ToolbeltWindow" visible="{toolbeltvisible}" cursor_area="true" xp_fill_speed="2.0">
       <rect>
         <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" on_press="true" />
         <grid depth="10" name="inventory" rows="1" cols="8" pos="3,-3" cell_width="75" cell_height="75" controller="Toolbelt" repeat_content="true">

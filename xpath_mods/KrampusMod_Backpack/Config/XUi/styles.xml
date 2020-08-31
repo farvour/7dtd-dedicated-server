@@ -10,7 +10,8 @@
       <style_entry name="holding_color" value="[green]" />
       <style_entry name="width" value="64" />
       <style_entry name="height" value="64" />
-      <style_entry name="hover_icon_grow" value="2" />
+      <style_entry name="hover_icon_grow" value="1.5" />
+      <style_entry name="hoverscale" value="1.25" />
       <style_entry name="on_press" value="true" />
       <style_entry name="sound_volume" value="0.75" />
       <style_entry name="pickup_sound" value="[pickup_click]" />
