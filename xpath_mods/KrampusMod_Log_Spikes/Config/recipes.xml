@@ -3,16 +3,16 @@
   <append xpath="/recipes">
     <!-- Add back the craftable recipe for log spikes. -->
     <recipe name="scrapIronLogSpike4" count="1">
-      <ingredient name="resourceScrapIron" count="50" />
+      <ingredient name="resourceScrapIron" count="100" />
     </recipe>
 
     <recipe name="woodLogSpike1" count="1">
-      <ingredient name="resourceWood" count="25" />
+      <ingredient name="resourceWood" count="50" />
     </recipe>
 
     <!-- Create a new concrete log spike that can be crafted in a cement mixer. -->
-    <recipe name="krampusModConcreteLogSpike1" count="1" craft_area="cementMixer" tags="cementMixerCrafting">
-      <ingredient name="resourceConcreteMix" count="15" />
+    <recipe name="krampusModConcreteSpike1" count="1" craft_area="cementMixer" tags="cementMixerCrafting">
+      <ingredient name="resourceConcreteMix" count="20" />
     </recipe>
   </append>
 </configs>

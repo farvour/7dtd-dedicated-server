@@ -2,25 +2,31 @@
 <configs>
   <!-- Recondition the bleeding damage given by the spikes at each stage. -->
   <set xpath="/blocks/block[@name='woodLogSpike1']/property[@name='Damage']/@value">15</set>
+  <set xpath="/blocks/block[@name='woodLogSpike1']/property[@name='Damage_received']/@value">10</set>
   <set xpath="/blocks/block[@name='rWoodLogSpike2']/property[@name='Damage']/@value">20</set>
+  <set xpath="/blocks/block[@name='rWoodLogSpike2']/property[@name='Damage_received']/@value">10</set>
   <set xpath="/blocks/block[@name='rWoodMetalLogSpike3']/property[@name='Damage']/@value">25</set>
+  <set xpath="/blocks/block[@name='rWoodMetalLogSpike3']/property[@name='Damage_received']/@value">10</set>
   <set xpath="/blocks/block[@name='scrapIronLogSpike4']/property[@name='Damage']/@value">30</set>
+  <set xpath="/blocks/block[@name='scrapIronLogSpike4']/property[@name='Damage_received']/@value">10</set>
   <set xpath="/blocks/block[@name='rScrapIronLogSpike5']/property[@name='Damage']/@value">35</set>
+  <set xpath="/blocks/block[@name='rScrapIronLogSpike5']/property[@name='Damage_received']/@value">10</set>
   <set xpath="/blocks/block[@name='steelLogSpike6']/property[@name='Damage']/@value">60</set>
+  <set xpath="/blocks/block[@name='steelLogSpike6']/property[@name='Damage_received']/@value">20</set>
 
   <!-- Define the new concrete log "spike" block. -->
   <append xpath="/blocks">
-    <block name="krampusModConcreteLogSpike1">
+    <block name="krampusModConcreteSpike1">
       <property name="Class" value="TrunkTip" />
       <property name="BlockTag" value="Spike" />
       <property name="Damage" value="40" />
-      <property name="Damage_received" value="20" />
+      <property name="Damage_received" value="30" />
       <property name="Material" value="Mconcrete" />
       <property name="Shape" value="New" />
       <property name="LightOpacity" value="6" />
       <property name="Path" value="solid" />
       <property name="Model" value="cone1m" />
-      <property name="CustomIcon" value="pouredConcreteBlock" />
+      <property name="CustomIcon" value="pouredConcretePyramid" />
       <property name="Texture" value="8" />
       <property name="UseGlobalUV" value="Local" />
       <property name="ImposterExchange" value="imposterPyramid" param1="10" />
@@ -30,7 +36,7 @@
         <property name="resourceConcreteMix" value="15" />
       </property>
       <property class="UpgradeBlock">
-        <property name="ToBlock" value="krampusModConcreteLogSpike2" />
+        <property name="ToBlock" value="krampusModConcreteSpike2" />
         <property name="Item" value="resourceConcreteMix" />
         <property name="ItemCount" value="15" />
         <property name="UpgradeHitCount" value="4" />
@@ -40,14 +46,14 @@
       <drop event="Destroy" count="0" />
       <drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1" />
       <property name="Group" value="Tools/Traps" />
-      <property name="DescriptionKey" value="krampusModConcreteLogSpike1Desc" />
+      <property name="DescriptionKey" value="krampusModConcreteSpike1Desc" />
       <property name="EconomicValue" value="75" />
       <property name="EconomicBundleSize" value="20" />
       <property name="FilterTags" value="fdecor,ftraps" />
       <property name="SortOrder1" value="70g0" />
     </block>
 
-    <block name="krampusModConcreteLogSpike2">
+    <block name="krampusModConcreteSpike2">
       <property name="Class" value="TrunkTip" />
       <property name="BlockTag" value="Spike" />
       <property name="Damage" value="55" />
@@ -57,7 +63,7 @@
       <property name="LightOpacity" value="6" />
       <property name="Path" value="solid" />
       <property name="Model" value="cone1m" />
-      <property name="CustomIcon" value="pouredConcreteBlock" />
+      <property name="CustomIcon" value="pouredConcretePyramid" />
       <property name="Texture" value="315,315,315,315,315,315" />
       <property name="UseGlobalUV" value="Local" />
       <property name="ImposterExchange" value="imposterPyramid" param1="10" />
