@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <!-- Reduce almost all demolition zombies from the feral horde stages! Will add back later some other way.. -->
+  <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieDemolition']" />
+  <append xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS')]">
+    <entity name="zombieDemolition" prob="0.01" />
+  </append>
+
+  <!-- Extra strippers. -->
+  <set xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieStripper']/@prob">0.4</set>
+
+  <!-- Reduce utility worker zombies in general population. -->
+  <set xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieUtilityWorker']/@prob">0.1</set>
+
+  <!-- Reduce fat tourists in general population. -->
+  <set xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieFatHawaiian']/@prob">0.2</set>
+
+  <!-- Less of these guys, let them spawn in sleeper cells -->
+  <!-- <remove xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieSteveCrawler']" /> -->
+
+  <!-- Add hazmat zombies to the general population. -->
+  <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+    <entity name="zombieMaleHazmat" prob="0.2" />
+  </append>
+
+  <!-- Add cop zombies to the general population. -->
+  <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+    <entity name="zombieFatCop" prob="0.05" />
+  </append>
+
+  <!-- Replace vultures with crawlers most of the time. -->
+  <remove xpath="/entitygroups/entitygroup[@name='VultureGroup']/entity[@name='animalZombieVulture']" />
+  <append xpath="/entitygroups/entitygroup[@name='VultureGroup']">
+    <entity name="invisibleAnimalEnemy" prob="50" />
+    <entity name="zombieSteveCrawler" prob="40" />
+    <entity name="animalZombieVulture" prob="10" />
+  </append>
+
+  <!-- Significantly reduce vultures in the desert, they suck. -->
+  <remove xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']/entity[@name='animalZombieVulture']" />
+  <remove xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']/entity[@name='animalSnake']" />
+  <append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']">
+    <entity name="animalSnake" prob="15" />
+    <entity name="animalZombieVulture" prob="5" />
+  </append>
+
+  <!-- Remove vultures from the wasteland. -->
+  <remove xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']/entity[@name='animalZombieVulture']" />
+  <remove xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']/entity[@name='animalZombieDog']" />
+  <remove xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']/entity[@name='animalSnake']" />
+  <append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
+    <entity name="animalSnake" prob="35" />
+    <entity name="animalZombieDog" prob="45" />
+  </append>
+  <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/entity[@name='animalZombieVulture']" />
+  <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/entity[@name='animalZombieVultureRadiated']" />
+  <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNightNoBears']/entity[@name='animalZombieVulture']" />
+  <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNightNoBears']/entity[@name='animalZombieVultureRadiated']" />
+  <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight2']/entity[@name='animalZombieVulture']" />
+  <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight2']/entity[@name='animalZombieVultureRadiated']" />
+
+  <!-- Make scouts a bit more fun. -->
+  <!-- <append xpath="/entitygroups/entitygroup[@name='ZombieScouts']">
+    <entity name="zombieWightFeral" prob="0.2"/>
+    <entity name="zombieFatCop" prob="0.1" />
+  </append> -->
+</configs>
