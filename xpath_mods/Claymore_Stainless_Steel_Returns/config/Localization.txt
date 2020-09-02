@@ -1,5 +1,0 @@
-Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
-resourceSteelPolish,items,Item,New,Reinforced Steel Upgrade,,,,
-resourceSteelPolishDesc,items,Item,New,This is used to further upgrade steel walls and increasing explosion resistence.,,,,
-stainlessSteelBlockVariantHelper,blocks,Variant,New,Reinforced Steel Block,,,,
-resourceSteelPolishSchematic,blocks,Block,New,Reinforced Steel Schematic,,,,,

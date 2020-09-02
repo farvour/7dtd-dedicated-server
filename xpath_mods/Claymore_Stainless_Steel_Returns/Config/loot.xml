@@ -1,4 +1,5 @@
-<Claymore>
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
   <append xpath="/lootcontainers/lootgroup[@name='schematicsModsRare']">
     <item name="resourceSteelPolishSchematic" />
   </append>
@@ -15,4 +16,4 @@
   <append xpath="/lootcontainers/lootgroup[@name='junk']">
     <item name="resourceSteelPolish" count="3,25" prob="0.05" />
   </append>
-</Claymore>
+</configs>

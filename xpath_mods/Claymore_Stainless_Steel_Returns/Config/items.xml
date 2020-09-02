@@ -1,4 +1,5 @@
-<Claymore>
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
   <append xpath="/items/item[@name='gunToolNailgun']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">,resourceSteelPolish</append>
   <append xpath="/items/item[@name='meleeToolClawHammer']/property[@class='Action1']/property[@name='Allowed_upgrade_items']/@value">,resourceSteelPolish</append>
 
@@ -23,4 +24,4 @@
 
   <set xpath="/items/item[@name='resourceSteelPolish']/property[@name='CreativeMode']/@value">Player</set>
   <remove xpath="/items/item[@name='resourceSteelPolish']/property[@name='DescriptionKey']" />
-</Claymore>
+</configs>

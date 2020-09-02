@@ -1,4 +1,5 @@
-<Claymore>
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
   <append xpath="/recipes">
     <recipe name="modDyeRed" count="1" craft_area="chemistryStation" tags="mods,chemStationCrafting">
       <property name="Group" value="Resources,Chemicals,CFChemicals" />
@@ -41,4 +42,4 @@
       <ingredient name="drinkJarEmpty" count="1" />
     </recipe>
   </append>
-</Claymore>
+</configs>

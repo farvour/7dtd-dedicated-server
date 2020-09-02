@@ -1,4 +1,5 @@
-<Claymore>
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
   <!-- This is just for handier creative builing -->
   <append xpath="/blocks">
     <block name="stainlessSteelBlockVariantHelper">
@@ -409,4 +410,4 @@
       <property name="UpgradeHitCount" value="4" />
     </property>
   </append>
-</Claymore>
+</configs>

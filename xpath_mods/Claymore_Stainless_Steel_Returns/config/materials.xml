@@ -1,3 +1,0 @@
-<Claymore>
-  <set xpath="/materials/material[@id='MstainlessSteel']/property[@name='explosionresistance']/@value">5.25</set>
-</Claymore>
