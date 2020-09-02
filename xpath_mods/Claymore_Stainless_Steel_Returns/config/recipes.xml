@@ -1,0 +1,9 @@
+<Claymore>
+  <append xpath="/recipes">
+    <recipe name="resourceSteelPolish" count="3" craft_time="15" tags="learnable,workbenchCrafting">
+      <ingredient name="resourceOil" count="5" />
+      <ingredient name="resourceCrushedSand" count="10" />
+      <ingredient name="resourceCoal" count="5" />
+    </recipe>
+  </append>
+</Claymore>

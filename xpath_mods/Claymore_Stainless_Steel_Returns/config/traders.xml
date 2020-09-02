@@ -1,0 +1,5 @@
+<Claymore>
+  <append xpath="/traders/trader_item_groups/trader_item_group[@name='constructionSupplies']">
+    <item name="resourceSteelPolish" count="15,75" prob="2" />
+  </append>
+</Claymore>
