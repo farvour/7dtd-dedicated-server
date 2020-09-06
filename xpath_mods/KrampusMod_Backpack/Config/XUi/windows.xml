@@ -26,7 +26,7 @@
         </rect>
 
         <!-- Money/dukes display. -->
-        <label depth="2" pos="472,-8" width="100" height="28" text="{currencyamount}" color="[mediumGrey]" justify="right" />
+        <label depth="2" pos="472,-8" width="100" height="28" text="{currencyamount}" color="[limeGreen]" justify="right" />
         <sprite depth="4" name="costIcon" sprite="ui_game_symbol_coin" size="24,24" pos="577,-10" color="[white]" foregroundlayer="true" />
       </panel>
 

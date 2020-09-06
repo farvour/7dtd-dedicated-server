@@ -6,49 +6,49 @@
   <append xpath="/windows">
     <!-- Left HUD - Temp, Stamina, Health, Food and Water -->
     <window name="KrampusMod_HUDLeftStatBars">
-      <rect name="hud" pos="10,136" rows="2" cols="1" width="140" side="right">
+      <rect name="hud" pos="10,196" rows="2" cols="1" width="140" side="right">
         <!-- Stealth bar. -->
-        <rect width="420" height="40" pos="0,0" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+        <rect width="150" height="30" pos="0,-32" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
           <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
           <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
           <filledsprite depth="3" name="background" color="0,0,0,150" type="filled" fill="1" />
           <filledsprite depth="4" name="BarContent" color="{stealthcolor}" type="filled" fill="0" />
-          <sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="8,-4" foregroundlayer="true" />
-          <label depth="6" name="TextContent" pos="-12,-4" font_size="28" color="[white]" justify="right" pivot="topleft" text="{statcurrent}" height="40" />
+          <sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="20,20" pos="4,-4" foregroundlayer="true" />
+          <label depth="6" name="TextContent" pos="-12,-4" font_size="20" color="[white]" justify="right" pivot="topleft" text="{statcurrent}" />
         </rect>
 
         <!-- Temperature bar. -->
-        <rect width="140" height="40" pos="422,0" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
+        <rect width="150" height="30" pos="0,0" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
           <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
           <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
-          <sprite depth="4" name="Icon" sprite="ui_game_symbol_temperature" size="32,32" pos="8,-4" foregroundlayer="true" />
-          <label depth="6" name="TextContent" pos="-12,-4" font_size="28" color="[white]" justify="right" pivot="topleft" text="{playercoretemp}" height="40" controller="PlayerStatsWindow" effect="outline" />
+          <sprite depth="4" name="Icon" sprite="ui_game_symbol_temperature" size="20,20" pos="4,-4" foregroundlayer="true" />
+          <label depth="6" name="TextContent" pos="-12,-4" font_size="20" color="[white]" justify="right" pivot="topleft" text="{playercoretemp}" controller="PlayerStatsWindow" effect="outline" />
         </rect>
 
         <!-- Stamina bar. -->
-        <rect width="280" height="40" pos="0,-42" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
+        <rect width="150" height="30" pos="0,-64" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
           <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
           <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
           <filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="{statmodifiedmax}" />
           <filledsprite depth="5" name="BarContent" color="0,54,255,128" type="filled" fill="0" />
-          <sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_agility" size="32,32" pos="8,-4" foregroundlayer="true" />
-          <label depth="7" name="TextContent" pos="-12,-4" font_size="28" color="[white]" justify="right" pivot="topleft" text="{statcurrentwithmax}" height="40" />
+          <sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_agility" size="20,20" pos="4,-4" foregroundlayer="true" />
+          <label depth="7" name="TextContent" pos="-12,-4" font_size="20" color="[white]" justify="right" pivot="topleft" text="{statcurrentwithmax}" />
           <sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false" />
-          <filledsprite depth="8" name="background" color="0,0,0,255" width="280" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
-          <filledsprite depth="3" name="background" color="0,0,0,255" width="280" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+          <filledsprite depth="8" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+          <filledsprite depth="3" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
         </rect>
 
         <!-- Health bar. -->
-        <rect width="280" height="40" pos="282,-42" controller="HUDStatBar" stat_type="Health" visible="{statvisible}">
+        <rect width="150" height="30" pos="0,-96" controller="HUDStatBar" stat_type="Health" visible="{statvisible}">
           <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
           <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
           <filledsprite depth="3" name="background" color="110,110,110,128" type="filled" fill="{statmodifiedmax}" />
           <filledsprite depth="5" name="BarContent" color="255,0,0,128" type="filled" fill="0" />
-          <sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="8,-4" foregroundlayer="true" />
-          <label depth="7" name="TextContent" pos="-12,-4" font_size="28" color="[white]" justify="right" pivot="topleft" text="{statcurrentwithmax}" height="40" />
+          <sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="20,20" pos="4,-4" foregroundlayer="true" />
+          <label depth="7" name="TextContent" pos="-12,-4" font_size="20" color="[white]" justify="right" pivot="topleft" text="{statcurrentwithmax}" />
           <sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false" />
-          <filledsprite depth="8" name="background" color="0,0,0,255" width="280" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
-          <filledsprite depth="3" name="background" color="0,0,0,255" width="280" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+          <filledsprite depth="8" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
+          <filledsprite depth="3" name="background" color="0,0,0,255" width="150" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
         </rect>
 
         <!-- Hide default panel. -->
@@ -100,28 +100,28 @@
           <!-- Custom detailed character window stats (food, water, etc). -->
           <rect name="rect_Default" visible="{statvisible}">
             <!-- FOOD -->
-            <rect width="280" height="40" pos="0,-84" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
+            <rect width="150" height="30" pos="0,-128" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
               <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
               <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
               <filledsprite depth="3" name="background" color="0,0,0,150" type="filled" fill="1" />
               <filledsprite depth="4" name="BarContent" color="0,128,0,150" type="filled" fill="0" globalopacity="false" />
               <!-- <sprite depth="4" color="0,128,0,150" type="filled" fill="{playerfoodfill}" controller="PlayerStatsWindow" /> -->
-              <sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="8,-4" foregroundlayer="true" />
+              <sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="20,20" pos="4,-4" foregroundlayer="true" />
               <!-- <label depth="6" name="TextContent" pos="-12,-4" font_size="28" color="[white]" justify="right" pivot="topleft" text="{playermodifiedcurrentfood}/{playerfoodmax}" height="40" controller="PlayerStatsWindow" /> -->
-              <label depth="6" name="TextContent" pos="-12,-4" font_size="28" color="[white]" justify="right" pivot="topleft" text="FOOD" height="40" />
+              <label depth="6" name="TextContent" pos="-12,-4" font_size="20" color="[white]" justify="right" pivot="topleft" text="FOOD" />
               <!-- <filledsprite depth="8" name="background" color="0,0,0,255" width="280" globalopacity="false" type="filled" fill="0" /> -->
               <!-- <filledsprite name="BarContent" depth="3" name="background" color="0,0,0,255" width="280" globalopacity="false" type="filled" fill="0" /> -->
             </rect>
 
             <!-- WATER -->
-            <rect width="280" height="40" pos="282,-84" controller="HUDStatBar" stat_type="Water">
+            <rect width="150" height="30" pos="0,-160" controller="HUDStatBar" stat_type="Water">
               <sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
               <sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
               <filledsprite depth="3" name="background" color="0,0,0,128" type="filled" fill="1" />
               <filledsprite depth="4" name="BarContent" color="0,51,51,255" type="filled" fill="0" globalopacity="false" />
-              <sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" pos="8,-4" foregroundlayer="true" />
+              <sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="20,20" pos="4,-4" foregroundlayer="true" />
               <!-- <label depth="6" name="TextContent" pos="-12,-4" font_size="28" color="[white]" justify="right" pivot="topleft" text="{playermodifiedcurrentwater}/{playerwatermax}" height="40" controller="PlayerStatsWindow" /> -->
-              <label depth="6" name="TextContent" pos="-12,-4" font_size="28" color="[white]" justify="right" pivot="topleft" text="WATER" height="40" />
+              <label depth="6" name="TextContent" pos="-12,-4" font_size="20" color="[white]" justify="right" pivot="topleft" text="WATER" />
               <!-- <filledsprite depth="8" name="background" color="0,0,0,255" width="280" globalopacity="false" type="filled" fill="0" /> -->
               <!-- <filledsprite depth="3" name="background" color="0,0,0,255" width="280" fillcenter="false" type="filled" fill="1" /> -->
             </rect>
@@ -130,7 +130,7 @@
       </rect>
 
       <!-- Hide the stock buff pop-out list. -->
-      <rect name="hud" pos="90,190" side="left" controller="BuffPopoutList" pivot="BottomLeft">
+      <rect name="hud" pos="90,226" side="left" controller="BuffPopoutList" pivot="BottomLeft">
         <panel width="286" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" style="press" sound="[recipe_click]" on_hover="true">
           <sprite depth="3" pos="0,0" name="Background" sprite="ui_game_popup" height="46" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
           <sprite depth="4" name="Icon" size="40,40" pos="-54,0" pivot="center" color="[transparent]" />
@@ -146,7 +146,7 @@
       <button name="pageUp" size="1,1" pos="9999,9999" />
 
       <rect name="buffs" controller="ActiveBuffList">
-              
+
         <panel height="32" controller="ActiveBuffEntry" width="280" disableautobackground="true">
           <sprite depth="0" name="background" color="[transparent]" />
           <sprite depth="2" name="Icon" sprite="{bufficon|once}" color="{buffcolor}" style="icon32px" width="28" height="28" pos="2,-1" />
