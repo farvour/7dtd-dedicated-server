@@ -67,7 +67,8 @@
   <!-- this overrides where user data for the game is stored -->
 
   <!-- Other technical settings -->
-  <property name="EACEnabled" value="true"/>
+  <property name="EACEnabled" value="false"/>
+
   <!-- Enables/Disables EasyAntiCheat -->
   <property name="HideCommandExecutionLog" value="0"/>
   <!-- Hide logging of command execution. 0 = show everything, 1 = hide only from Telnet/ControlPanel, 2 = also hide from remote game clients, 3 = hide everything -->
@@ -79,7 +80,7 @@
   <!-- GAMEPLAY -->
 
   <!-- World -->
-  <property name="GameWorld" value="Navezgane"/>
+  <property name="GameWorld" value="Beer"/>
   <!-- "RWG" (see WorldGenSeed and WorldGenSize options below) or any already existing world name in the Worlds folder (currently shipping with e.g. "Navezgane", "PREGEN01", ...) -->
   <property name="WorldGenSeed" value="Krampus0"/>
   <!-- If RWG this is the seed for the generation of the new world. If a world with the resulting name already exists it will simply load it -->
@@ -137,11 +138,11 @@
   <!-- 0 = Normal, 1 = Feral -->
   <property name="ZombieMove" value="0" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
-  <property name="ZombieMoveNight" value="2" />
+  <property name="ZombieMoveNight" value="1" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
   <property name="ZombieFeralMove" value="3" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
-  <property name="ZombieBMMove" value="4" />
+  <property name="ZombieBMMove" value="3" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
   <property name="BloodMoonFrequency" value="7" />
   <!-- What frequency (in days) should a blood moon take place. Set to "0" for no blood moons -->
@@ -163,7 +164,7 @@
   <!-- Sets if a marker is added to map/compass for air drops. -->
 
   <!-- Multiplayer -->
-  <property name="PartySharedKillRange" value="500"/>
+  <property name="PartySharedKillRange" value="100"/>
   <!-- The distance you must be within to receive party shared kill xp and quest party kill objective credit. -->
   <property name="PlayerKillingMode" value="0" />
   <!-- Player Killing Settings (0 = No Killing, 1 = Kill Allies Only, 2 = Kill Strangers Only, 3 = Kill Everyone) -->
@@ -171,9 +172,9 @@
   <!-- Land claim options -->
   <property name="LandClaimCount" value="4"/>
   <!-- Maximum allowed land claims per player. -->
-  <property name="LandClaimSize" value="80"/>
+  <property name="LandClaimSize" value="60"/>
   <!-- Size in blocks that is protected by a keystone -->
-  <property name="LandClaimDeadZone" value="200"/>
+  <property name="LandClaimDeadZone" value="100"/>
   <!-- Keystones must be this many blocks apart (unless you are friends with the other player) -->
   <property name="LandClaimExpiryTime" value="15"/>
   <!-- The number of days a player can be offline before their claims expire and are no longer protected -->

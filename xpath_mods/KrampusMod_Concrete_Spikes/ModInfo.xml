@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <ModInfo>
+    <Name value="KrampusMod_Concrete_Spikes" />
+    <Description value="New concrete spikes that be created in the cement mixer, update to reinforced and steel." />
+    <Author value="KrazyKrampus" />
+    <Version value="1.0" />
+    <Website value="" />
+  </ModInfo>
+</xml>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <append xpath="/recipes">
+    <!-- Add back the craftable recipe for log spikes. -->
+    <recipe name="scrapIronLogSpike4" count="1">
+      <ingredient name="resourceScrapIron" count="100" />
+    </recipe>
+
+    <recipe name="woodLogSpike1" count="1">
+      <ingredient name="resourceWood" count="50" />
+    </recipe>
+  </append>
+</configs>

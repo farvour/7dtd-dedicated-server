@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <!-- This is just for handier creative builing -->
+  <append xpath="/blocks">
+    <block name="stainlessSteelBlockVariantHelper">
+      <property name="Extends" value="stainlessSteelMaster" />
+      <property name="CustomIcon" value="stainlessSteelMaster" />
+      <property name="CreativeMode" value="Player" />
+      <property name="DescriptionKey" value="blockVariantHelperGroupDesc" />
+      <property name="ItemTypeIcon" value="all_blocks" />
+      <property name="SelectAlternates" value="true" />
+      <property name="PlaceAltBlockValue" value="stainlessSteelRamp,stainlessSteelWedge,stainlessSteelWedgeTip,stainlessSteelHalf,stainlessSteelQuarter,stainlessSteelEighth,stainlessSteelPlate,stainlessSteelWedgeIncline,stainlessSteelWedgeTipCNRFullTop,stainlessSteelCTRPlate,stainlessSteelCNRFull,stainlessSteelCNRRamp,stainlessSteelCNRInside,stainlessSteelSupport,stainlessSteelPyramid,stainlessSteelPillar100,stainlessSteelPillar50,stainlessSteelStairs25,stainlessSteelPole,stainlessSteelWedgeTipCNRFullBottom,stainlessSteelWedgeCNRInsideBottom,stainlessSteelWedgeCNRInsideTop,stainlessSteelStairsFilledRailingLeft,stainlessSteelStairsFilledRailingRight,stainlessSteelArrowSlitHalf,stainlessSteelGableInvertedSteep,stainlessSteelCNRRampFiller,stainlessSteelStairs25CornerCNR,stainlessSteelArch,stainlessSteelCTREighth,stainlessSteelWedgeStairs,stainlessSteelWedgeCNRInsideSteepTop,stainlessSteelQuarterCNR,stainlessSteelWedgeTipStairs,stainlessSteelWedgeCNRSteepTop,stainlessSteelQuarterTeeSCtr,stainlessSteelWedgeCNRSteepBase,stainlessSteelQuarterSCtr,stainlessSteelPillar100Cap,stainlessSteelQuarterCNR3Way,stainlessSteelWedgeCNRInsideSteepBase,stainlessSteelCTRpole,stainlessSteelGableQuarter,stainlessSteelGableInvertedQuarter,stainlessSteelGableInvertedHalf,stainlessSteelBlock,stainlessSteelCNRRoundTop,stainlessSteelCNRRound,stainlessSteelPlateOffset" />
+      <property name="Group" value="Basics,Building,advBuilding" />
+      <property name="PickupJournalEntry" value="shapeMenuTip" />
+    </block>
+  </append>
+  <!-- End of handier creative building -->
+
+  <!-- Not working anymore like the normal way. The Pimps again changed something...
+<append xpath="/blocks/block[@name='steelMaster']">
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="stainlessSteelMaster"/>
+		<property name="Item" value="resourceSteelPolish"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+</append>-->
+
+  <append xpath="/blocks/block[@name='steelRamp']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelRamp" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedge']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedge" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedgeTip']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedgeTip" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelHalf']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelHalf" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelQuarter']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelQuarter" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelEighth']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelEighth" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelPlate']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelPlate" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedgeIncline']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedgeIncline" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedgeTipCNRFullTop']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedgeTipCNRFullTop" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelCTRPlate']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelCTRPlate" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelCNRFull']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelCNRFull" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelCNRRamp']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelCNRRamp" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelCNRInside']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelCNRInside" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelSupport']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelSupport" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelPyramid']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelPyramid" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelPillar100']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelPillar100" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelPillar50']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelPillar50" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelStairs25']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelStairs25" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelPole']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelPole" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedgeTipCNRFullBottom']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedgeTipCNRFullBottom" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedgeCNRInsideBottom']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedgeCNRInsideBottom" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedgeCNRInsideTop']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedgeCNRInsideTop" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelStairsFilledRailingLeft']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelStairsFilledRailingLeft" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelStairsFilledRailingRight']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelStairsFilledRailingRight" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelArrowSlitHalf']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelArrowSlitHalf" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelGableInvertedSteep']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelGableInvertedSteep" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelCNRRampFiller']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelCNRRampFiller" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelStairs25CornerCNR']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelStairs25CornerCNR" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelArch']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelArch" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedgeStairs']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedgeStairs" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedgeCNRInsideSteepTop']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedgeCNRInsideSteepTop" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelQuarterCNR']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelQuarterCNR" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedgeTipStairs']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedgeTipStairs" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedgeCNRSteepTop']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedgeCNRSteepTop" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelQuarterTeeSCtr']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelQuarterTeeSCtr" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedgeCNRSteepBase']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedgeCNRSteepBase" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelQuarterSCtr']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelQuarterSCtr" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelPillar100Cap']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelPillar100Cap" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelQuarterCNR3Way']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelQuarterCNR3Way" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelWedgeCNRInsideSteepBase']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelWedgeCNRInsideSteepBase" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelCTRpole']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelCTRpole" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelGableQuarter']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelGableQuarter" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelGableInvertedQuarter']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelGableInvertedQuarter" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelGableInvertedHalf']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelGableInvertedHalf" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelBlock']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelBlock" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelCNRRoundTop']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelCNRRoundTop" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelCNRRound']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelCNRRound" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+  <append xpath="/blocks/block[@name='steelPlateOffset']">
+    <property class="UpgradeBlock">
+      <property name="ToBlock" value="stainlessSteelPlateOffset" />
+      <property name="Item" value="resourceSteelPolish" />
+      <property name="ItemCount" value="10" />
+      <property name="UpgradeHitCount" value="4" />
+    </property>
+  </append>
+</configs>

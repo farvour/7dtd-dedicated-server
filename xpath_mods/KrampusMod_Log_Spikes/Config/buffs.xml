@@ -21,7 +21,6 @@
         <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="bleedAmount" operation="set" value="@bleedCounter" />
         <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="bleedAmount" operation="set" value="@bleedCounter" />
 
-        <passive_effect name="HealthMaxModifierOT" operation="base_subtract" value="@bleedAmount" />
         <passive_effect name="HealthChangeOT" operation="base_subtract" value="@bleedAmount" />
 
         <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_bleeding" play_in_head="true" />
