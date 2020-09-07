@@ -1,0 +1,8 @@
+<Claymore>
+  <set xpath="/traders/trader_info[@id='3']/@reset_interval">1</set>
+  <setattribute xpath="/traders/trader_info[@id='3']" name="full_reset">true</setattribute>
+  <set xpath="/traders/trader_info[@id='3']/@player_owned">false</set>
+  <set xpath="/traders/trader_info[@id='3']/@allow_sell">true</set>
+  <removeattribute xpath="/traders/trader_info[@id='3']/@override_buy_markup" />
+  <removeattribute xpath="/traders/trader_info[@id='3']/@override_sell_markup" />
+</Claymore>
