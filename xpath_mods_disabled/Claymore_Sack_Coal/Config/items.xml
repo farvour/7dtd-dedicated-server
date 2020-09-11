@@ -1,0 +1,41 @@
+<Claymore>
+  <append xpath="/items">
+    <item name="resourceSackCoalSmall">
+      <property name="CustomIcon" value="resourceSackCoalSmall" />
+      <property name="HoldType" value="45" />
+      <property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
+      <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
+      <property name="Material" value="MresourceWood" />
+      <property name="Weight" value="5" />
+      <property name="FuelValue" value="600" />
+      <property name="EconomicValue" value="30" />
+      <property name="EconomicBundleSize" value="1" />
+      <property name="Group" value="Resources" />
+    </item>
+    <item name="resourceSackCoalMedium">
+      <property name="CustomIcon" value="resourceSackCoalMedium" />
+      <property name="HoldType" value="45" />
+      <property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
+      <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
+      <property name="Material" value="MresourceWood" />
+      <property name="Weight" value="15" />
+      <property name="FuelValue" value="1800" />
+      <property name="EconomicValue" value="150" />
+      <property name="EconomicBundleSize" value="1" />
+      <property name="Group" value="Resources" />
+    </item>
+    <item name="resourceSackCoalLarge">
+      <property name="CustomIcon" value="resourceSackCoalLarge" />
+      <property name="HoldType" value="45" />
+      <property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
+      <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
+      <property name="Material" value="MresourceWood" />
+      <property name="Weight" value="45" />
+      <property name="FuelValue" value="3600" />
+      <property name="EconomicValue" value="300" />
+      <property name="EconomicBundleSize" value="1" />
+      <property name="Group" value="Resources" />
+    </item>
+  </append>
+  <set xpath="/items/item[@name='resourceCoal']/property[@name='FuelValue']/@value">120</set>
+</Claymore>

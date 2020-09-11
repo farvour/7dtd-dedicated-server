@@ -1,0 +1,13 @@
+<Claymore>
+  <append xpath="/recipes">
+    <recipe name="resourceSackCoalSmall" count="1" craft_area="workbench" tags="workbenchCrafting" craft_time="1" craft_exp_gain="0" always_unlocked="true" use_ingredient_modifier="false">
+      <ingredient name="resourceCoal" count="10" />
+    </recipe>
+    <recipe name="resourceSackCoalMedium" count="1" craft_area="workbench" tags="workbenchCrafting" craft_time="1" craft_exp_gain="0" always_unlocked="true" use_ingredient_modifier="false">
+      <ingredient name="resourceCoal" count="30" />
+    </recipe>
+    <recipe name="resourceSackCoalLarge" count="1" craft_area="workbench" tags="workbenchCrafting" craft_time="1" craft_exp_gain="0" always_unlocked="true" use_ingredient_modifier="false">
+      <ingredient name="resourceCoal" count="60" />
+    </recipe>
+  </append>
+</Claymore>
