@@ -22,32 +22,32 @@
   <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle9mm') and contains(@name, 'BulletAP')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
 
   <!-- MAGNUM -->
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo44Magnum') and contains(@name, 'BulletBall')]/@craft_time">300</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo44Magnum') and contains(@name, 'BulletBall')]/ingredient[@name='resourceBulletTip']/@count">800</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo44Magnum') and contains(@name, 'BulletBall')]/ingredient[@name='resourceGunPowder']/@count">1600</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo44Magnum') and contains(@name, 'BulletBall')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo44Magnum') and contains(@name, 'BulletHP')]/@craft_time">600</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo44Magnum') and contains(@name, 'BulletHP')]/ingredient[@name='resourceBulletTip']/@count">1600</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo44Magnum') and contains(@name, 'BulletHP')]/ingredient[@name='resourceGunPowder']/@count">1600</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo44Magnum') and contains(@name, 'BulletHP')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo44Magnum') and contains(@name, 'BulletAP')]/@craft_time">600</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo44Magnum') and contains(@name, 'BulletAP')]/ingredient[@name='resourceBulletTip']/@count">800</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo44Magnum') and contains(@name, 'BulletAP')]/ingredient[@name='resourceGunPowder']/@count">2400</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo44Magnum') and contains(@name, 'BulletAP')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle44Magnum') and contains(@name, 'BulletBall')]/@craft_time">300</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle44Magnum') and contains(@name, 'BulletBall')]/ingredient[@name='resourceBulletTip']/@count">800</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle44Magnum') and contains(@name, 'BulletBall')]/ingredient[@name='resourceGunPowder']/@count">1600</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle44Magnum') and contains(@name, 'BulletBall')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle44Magnum') and contains(@name, 'BulletHP')]/@craft_time">600</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle44Magnum') and contains(@name, 'BulletHP')]/ingredient[@name='resourceBulletTip']/@count">1600</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle44Magnum') and contains(@name, 'BulletHP')]/ingredient[@name='resourceGunPowder']/@count">1600</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle44Magnum') and contains(@name, 'BulletHP')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle44Magnum') and contains(@name, 'BulletAP')]/@craft_time">600</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle44Magnum') and contains(@name, 'BulletAP')]/ingredient[@name='resourceBulletTip']/@count">800</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle44Magnum') and contains(@name, 'BulletAP')]/ingredient[@name='resourceGunPowder']/@count">2400</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle44Magnum') and contains(@name, 'BulletAP')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
 
   <!-- 7.62 -->
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo762mm') and contains(@name, 'BulletBall')]/@craft_time">300</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo762mm') and contains(@name, 'BulletBall')]/ingredient[@name='resourceBulletTip']/@count">800</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo762mm') and contains(@name, 'BulletBall')]/ingredient[@name='resourceGunPowder']/@count">2400</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo762mm') and contains(@name, 'BulletBall')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo762mm') and contains(@name, 'BulletHP')]/@craft_time">600</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo762mm') and contains(@name, 'BulletHP')]/ingredient[@name='resourceBulletTip']/@count">1600</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo762mm') and contains(@name, 'BulletHP')]/ingredient[@name='resourceGunPowder']/@count">2400</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo762mm') and contains(@name, 'BulletHP')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo762mm') and contains(@name, 'BulletAP')]/@craft_time">600</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo762mm') and contains(@name, 'BulletAP')]/ingredient[@name='resourceBulletTip']/@count">800</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo762mm') and contains(@name, 'BulletAP')]/ingredient[@name='resourceGunPowder']/@count">4000</set>
-  <set xpath="/recipes/recipe[starts-with(@name, 'ammo762mm') and contains(@name, 'BulletAP')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle762mm') and contains(@name, 'BulletBall')]/@craft_time">300</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle762mm') and contains(@name, 'BulletBall')]/ingredient[@name='resourceBulletTip']/@count">800</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle762mm') and contains(@name, 'BulletBall')]/ingredient[@name='resourceGunPowder']/@count">2400</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle762mm') and contains(@name, 'BulletBall')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle762mm') and contains(@name, 'BulletHP')]/@craft_time">600</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle762mm') and contains(@name, 'BulletHP')]/ingredient[@name='resourceBulletTip']/@count">1600</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle762mm') and contains(@name, 'BulletHP')]/ingredient[@name='resourceGunPowder']/@count">2400</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle762mm') and contains(@name, 'BulletHP')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle762mm') and contains(@name, 'BulletAP')]/@craft_time">600</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle762mm') and contains(@name, 'BulletAP')]/ingredient[@name='resourceBulletTip']/@count">800</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle762mm') and contains(@name, 'BulletAP')]/ingredient[@name='resourceGunPowder']/@count">4000</set>
+  <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundle762mm') and contains(@name, 'BulletAP')]/ingredient[@name='resourceBulletCasing']/@count">800</set>
 
   <!-- Shotgun Shells -->
   <set xpath="/recipes/recipe[starts-with(@name, 'ammoBundleShotgun') and contains(@name, 'Shell')]/@craft_time">300</set>
