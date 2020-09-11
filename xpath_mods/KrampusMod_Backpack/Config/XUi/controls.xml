@@ -13,7 +13,7 @@
         <sprite depth="8" name="lockTypeIcon" width="20" height="20" sprite="" pos="2,-2" foregroundlayer="true" />
         <sprite depth="8" name="itemtypeicon" width="20" height="20" sprite="ui_game_symbol_{itemtypeicon}" pos="2,-2" foregroundlayer="true" visible="{hasitemtypeicon}" color="{itemtypeicontint}" />
 
-        <sprite depth="3" name="durabilityBackground" width="52" height="10" sprite="menu_empty2px" color="[black_half_alpha]" type="sliced" pos="3, -46" foregroundlayer="true" />
+        <sprite depth="3" name="durabilityBackground" width="52" height="10" sprite="menu_empty3px" color="[darkGrey]" type="sliced" pos="3, -46" foregroundlayer="true" />
         <filledsprite depth="4" name="durability" width="52" height="10" sprite="menu_empty2px" color="[transparent]" type="filled" pos="3, -46" foregroundlayer="true" />
 
         <sprite depth="5" name="disabledOverlay" width="57" height="57" color="[darkGrey_half_alpha]" pos="1,-1" type="sliced" visible="false" />
