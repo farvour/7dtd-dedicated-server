@@ -10,7 +10,7 @@
   <!-- Ammo stacks. -->
   <set xpath="/items/item[starts-with(@name, 'ammo') and not (starts-with(@name, 'ammoBundle'))]/property[@name='Stacknumber']/@value">10000</set>
   <set xpath="items/item[starts-with(@name, 'ammoBundle')]/property[@name='Stacknumber']/@value">50</set>
-  <set xpath="/items/item[starts-with(@name, 'ammoBundle')]/property[@class='Action0']/property[@name='Create_item_count']/@value">10000</set>
+  <set xpath="/items/item[starts-with(@name, 'ammoBundle')]/property[@class='Action0']/property[@name='Create_item_count']/@value">1000</set>
   <!--
   <set xpath="/items/item[@name='ammoShotgunShell']/property[@name='Stacknumber']/@value">500</set>
   <set xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Stacknumber']/@value">500</set>
