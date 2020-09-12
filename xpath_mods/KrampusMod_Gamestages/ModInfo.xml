@@ -4,7 +4,7 @@
     <Name value="KrampusMod_Gamestages" />
     <Description value="Delays the curve a bit on gamestage progression to allow for more time before things get really difficult. Currently it is only adjusting difficulty and bonus multipliers in A19 and not modifying the actual Gamestages." />
     <Author value="KrazyKrampus" />
-    <Version value="3.0" />
+    <Version value="3.1" />
     <Website value="" />
   </ModInfo>
 </xml>
