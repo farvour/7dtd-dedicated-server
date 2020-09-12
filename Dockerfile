@@ -53,7 +53,7 @@ COPY --chown=z:root config/serverconfig.xml ${SERVER_INSTALL_DIR}/
 
 # Mods and mods related tasks.
 # COPY --chown=z:root server_fixes_v19_22_32/ ${SERVER_INSTALL_DIR}/Mods/
-COPY --chown=z:root mods/BCManager/ ${SERVER_INSTALL_DIR}/Mods/
+COPY --chown=z:root mods/BCManager/ ${SERVER_INSTALL_DIR}/Mods/BCManager/
 COPY --chown=z:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
 
 # Default web UI control panel port.
