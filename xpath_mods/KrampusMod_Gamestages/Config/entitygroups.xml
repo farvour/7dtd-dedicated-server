@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
+  <!-- Reduce almost all demolition zombies from the feral horde stages! Will add back later some other way.. -->
+  <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieDemolition']" />
+  <append xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS')]">
+    <entity name="zombieDemolition" prob="0.01" />
+  </append>
+
   <!-- Replace gamestage entitygroups for modified GS. -->
   <!--
   <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS')]" />
