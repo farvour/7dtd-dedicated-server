@@ -4,8 +4,8 @@
   <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='base_set']/@value">300</set>
 
   <!-- Nerf the block damage. -->
-  <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.BlockDamage'/@value">2000</set>
-  <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.DamageBonus.earth'/@value">.05</set>
+  <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.BlockDamage']/@value">2000</set>
+  <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.DamageBonus.earth']/@value">.05</set>
 
   <!-- Slow down this zombie, becauase all of its heavy armor shouldn't allow it to move so fast anyway. -->
   <append xpath="/entity_classes/entity_class[@name='zombieDemolition']">
