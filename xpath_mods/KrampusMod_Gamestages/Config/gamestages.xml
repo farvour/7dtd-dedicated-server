@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
   <!-- Adjust multiplier/bonuses. -->
-  <set xpath="/gamestages/config/@daysAliveChangeWhenKilled">3</set>
+  <set xpath="/gamestages/config/@daysAliveChangeWhenKilled">7</set>
+  <!--
   <set xpath="/gamestages/config/@adventurerGameDifficultyBonus">1.1</set>
   <set xpath="/gamestages/config/@nomadGameDifficultyBonus">1.3</set>
   <set xpath="/gamestages/config/@warriorGameDifficultyBonus">1.5</set>
   <set xpath="/gamestages/config/@survivalistGameDifficultyBonus">1.9</set>
   <set xpath="/gamestages/config/@insaneGameDifficultyBonus">2.2</set>
-  <set xpath="/gamestages/config/@diminishingReturns">0.25</set>
+  -->
+  <set xpath="/gamestages/config/@difficultyBonus">0.9</set>
+  <set xpath="/gamestages/config/@startingWeight">0.9</set>
+  <set xpath="/gamestages/config/@diminishingReturns">0.3</set>
 
   <!-- Adjust sleeper volume gamestage with custom generation. -->
+  <!--
   <remove xpath="/gamestages/spawner[@name='SleeperGSList']" />
   <append xpath="/gamestages">
     <spawner name="SleeperGSList">
@@ -981,9 +986,10 @@
       </gamestage>
     </spawner>
   </append>
+  -->
 
   <!-- Adjust scout gamestage with custom generation. -->
-
+  <!--
   <remove xpath="/gamestages/spawner[@name='ScoutGSList']" />
   <append xpath="/gamestages">
     <spawner name="ScoutGSList">
@@ -1953,14 +1959,12 @@
       <gamestage stage="3243">
         <spawn group="scoutHordeStageGS3243" num="48" maxAlive="256" duration="1" />
       </gamestage>
-
-
-
-
     </spawner>
   </append>
+  -->
 
   <!-- Adjust blood moon horde gamestage with custom generation. -->
+  <!--
   <remove xpath="/gamestages/spawner[@name='BloodMoonHorde']" />
   <append xpath="/gamestages">
     <spawner name="BloodMoonHorde">
@@ -3555,11 +3559,14 @@
       </gamestage>
     </spawner>
   </append>
+  -->
 
   <!-- Wolves! -->
+  <!--
   <append xpath='/gamestages/spawner[@name="BloodMoonHorde"]/gamestage[@stage &gt; 200]'>
     <spawn group="WolfPack" num="10" maxAlive="2" interval="45" />
   </append>
+  -->
 
   <!-- Trickle zombies all night long. -->
   <!-- <append xpath='/gamestages/spawner[@name="BloodMoonHorde"]/gamestage[@stage &gt; 200]'>

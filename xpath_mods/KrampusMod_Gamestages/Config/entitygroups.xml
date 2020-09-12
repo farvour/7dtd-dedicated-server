@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
   <!-- Replace gamestage entitygroups for modified GS. -->
+  <!--
   <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS')]" />
   <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'scoutHordeStageGS')]" />
   <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS')]" />
+  -->
 
   <!-- Sleepers. -->
+  <!--
   <append xpath="/entitygroups">
     <entitygroup name="sleeperHordeStageGS1">
       <entity name="zombieSkateboarder" />
@@ -5135,8 +5138,10 @@
       <entity name="zombieMaleHazmat" prob="1" />
     </entitygroup>
   </append>
+  -->
 
   <!-- Scouts. -->
+  <!--
   <append xpath="/entitygroups">
     <entitygroup name="scoutHordeStageGS1">
       <entity name="zombieArlene" />
@@ -9003,8 +9008,10 @@
       <entity name="zombieFatCopRadiated" prob="0.5" />
     </entitygroup>
   </append>
+  -->
 
   <!-- Feral / Blood Moon. -->
+  <!--
   <append xpath="/entitygroups">
     <entitygroup name="feralHordeStageGS1">
       <entity name="zombieNurse" />
@@ -14352,4 +14359,5 @@
       <entity name="zombieMoe" />
     </entitygroup>
   </append>
+  -->
 </configs>
