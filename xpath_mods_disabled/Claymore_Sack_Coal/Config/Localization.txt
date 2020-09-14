@@ -1,7 +1,0 @@
-Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
-resourceSackCoalSmall,items,Item,KgNone,Sack Coal Small,,,,,
-resourceSackCoalSmallDesc,items,Item,KgNone,"One coal at a time? How about to throw a whole sack in the fire? Yeah! Burn, baby, burn!\n10 Minutes of burntime.",,,,,
-resourceSackCoalMedium,items,Item,KgNone,Sack Coal Medium,,,,,
-resourceSackCoalMediumDesc,items,Item,KgNone,"One coal at a time? How about to throw a whole sack in the fire? Yeah! Burn, baby, burn!\n30 Minutes of burntime.",,,,,
-resourceSackCoalLarge,items,Item,KgNone,Sack Coal Large,,,,,
-resourceSackCoalLargeDesc,items,Item,KgNone,"One coal at a time? How about to throw a whole sack in the fire? Yeah! Burn, baby, burn!\n60 Minutes of burntime.",,,,,
