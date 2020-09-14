@@ -1,3 +1,16 @@
+FROM alpine/git:v2.26.2 AS git_modlet_cloner
+LABEL stage=intermediate
+
+RUN echo "Clone all Modlets into sourced location for final image COPY command..." && \
+    cd /tmp && \
+    mkdir output && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-concrete-spikes.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-easier-demolishers.git && \
+    cp -rpv krampusmod-concrete-spikes/KrampusMod_Concrete_Spikes output/ && \
+    cp -rpv krampusmod-easier-demolishers/KrampusMod_Easier_Demolishers output/ && \
+    ls -la /tmp && \
+    echo "Done!"
+
 FROM ubuntu:bionic
 LABEL maintainer="Thomas Farvour <tom@farvour.com>"
 
@@ -39,6 +52,7 @@ RUN echo "Downloading and installing steamcmd..." && \
     tar -zxvf steamcmd_linux.tar.gz
 
 # This is most likely going to be the largest layer created; all the game files for the dedicated server.
+# NOTE: It is a good idea to do as much as possible _beyond_ this point to avoid Docker having to re-create it.
 RUN echo "Downloading and installing 7dtd server with steamcmd..." && \
     ${SERVER_HOME}/steamcmd.sh +runscript steamcmd-7dtd.script
 
@@ -57,14 +71,7 @@ COPY --chown=z:root mods/BCManager/ ${SERVER_INSTALL_DIR}/Mods/BCManager/
 COPY --chown=z:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
 
 # Modlets from repositories.
-WORKDIR /tmp
-RUN echo "Installing KrampusMod_Concrete_Spikes modlet..." && \
-    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-concrete-spikes.git && \
-    cp -rpv KrampusMod_Concrete_Spikes ${SERVER_INSTALL_DIR}/Mods/
-RUN echo "Installing KrampusMod_Easier_Demolishers modlet..." && \
-    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-easier-demolishers.git && \
-    cp -rpv KrampusMod_Easier_Demolishers ${SERVER_INSTALL_DIR}/Mods/
-WORKDIR ${SERVER_HOME}
+COPY --from=git_modlet_cloner --chown=z:root /tmp/output/ ${SERVER_INSTALL_DIR}/Mods/
 
 # Default web UI control panel port.
 EXPOSE 8080/tcp
