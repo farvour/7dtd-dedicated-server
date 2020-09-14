@@ -4,8 +4,10 @@ LABEL stage=intermediate
 RUN echo "Clone all Modlets into sourced location for final image COPY command..." && \
     cd /tmp && \
     mkdir output && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-10k-stacks.git && \
     git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-concrete-spikes.git && \
     git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-easier-demolishers.git && \
+    cp -rpv krampusmod-10k-stacks/KrampusMod_10K_Stacks output/ && \
     cp -rpv krampusmod-concrete-spikes/KrampusMod_Concrete_Spikes output/ && \
     cp -rpv krampusmod-easier-demolishers/KrampusMod_Easier_Demolishers output/ && \
     ls -la /tmp && \
