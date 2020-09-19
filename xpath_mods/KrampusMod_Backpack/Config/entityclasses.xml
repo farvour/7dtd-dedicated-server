@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configs>
-  <!-- Allow player backpacks and loot containers to linger a bit longer. -->
-  <set xpath="/entity_classes/entity_class[@name='Backpack']/property[@name='TimeStayAfterDeath']/@value">7200</set>  <!-- 2 hours. -->
-  <set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='TimeStayAfterDeath']/@value">300</set>  <!-- 5 minutes. -->
-  <set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular']/property[@name='TimeStayAfterDeath']/@value">3600</set>  <!-- 60 minutes. -->
-</configs>
