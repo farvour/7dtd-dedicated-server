@@ -9,9 +9,17 @@ RUN echo "Clone all Modlets into sourced location for final image COPY command..
     git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-concrete-spikes.git && \
     git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-easier-demolishers.git && \
     git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-faster-smelting.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-lefthud.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-log-spikes.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-steel-bars.git && \
     cp -rpv krampusmod-10k-stacks/KrampusMod_10K_Stacks output/ && \
+    cp -rpv krampusmod-backpack/KrampusMod_Backpack output/ && \
     cp -rpv krampusmod-concrete-spikes/KrampusMod_Concrete_Spikes output/ && \
     cp -rpv krampusmod-easier-demolishers/KrampusMod_Easier_Demolishers output/ && \
+    cp -rpv krampusmod-faster-smelting/KrampusMod_Faster_Smelting output/ && \
+    cp -rpv krampusmod-lefthud/KrampusMod_LeftHUD output/ && \
+    cp -rpv krampusmod-log-spikes/KrampusMod_Log_Spikes output/ && \
+    cp -rpv krampusmod-steel-bars/KrampusMod_Steel_Bars output/ && \
     ls -la /tmp && \
     echo "Done!"
 
