@@ -4,20 +4,22 @@ LABEL stage=intermediate
 RUN echo "Clone all Modlets into sourced location for final image COPY command..." && \
     cd /tmp && \
     mkdir output && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/claymore-stainless-steel-returns.git && \
     git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-10k-stacks.git && \
     git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-backpack.git && \
     git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-concrete-spikes.git && \
     git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-easier-demolishers.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-easier-gamestages.git && \
     git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-faster-smelting.git && \
-    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-lefthud.git && \
     git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-log-spikes.git && \
     git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-steel-bars.git && \
+    cp -rpv claymore-stainless-steel-returns/Claymore_Stainless_Steel_Returns output/ && \
     cp -rpv krampusmod-10k-stacks/KrampusMod_10K_Stacks output/ && \
     cp -rpv krampusmod-backpack/KrampusMod_Backpack output/ && \
     cp -rpv krampusmod-concrete-spikes/KrampusMod_Concrete_Spikes output/ && \
     cp -rpv krampusmod-easier-demolishers/KrampusMod_Easier_Demolishers output/ && \
+    cp -rpv krampusmod-easier-gamestages/KrampusMod_Easier_Gamestages output/ && \
     cp -rpv krampusmod-faster-smelting/KrampusMod_Faster_Smelting output/ && \
-    cp -rpv krampusmod-lefthud/KrampusMod_LeftHUD output/ && \
     cp -rpv krampusmod-log-spikes/KrampusMod_Log_Spikes output/ && \
     cp -rpv krampusmod-steel-bars/KrampusMod_Steel_Bars output/ && \
     ls -la /tmp && \
