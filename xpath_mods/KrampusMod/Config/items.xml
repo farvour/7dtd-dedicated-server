@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
   <!-- Make timed charge have a much larger explosion radius and damage. -->
+  <!--
   <set xpath="/items/item[@name='thrownTimedCharge']/property[@name='Stacknumber']/@value">50</set>
   <set xpath="/items/item[@name='thrownTimedCharge']/property[@name='Explosion.RadiusBlocks']/@value">16</set>
   <set xpath="/items/item[@name='thrownTimedCharge']/property[@name='Explosion.RadiusEntities']/@value">12</set>
@@ -10,14 +11,14 @@
   <set xpath="/items/item[@name='thrownTimedCharge']/effect_group/passive_effect[@name='EntityDamage']/@value">2000</set>
   <set xpath="/items/item[@name='thrownTimedCharge']/effect_group/display_value[@name='dExDamageEntity']/@value">2000</set>
   <set xpath="/items/item[@name='thrownTimedCharge']/effect_group/display_value[@name='dExRadius']/@value">16</set>
+  -->
 
   <!-- Dynamite is fun, but let's make it even more fun. -->
-  <set xpath="/items/item[@name='thrownDynamite']/property[@name='Stacknumber']/@value">50</set>
-  <set xpath="/items/item[@name='thrownDynamite']/property[@name='Explosion.RadiusBlocks']/@value">12</set>
-  <set xpath="/items/item[@name='thrownDynamite']/property[@name='Explosion.RadiusEntities']/@value">12</set>
-  <set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='BlockDamage']/@value">9000</set>
-  <set xpath="/items/item[@name='thrownDynamite']/effect_group/display_value[@name='dExDamageBlock']/@value">9000</set>
-  <set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='EntityDamage']/@value">1000</set>
-  <set xpath="/items/item[@name='thrownDynamite']/effect_group/display_value[@name='dExDamageEntity']/@value">1000</set>
-  <set xpath="/items/item[@name='thrownDynamite']/effect_group/display_value[@name='dExRadius']/@value">12</set>
+  <set xpath="/items/item[@name='thrownDynamite']/property[@name='Explosion.RadiusBlocks']/@value">15</set>
+  <set xpath="/items/item[@name='thrownDynamite']/property[@name='Explosion.RadiusEntities']/@value">20</set>
+  <set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='BlockDamage']/@value">15000</set>
+  <set xpath="/items/item[@name='thrownDynamite']/effect_group/display_value[@name='dExDamageBlock']/@value">15000</set>
+  <set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='EntityDamage']/@value">2000</set>
+  <set xpath="/items/item[@name='thrownDynamite']/effect_group/display_value[@name='dExDamageEntity']/@value">2000</set>
+  <set xpath="/items/item[@name='thrownDynamite']/effect_group/display_value[@name='dExRadius']/@value">15</set>
 </configs>
