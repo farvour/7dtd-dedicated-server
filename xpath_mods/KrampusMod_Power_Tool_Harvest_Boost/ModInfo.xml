@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <ModInfo>
+    <Name value="KrampusMod_Power_Tool_Harvest_Boost" />
+    <Description value="Makes power tools such as the auger and chainsaw actually 'useful' by increasing harvest rate." />
+    <Author value="KrazyKrampus" />
+    <Version value="1.0" />
+    <Website value="" />
+  </ModInfo>
+</xml>
