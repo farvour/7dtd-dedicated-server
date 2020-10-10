@@ -1,3 +1,0 @@
-<Claymore>
-  <set xpath="/items/item/effect_group/passive_effect[@name='ModSlots'][@tier='1,2,3,4,5,6']/@value">1,2,3,4,5,6</set>
-</Claymore>

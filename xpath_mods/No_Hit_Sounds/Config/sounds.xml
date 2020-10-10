@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitcloth']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitcloth1']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitcloth']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitcloth2']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitcloth']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitcloth3']/@ClipName"></removeattribute>
+
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitearth']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitearth1']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitearth']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitearth2']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitearth']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitearth3']/@ClipName"></removeattribute>
+
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitglass']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitglass1']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitglass']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitglass2']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitglass']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitglass3']/@ClipName"></removeattribute>
+
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitmetal']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitmetal1']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitmetal']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitmetal2']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitmetal']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitmetal3']/@ClipName"></removeattribute>
+
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitorganic']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitorganic1']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitorganic']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitorganic2']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitorganic']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitorganic3']/@ClipName"></removeattribute>
+
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitplant']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitplant1']/@ClipName"></removeattribute>
+
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitsnow']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitsnow1']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitsnow']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitsnow2']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitsnow']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitsnow3']/@ClipName"></removeattribute>
+
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitstone']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitstone1']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitstone']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitstone2']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitstone']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitstone3']/@ClipName"></removeattribute>
+
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitwater']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitwater1']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitwater']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitwater2']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitwater']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitwater3']/@ClipName"></removeattribute>
+
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitwood']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitwood1']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitwood']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitwood2']/@ClipName"></removeattribute>
+  <removeattribute xpath="/Sounds/SoundDataNode[@name='bullethitwood']/AudioClip[@ClipName='Sounds/ImpactSurface/bullethitwood3']/@ClipName"></removeattribute>
+</configs>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <set xpath="/items/item[@name='meleeToolAuger']/effect_group[@name='meleeToolAuger']/passive_effect[@name='BlockDamage' and @operation='base_set']/@value">30</set>
+  <set xpath="/items/item[@name='meleeToolAuger']/effect_group[@name='meleeToolAuger']/passive_effect[@name='RoundsPerMinute' and @operation='base_set']/@value">400</set>
+  <set xpath="/items/item[@name='meleeToolAuger']/effect_group[@name='meleeToolAuger']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value">500</set>
+
+  <set xpath="/items/item[@name='meleeToolChainsaw']/effect_group[@name='meleeToolChainsaw']/passive_effect[@name='BlockDamage' and @operation='base_set']/@value">30</set>
+  <set xpath="/items/item[@name='meleeToolChainsaw']/effect_group[@name='meleeToolChainsaw']/passive_effect[@name='RoundsPerMinute' and @operation='base_set']/@value">400</set>
+  <set xpath="/items/item[@name='meleeToolChainsaw']/effect_group[@name='meleeToolChainsaw']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value">500</set>
+</configs>

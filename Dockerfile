@@ -1,3 +1,42 @@
+FROM alpine/git:v2.26.2 AS git_modlet_cloner
+LABEL stage=intermediate
+
+RUN echo "Clone all Modlets into sourced location for final image COPY command..." && \
+    cd /tmp && \
+    mkdir output && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/claymore-craftable-dyes.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/claymore-modslots-equals-itemlevel.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/claymore-stainless-steel-returns.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-10k-stacks.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-backpack.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-concrete-spikes.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-easier-demolishers.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-easier-gamestages.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-faster-smelting.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-log-spikes.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/krampusmod-steel-bars.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/s420-simpleui-4digitcraft.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/s420-simpleui-compass.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/s420-simpleui-craftingqueue.git && \
+    git clone --depth 1 https://gitlab.com/7dtd/modlets/s420-simpleui-forgeinput.git && \
+    cp -rpv claymore-craftable-dyes/Claymore_Craftable_Dyes output/ && \
+    cp -rpv claymore-modslots-equals-itemlevel/Claymore_Modslots_Equals_Itemlevel output/ && \
+    cp -rpv claymore-stainless-steel-returns/Claymore_Stainless_Steel_Returns output/ && \
+    cp -rpv krampusmod-10k-stacks/KrampusMod_10K_Stacks output/ && \
+    cp -rpv krampusmod-backpack/KrampusMod_Backpack output/ && \
+    cp -rpv krampusmod-concrete-spikes/KrampusMod_Concrete_Spikes output/ && \
+    cp -rpv krampusmod-easier-demolishers/KrampusMod_Easier_Demolishers output/ && \
+    cp -rpv krampusmod-easier-gamestages/KrampusMod_Easier_Gamestages output/ && \
+    cp -rpv krampusmod-faster-smelting/KrampusMod_Faster_Smelting output/ && \
+    cp -rpv krampusmod-log-spikes/KrampusMod_Log_Spikes output/ && \
+    cp -rpv krampusmod-steel-bars/KrampusMod_Steel_Bars output/ && \
+    cp -rpv s420-simpleui-4digitcraft/S420_SimpleUI-4DigitCraft output/ && \
+    cp -rpv s420-simpleui-compass/S420_SimpleUI-Compass output/ && \
+    cp -rpv s420-simpleui-craftingqueue/S420_SimpleUI-CraftingQueue output/ && \
+    cp -rpv s420-simpleui-forgeinput/S420_SimpleUI-ForgeInput output/ && \
+    ls -la /tmp && \
+    echo "Done!"
+
 FROM ubuntu:bionic
 LABEL maintainer="Thomas Farvour <tom@farvour.com>"
 
@@ -13,7 +52,7 @@ ENV SERVER_DATA_DIR=/app/7dtd/data
 # Steam still requires 32-bit cross compilation libraries.
 RUN echo "Installing necessary system packages to support steam CLI installation..." && \
     apt-get update && \
-    apt-get install -y bash expect htop tmux lib32gcc1 pigz telnet wget && \
+    apt-get install -y bash expect htop tmux lib32gcc1 pigz telnet wget git && \
     rm -rf /var/lib/apt/lists/*
 
 ENV PROC_UID 7999
@@ -39,6 +78,7 @@ RUN echo "Downloading and installing steamcmd..." && \
     tar -zxvf steamcmd_linux.tar.gz
 
 # This is most likely going to be the largest layer created; all the game files for the dedicated server.
+# NOTE: It is a good idea to do as much as possible _beyond_ this point to avoid Docker having to re-create it.
 RUN echo "Downloading and installing 7dtd server with steamcmd..." && \
     ${SERVER_HOME}/steamcmd.sh +runscript steamcmd-7dtd.script
 
@@ -55,6 +95,9 @@ COPY --chown=z:root config/serverconfig.xml ${SERVER_INSTALL_DIR}/
 # COPY --chown=z:root server_fixes_v19_22_32/ ${SERVER_INSTALL_DIR}/Mods/
 COPY --chown=z:root mods/BCManager/ ${SERVER_INSTALL_DIR}/Mods/BCManager/
 COPY --chown=z:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
+
+# Modlets from repositories.
+COPY --from=git_modlet_cloner --chown=z:root /tmp/output/ ${SERVER_INSTALL_DIR}/Mods/
 
 # Default web UI control panel port.
 EXPOSE 8080/tcp
