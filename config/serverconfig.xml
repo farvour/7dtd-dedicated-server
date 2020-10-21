@@ -3,7 +3,7 @@
   <!-- GENERAL SERVER SETTINGS -->
 
   <!-- Server representation -->
-  <property name="ServerName" value="Krampus World | PvE | 19.1 Stable | Mods"/>
+  <property name="ServerName" value="Krampus World | PvE | 19.2 Stable | Mods"/>
   <!-- Whatever you want the name of the server to be. -->
   <property name="ServerDescription" value="KrazyKrampus' 7 Days to Die Server. Server is a PvE, custom random generated map w/ loot enhancements, spawning mods, stack mods, XUi changes + more. All respectful players are welcome to join."/>
   <!-- Whatever you want the server description to be, will be shown in the server browser. -->
