@@ -3,7 +3,7 @@
   <!-- GENERAL SERVER SETTINGS -->
 
   <!-- Server representation -->
-  <property name="ServerName" value="Krampus World | PvE | 19.0 Stable | Mods"/>
+  <property name="ServerName" value="Krampus World | PvE | 19.1 Stable | Mods"/>
   <!-- Whatever you want the name of the server to be. -->
   <property name="ServerDescription" value="KrazyKrampus' 7 Days to Die Server. Server is a PvE, custom random generated map w/ loot enhancements, spawning mods, stack mods, XUi changes + more. All respectful players are welcome to join."/>
   <!-- Whatever you want the server description to be, will be shown in the server browser. -->
@@ -80,7 +80,8 @@
   <!-- GAMEPLAY -->
 
   <!-- World -->
-  <property name="GameWorld" value="Beer"/>
+  <property name="GameWorld" value="NitroGenMap111"/>
+  <!-- <property name="GameWorld" value="Pizza"/> -->
   <!-- "RWG" (see WorldGenSeed and WorldGenSize options below) or any already existing world name in the Worlds folder (currently shipping with e.g. "Navezgane", "PREGEN01", ...) -->
   <property name="WorldGenSeed" value="Krampus0"/>
   <!-- If RWG this is the seed for the generation of the new world. If a world with the resulting name already exists it will simply load it -->
@@ -92,7 +93,7 @@
   <!-- GameModeSurvival -->
 
   <!-- Difficulty -->
-  <property name="GameDifficulty" value="2"/>
+  <property name="GameDifficulty" value="3"/>
   <!-- 0 - 5, 0=easiest, 5=hardest -->
   <property name="BlockDamagePlayer" value="100" />
   <!-- How much damage do players to blocks (percentage in whole numbers) -->
@@ -110,7 +111,7 @@
   <!--  -->
   <property name="BuildCreate" value="false" />
   <!-- cheat mode on/off -->
-  <property name="DayNightLength" value="60" />
+  <property name="DayNightLength" value="90" />
   <!-- real time minutes per in game day: 60 minutes -->
   <property name="DayLightLength" value="18" />
   <!-- in game hours the sun shines per day: 18 hours day light per in game day -->
@@ -138,7 +139,7 @@
   <!-- 0 = Normal, 1 = Feral -->
   <property name="ZombieMove" value="0" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
-  <property name="ZombieMoveNight" value="1" />
+  <property name="ZombieMoveNight" value="2" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
   <property name="ZombieFeralMove" value="3" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
@@ -146,11 +147,11 @@
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
   <property name="BloodMoonFrequency" value="7" />
   <!-- What frequency (in days) should a blood moon take place. Set to "0" for no blood moons -->
-  <property name="BloodMoonRange" value="0" />
+  <property name="BloodMoonRange" value="1" />
   <!-- How many days can the actual blood moon day randomly deviate from the above setting. Setting this to 0 makes blood moons happen exactly each Nth day as specified in BloodMoonFrequency -->
   <property name="BloodMoonWarning" value="12" />
   <!-- The Hour number that the red day number begins on a blood moon day. Setting this to -1 makes the red never show.  -->
-  <property name="BloodMoonEnemyCount" value="8" />
+  <property name="BloodMoonEnemyCount" value="10" />
   <!-- This is the number of zombies that can be alive (spawned at the same time) at any time PER PLAYER during a blood moon horde, however, MaxSpawnedZombies overrides this number in multiplayer games. Also note that your game stage sets the max number of zombies PER PARTY. Low game stage values can result in lower number of zombies than the BloodMoonEnemyCount setting. Changing this setting has a huge impact on performance. -->
 
   <!-- Loot -->
@@ -158,7 +159,7 @@
   <!-- percentage in whole numbers -->
   <property name="LootRespawnDays" value="30" />
   <!-- days in whole numbers -->
-  <property name="AirDropFrequency" value="72"/>
+  <property name="AirDropFrequency" value="48"/>
   <!-- How often airdrop occur in game-hours, 0 == never -->
   <property name="AirDropMarker" value="true"/>
   <!-- Sets if a marker is added to map/compass for air drops. -->
@@ -172,7 +173,7 @@
   <!-- Land claim options -->
   <property name="LandClaimCount" value="4"/>
   <!-- Maximum allowed land claims per player. -->
-  <property name="LandClaimSize" value="60"/>
+  <property name="LandClaimSize" value="35"/>
   <!-- Size in blocks that is protected by a keystone -->
   <property name="LandClaimDeadZone" value="100"/>
   <!-- Keystones must be this many blocks apart (unless you are friends with the other player) -->
