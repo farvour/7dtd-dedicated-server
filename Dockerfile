@@ -16,7 +16,7 @@ RUN echo "Clone all Modlets into sourced location for final image COPY command..
     git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/krampusmod-log-spikes.git && \
     git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/krampusmod-steel-bars.git && \
     git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/s420-simpleui-4digitcraft.git && \
-    git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/s420-simpleui-compass.git && \
+    echo git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/s420-simpleui-compass.git && \
     git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/s420-simpleui-craftingqueue.git && \
     git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/s420-simpleui-forgeinput.git && \
     cp -rpv claymore-craftable-dyes/Claymore_Craftable_Dyes output/ && \
@@ -31,7 +31,7 @@ RUN echo "Clone all Modlets into sourced location for final image COPY command..
     cp -rpv krampusmod-log-spikes/KrampusMod_Log_Spikes output/ && \
     cp -rpv krampusmod-steel-bars/KrampusMod_Steel_Bars output/ && \
     cp -rpv s420-simpleui-4digitcraft/S420_SimpleUI-4DigitCraft output/ && \
-    cp -rpv s420-simpleui-compass/S420_SimpleUI-Compass output/ && \
+    echo cp -rpv s420-simpleui-compass/S420_SimpleUI-Compass output/ && \
     cp -rpv s420-simpleui-craftingqueue/S420_SimpleUI-CraftingQueue output/ && \
     cp -rpv s420-simpleui-forgeinput/S420_SimpleUI-ForgeInput output/ && \
     ls -la /tmp && \
@@ -82,6 +82,15 @@ RUN echo "Downloading and installing steamcmd..." && \
 RUN echo "Downloading and installing 7dtd server with steamcmd..." && \
     ${SERVER_HOME}/steamcmd.sh +runscript steamcmd-7dtd.script
 
+# Install the backup2l script for automatic backup assistance.
+# You can simply run this script in the container and backup the mounted volume to a destination available on the host.
+# docker run --rm --entrypoint /bin/bash dedicated-server_7dtd-server:latest -v dedicated-server_7dtd-data:/app/7dtd/data/Saves -v /mnt/backup:/app/7dtd/backups /app/7dtd/backup2l/backup2l -c /app/7dtd/backup2l/backup2l.conf -b
+RUN echo "Install the backup2l tool and config..." && \
+    git clone --single-branch --branch master https://github.com/gkiefer/backup2l.git && \
+    if [ ! -d ${SERVER_HOME}/backups ]; then mkdir -p ${SERVER_HOME}/backups; fi
+
+COPY --chown=z:root config/backup2l.conf ${SERVER_HOME}/backup2l/backup2l.conf
+
 # Install custom startserver script.
 COPY --chown=z:root scripts/startserver-1.sh ${SERVER_INSTALL_DIR}/
 
@@ -98,15 +107,6 @@ COPY --chown=z:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
 
 # Modlets from repositories.
 COPY --from=git_modlet_cloner --chown=z:root /tmp/output/ ${SERVER_INSTALL_DIR}/Mods/
-
-# Install the backup2l script for automatic backup assistance.
-# You can simply run this script in the container and backup the mounted volume to a destination available on the host.
-# docker run --rm --entrypoint /bin/bash dedicated-server_7dtd-server:latest -v dedicated-server_7dtd-data:/app/7dtd/data/Saves -v /mnt/backup:/app/7dtd/backups /app/7dtd/backup2l/backup2l -c /app/7dtd/backup2l/backup2l.conf -b
-RUN echo "Install the backup2l tool and config..." && \
-    git clone --single-branch --branch master https://github.com/gkiefer/backup2l.git && \
-    if [ ! -d ${SERVER_HOME}/backups ]; then mkdir -p ${SERVER_HOME}/backups; fi
-
-COPY --chown=z:root config/backup2l.conf ${SERVER_HOME}/backup2l/backup2l.conf
 
 # Default web UI control panel port.
 EXPOSE 8080/tcp

@@ -1,0 +1,41 @@
+<ProjectZ2TB10_WINDOWS>
+
+<!--	// Z2 // 10 Slot Toolbelt Conversion -->
+
+		<set xpath="/windows/window[@name='windowToolbelt']//@cols">10</set>
+		<set xpath="/windows/window[@name='windowToolbelt']//@cell_width">80</set>
+
+		<set xpath="/windows/window[@name='HUDLeftStatBars']/sprite[@name='statStaminaToToolbeltA']/@size">35,1</set>
+
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='statStaminaToToolbeltB']/@pos">-422,0</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='statStaminaToToolbeltB']/@size">35,1</set>
+
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='toolbeltLeftA']/@pos">-415,49</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='toolbeltLeftB']/@pos">-415,0</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='toolbeltLeftC']/@pos">-415,-49</set>
+
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='toolbeltLeftDiamondA1']/@pos">-415,0</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='toolbeltLeftDiamondA2']/@pos">-415,0</set>
+
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='toolbeltRightDiamondA1']/@pos">415,0</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='toolbeltRightDiamondA2']/@pos">415,0</set>
+
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='toolbeltRightA']/@pos">415,49</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='toolbeltRightB']/@pos">415,0</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='toolbeltRightC']/@pos">415,-49</set>
+
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='toolbeltToStatHungerB']/@size">35,1</set>
+		<set xpath="/windows/window[@name='windowToolbelt']/sprite[@name='toolbeltToStatHungerB']/@pos">422,0</set>
+
+		<set xpath="/windows/window[@name='HUDRightStatBars']/rect/sprite[@name='toolbeltToStatHungerA']/@size">35,1</set>
+
+		<set xpath="/windows/window[@name='windowToolbelt']/grid[@name='inventory']/@pos">41,-38</set>
+
+		<set xpath="/windows/window[@name='windowToolbelt']/grid[@name='inventorySlotNumbers']/@pos">84,-1</set>
+
+		<insertAfter xpath="/windows/window[@name='windowToolbelt']/grid[@name='inventorySlotNumbers']/label[@name='slotNumber8']">
+			<label name="slotNumber9" depth="20" pos="0,0" size="20,20" text="9" color="[slotNumberLabelMain]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" pivot="center" />
+			<label name="slotNumber0" depth="20" pos="0,0" size="20,20" text="0" color="[slotNumberLabelMain]" font_size="16" crispness="Never" effect="outline" effect_distance="1,1" pivot="center" />
+		</insertAfter>
+
+</ProjectZ2TB10_WINDOWS>

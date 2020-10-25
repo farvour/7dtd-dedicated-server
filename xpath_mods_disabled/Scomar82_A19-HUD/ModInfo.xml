@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Scomar82_A19-HUD" />
+		<Description value="Simple HUD" />
+		<Author value="Scomar" />
+		<Version value="1.3" comp="A19.1"/>
+		<Website value="https://github.com/Scomar82/7-Days-Modlets" />
+	</ModInfo>
+</xml>
