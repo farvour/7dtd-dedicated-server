@@ -99,6 +99,15 @@ COPY --chown=z:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
 # Modlets from repositories.
 COPY --from=git_modlet_cloner --chown=z:root /tmp/output/ ${SERVER_INSTALL_DIR}/Mods/
 
+# Install the backup2l script for automatic backup assistance.
+# You can simply run this script in the container and backup the mounted volume to a destination available on the host.
+# docker run --rm --entrypoint /bin/bash dedicated-server_7dtd-server:latest -v dedicated-server_7dtd-data:/app/7dtd/data/Saves -v /mnt/backup:/app/7dtd/backups /app/7dtd/backup2l/backup2l -c /app/7dtd/backup2l/backup2l.conf -b
+RUN echo "Install the backup2l tool and config..." && \
+    git clone --single-branch --branch master https://github.com/gkiefer/backup2l.git && \
+    if [ ! -d ${SERVER_HOME}/backups ]; then mkdir -p ${SERVER_HOME}/backups; fi
+
+COPY --chown=z:root config/backup2l.conf ${SERVER_HOME}/backup2l/backup2l.conf
+
 # Default web UI control panel port.
 EXPOSE 8080/tcp
 

@@ -5,12 +5,12 @@ services:
   7dtd-server:
     build: .
     volumes:
-      # - type: volume # You could also bind-mount this to your local FS (see below)
-      #   source: 7dtd-data
-      #   target: /app/7dtd/data/Saves
-      - type: bind
-        source: /home/z/7DaysToDieData/Saves
+      - type: volume # You could also bind-mount this to your local FS (see below)
+        source: 7dtd-data
         target: /app/7dtd/data/Saves
+        # - type: bind
+        # source: /home/z/7DaysToDieData/Saves
+        # target: /app/7dtd/data/Saves
     ports:
       - 8080:8080/tcp
       - 8081:8081/tcp
@@ -19,7 +19,6 @@ services:
       - 26900:26900/udp
       - 26901:26901/udp
       - 26902:26902/udp
-    network_mode: host
 
 volumes:
   7dtd-data:
