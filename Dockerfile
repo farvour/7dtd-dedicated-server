@@ -16,8 +16,6 @@ RUN echo "Clone all Modlets into sourced location for final image COPY command..
     git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/krampusmod-log-spikes.git && \
     git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/krampusmod-steel-bars.git && \
     git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/s420-simpleui-4digitcraft.git && \
-    echo git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/s420-simpleui-compass.git && \
-    git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/s420-simpleui-craftingqueue.git && \
     git clone --single-branch --branch master https://gitlab.com/7dtd/modlets/s420-simpleui-forgeinput.git && \
     cp -rpv claymore-craftable-dyes/Claymore_Craftable_Dyes output/ && \
     cp -rpv claymore-modslots-equals-itemlevel/Claymore_Modslots_Equals_Itemlevel output/ && \
@@ -31,8 +29,6 @@ RUN echo "Clone all Modlets into sourced location for final image COPY command..
     cp -rpv krampusmod-log-spikes/KrampusMod_Log_Spikes output/ && \
     cp -rpv krampusmod-steel-bars/KrampusMod_Steel_Bars output/ && \
     cp -rpv s420-simpleui-4digitcraft/S420_SimpleUI-4DigitCraft output/ && \
-    echo cp -rpv s420-simpleui-compass/S420_SimpleUI-Compass output/ && \
-    cp -rpv s420-simpleui-craftingqueue/S420_SimpleUI-CraftingQueue output/ && \
     cp -rpv s420-simpleui-forgeinput/S420_SimpleUI-ForgeInput output/ && \
     ls -la /tmp && \
     echo "Done!"
@@ -103,6 +99,7 @@ COPY --chown=z:root config/serverconfig.xml ${SERVER_INSTALL_DIR}/
 # Mods and mods related tasks.
 # COPY --chown=z:root server_fixes_v19_22_32/ ${SERVER_INSTALL_DIR}/Mods/
 COPY --chown=z:root mods/BCManager/ ${SERVER_INSTALL_DIR}/Mods/BCManager/
+COPY --chown=z:root xpath_mods_src/ ${SERVER_INSTALL_DIR}/xpath_mods_src/
 COPY --chown=z:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
 
 # Modlets from repositories.
