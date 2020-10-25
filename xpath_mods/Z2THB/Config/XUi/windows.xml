@@ -1,0 +1,7 @@
+<ProjectZ2THB_WINDOWS>
+
+<!--	// Z2 // Target Health Bar Enable -->
+
+		<set xpath="/windows/window[@name='windowTargetBar']/@visibility">always</set>
+
+</ProjectZ2THB_WINDOWS>

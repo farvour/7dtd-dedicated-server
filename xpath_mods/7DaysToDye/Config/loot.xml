@@ -1,0 +1,12 @@
+<potato>
+<append xpath="/lootcontainers/lootgroup[@name='dyes']">
+<item name="Dye: Turquoise"/>
+<item name="Dye: Royal Purple"/>
+<item name="Dye: Gold"/>
+<item name="Dye: Silver"/>
+<item name="Dye: Bronze"/>
+<item name="Dye: Lime"/>
+<item name="Dye: Candy Pink"/>
+<item name="Dye: Orange"/>
+</append>
+</potato>
