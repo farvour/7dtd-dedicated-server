@@ -1,0 +1,51 @@
+[submodule "xpath_mods_src/s420-simpleui-craftingqueue"]
+	path = xpath_mods_src/s420-simpleui-craftingqueue
+	url = git@gitlab.com:7dtd/modlets/s420-simpleui-craftingqueue.git
+[submodule "xpath_mods_src/claymore-craftable-dyes"]
+	path = xpath_mods_src/claymore-craftable-dyes
+	url = git@gitlab.com:7dtd/modlets/claymore-craftable-dyes.git
+[submodule "xpath_mods_src/claymore-modslots-equals-itemlevel"]
+	path = xpath_mods_src/claymore-modslots-equals-itemlevel
+	url = git@gitlab.com:7dtd/modlets/claymore-modslots-equals-itemlevel.git
+[submodule "xpath_mods_src/claymore-stainless-steel-returns"]
+	path = xpath_mods_src/claymore-stainless-steel-returns
+	url = git@gitlab.com:7dtd/modlets/claymore-stainless-steel-returns.git
+[submodule "xpath_mods_src/krampusmod-steel-bars"]
+	path = xpath_mods_src/krampusmod-steel-bars
+	url = git@gitlab.com:7dtd/modlets/krampusmod-steel-bars.git
+[submodule "xpath_mods_src/krampusmod-ui-toolbelt"]
+	path = xpath_mods_src/krampusmod-ui-toolbelt
+	url = git@gitlab.com:7dtd/modlets/krampusmod-ui-toolbelt.git
+[submodule "xpath_mods_src/s420-simpleui-forgeinput"]
+	path = xpath_mods_src/s420-simpleui-forgeinput
+	url = git@gitlab.com:7dtd/modlets/s420-simpleui-forgeinput.git
+[submodule "xpath_mods_src/s420-simpleui-compass"]
+	path = xpath_mods_src/s420-simpleui-compass
+	url = git@gitlab.com:7dtd/modlets/s420-simpleui-compass.git
+[submodule "xpath_mods_src/krampusmod-easier-gamestages"]
+	path = xpath_mods_src/krampusmod-easier-gamestages
+	url = git@gitlab.com:7dtd/modlets/krampusmod-easier-gamestages.git
+[submodule "xpath_mods_src/krampusmod-10k-stacks"]
+	path = xpath_mods_src/krampusmod-10k-stacks
+	url = git@gitlab.com:7dtd/modlets/krampusmod-10k-stacks.git
+[submodule "xpath_mods_src/krampusmod-log-spikes"]
+	path = xpath_mods_src/krampusmod-log-spikes
+	url = git@gitlab.com:7dtd/modlets/krampusmod-log-spikes.git
+[submodule "xpath_mods_src/krampusmod-concrete-spikes"]
+	path = xpath_mods_src/krampusmod-concrete-spikes
+	url = git@gitlab.com:7dtd/modlets/krampusmod-concrete-spikes.git
+[submodule "xpath_mods_src/krampusmod-easier-demolishers"]
+	path = xpath_mods_src/krampusmod-easier-demolishers
+	url = git@gitlab.com:7dtd/modlets/krampusmod-easier-demolishers.git
+[submodule "xpath_mods_src/krampusmod-backpack"]
+	path = xpath_mods_src/krampusmod-backpack
+	url = git@gitlab.com:7dtd/modlets/krampusmod-backpack.git
+[submodule "xpath_mods_src/krampusmod-faster-smelting"]
+	path = xpath_mods_src/krampusmod-faster-smelting
+	url = git@gitlab.com:7dtd/modlets/krampusmod-faster-smelting.git
+[submodule "xpath_mods_src/s420-simpleui-4digitcraft"]
+	path = xpath_mods_src/s420-simpleui-4digitcraft
+	url = git@gitlab.com:7dtd/modlets/s420-simpleui-4digitcraft.git
+[submodule "xpath_mods_src/krampusmod-ui-lefthud"]
+	path = xpath_mods_src/krampusmod-ui-lefthud
+	url = git@gitlab.com:7dtd/modlets/krampusmod-ui-lefthud.git
