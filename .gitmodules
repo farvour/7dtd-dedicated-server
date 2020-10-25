@@ -1,0 +1,3 @@
+[submodule "xpath_mods_src/s420-simpleui-craftingqueue"]
+	path = xpath_mods_src/s420-simpleui-craftingqueue
+	url = git@gitlab.com:7dtd/modlets/s420-simpleui-craftingqueue.git
