@@ -4,6 +4,7 @@ version: "3.8"
 services:
   7dtd-server:
     build: .
+    image: omicron:32000/7dtd-dedicated-server
     volumes:
       - type: volume # You could also bind-mount this to your local FS (see below)
         source: 7dtd-data

@@ -111,7 +111,7 @@
   <!--  -->
   <property name="BuildCreate" value="false" />
   <!-- cheat mode on/off -->
-  <property name="DayNightLength" value="90" />
+  <property name="DayNightLength" value="60" />
   <!-- real time minutes per in game day: 60 minutes -->
   <property name="DayLightLength" value="18" />
   <!-- in game hours the sun shines per day: 18 hours day light per in game day -->
