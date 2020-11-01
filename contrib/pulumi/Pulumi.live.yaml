@@ -1,0 +1,8 @@
+config:
+  7dtd-dedicated-server-ts:image: localhost:32000/7dtd-dedicated-server
+  7dtd-dedicated-server-ts:imageTag: 8dde2ad
+  7dtd-dedicated-server-ts:statefulSet:
+    labels:
+      app.kubernetes.io/name: 7dtd-dedicated-server
+      kind: StatefulSet
+  pulumi:template: kubernetes-typescript
