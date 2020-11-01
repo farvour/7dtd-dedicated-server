@@ -1,0 +1,4 @@
+name: 7dtd-dedicated-server-ts
+runtime: nodejs
+description: A minimal Kubernetes TypeScript Pulumi program for deploying 7 Days to
+  Die Dedicated Server to Kubernetes.
