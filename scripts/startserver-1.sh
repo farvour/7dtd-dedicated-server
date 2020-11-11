@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -x
+
 SERVERDIR=$(dirname "$0")
 cd ${SERVERDIR}
 
@@ -33,6 +35,7 @@ fi
 
 export LD_LIBRARY_PATH=.
 #export MALLOC_CHECK_=0
+export TMPDIR=/tmp
 
 if [ "$(uname -m)" = "x86_64" ]; then
   ./7DaysToDieServer.x86_64 \

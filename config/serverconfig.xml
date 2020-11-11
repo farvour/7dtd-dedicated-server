@@ -111,7 +111,7 @@
   <!--  -->
   <property name="BuildCreate" value="false" />
   <!-- cheat mode on/off -->
-  <property name="DayNightLength" value="60" />
+  <property name="DayNightLength" value="50" />
   <!-- real time minutes per in game day: 60 minutes -->
   <property name="DayLightLength" value="18" />
   <!-- in game hours the sun shines per day: 18 hours day light per in game day -->
@@ -147,7 +147,7 @@
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
   <property name="BloodMoonFrequency" value="7" />
   <!-- What frequency (in days) should a blood moon take place. Set to "0" for no blood moons -->
-  <property name="BloodMoonRange" value="1" />
+  <property name="BloodMoonRange" value="0" />
   <!-- How many days can the actual blood moon day randomly deviate from the above setting. Setting this to 0 makes blood moons happen exactly each Nth day as specified in BloodMoonFrequency -->
   <property name="BloodMoonWarning" value="12" />
   <!-- The Hour number that the red day number begins on a blood moon day. Setting this to -1 makes the red never show.  -->
