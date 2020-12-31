@@ -41,10 +41,13 @@
   <append xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]">
     <entity name="zombieDemolition" prob="0.15" />
   </append>
+  <append xpath="/entitygroups/entitygroup[starts-with(@name, 'FwanderingHordeStage')]">
+    <entity name="zombieDemolition" prob="0.15" />
+  </append>
 
   <!-- Remove vultures from wandering hordes. -->
   <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]/entity[@name='animalZombieVulture']" />
-  <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]/entity[@name='animalZombieVultureRadiated']" />
+  <!-- <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]/entity[@name='animalZombieVultureRadiated']" /> -->
 
   <!-- Replace vultures with crawlers most of the time. -->
   <remove xpath="/entitygroups/entitygroup[@name='VultureGroup']/entity[@name='animalZombieVulture']" />
