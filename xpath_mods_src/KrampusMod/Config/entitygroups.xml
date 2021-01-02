@@ -47,7 +47,7 @@
 
   <!-- Add some random chance to get demolishers in sleeper cells. -->
   <append xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS')]">
-    <entity name="zombieDemolition" prob="0.05" />
+    <entity name="zombieDemolition" prob="0.15" />
   </append>
 
   <!-- Remove vultures from wandering hordes. -->
