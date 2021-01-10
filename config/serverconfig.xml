@@ -139,17 +139,17 @@
   <!-- 0 = Normal, 1 = Feral -->
   <property name="ZombieMove" value="0" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
-  <property name="ZombieMoveNight" value="2" />
+  <property name="ZombieMoveNight" value="0" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
   <property name="ZombieFeralMove" value="3" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
-  <property name="ZombieBMMove" value="1" />
+  <property name="ZombieBMMove" value="2" />
   <!-- 0-4 (walk, jog, run, sprint, nightmare) -->
-  <property name="BloodMoonFrequency" value="7" />
+  <property name="BloodMoonFrequency" value="6" />
   <!-- What frequency (in days) should a blood moon take place. Set to "0" for no blood moons -->
-  <property name="BloodMoonRange" value="0" />
+  <property name="BloodMoonRange" value="1" />
   <!-- How many days can the actual blood moon day randomly deviate from the above setting. Setting this to 0 makes blood moons happen exactly each Nth day as specified in BloodMoonFrequency -->
-  <property name="BloodMoonWarning" value="12" />
+  <property name="BloodMoonWarning" value="16" />
   <!-- The Hour number that the red day number begins on a blood moon day. Setting this to -1 makes the red never show.  -->
   <property name="BloodMoonEnemyCount" value="10" />
   <!-- This is the number of zombies that can be alive (spawned at the same time) at any time PER PLAYER during a blood moon horde, however, MaxSpawnedZombies overrides this number in multiplayer games. Also note that your game stage sets the max number of zombies PER PARTY. Low game stage values can result in lower number of zombies than the BloodMoonEnemyCount setting. Changing this setting has a huge impact on performance. -->
