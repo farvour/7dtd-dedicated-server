@@ -3,6 +3,16 @@
   <!-- Extra strippers. -->
   <set xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieStripper']/@prob">0.4</set>
 
+  <append xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS')]">
+    <entity name="zombieStripper" prob="0.5" />
+    <entity name="zombieStripperFeral" prob="0.1" />
+  </append>
+
+  <append xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStage')]">
+    <entity name="zombieStripper" prob="0.5" />
+    <entity name="zombieStripperFeral" prob="0.1" />
+  </append>
+
   <!-- Reduce utility worker zombies in general population. -->
   <set xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieUtilityWorker']/@prob">0.1</set>
 
@@ -24,8 +34,25 @@
 
   <!-- Add demolishers to the general population. -->
   <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
-    <entity name="zombieDemolition" prob="0.05" />
+    <entity name="zombieDemolition" prob="0.15" />
   </append>
+
+  <!-- Add demolishers to the wandering hordes. -->
+  <append xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]">
+    <entity name="zombieDemolition" prob="0.15" />
+  </append>
+  <append xpath="/entitygroups/entitygroup[starts-with(@name, 'FwanderingHordeStage')]">
+    <entity name="zombieDemolition" prob="0.15" />
+  </append>
+
+  <!-- Add some random chance to get demolishers in sleeper cells. -->
+  <append xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS')]">
+    <entity name="zombieDemolition" prob="0.15" />
+  </append>
+
+  <!-- Remove vultures from wandering hordes. -->
+  <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]/entity[@name='animalZombieVulture']" />
+  <!-- <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]/entity[@name='animalZombieVultureRadiated']" /> -->
 
   <!-- Replace vultures with crawlers most of the time. -->
   <remove xpath="/entitygroups/entitygroup[@name='VultureGroup']/entity[@name='animalZombieVulture']" />

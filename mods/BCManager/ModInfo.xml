@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
   <ModInfo>
-    <Name value="Bad Company Manager"/>
-    <Description value="Dedicated Server Manager - Adds extensive data mining and world editing commands and events systems"/>
-    <Author value="StompyNZ"/>
-    <Version value="5.0.0 (19.0)"/>
-    <Website value="https://github.com/7days2mod/BadCompanySM"/>
+    <Name value="Bad Company Manager" />
+    <Description value="Dedicated Server Manager - Adds extensive data mining and world editing commands and events systems." />
+    <Author value="farvour, StompyNZ" />
+    <Version value="6.0.0 (19.2)" />
+    <Website value="https://gitlab.com/7dtd/bcmanager" />
   </ModInfo>
 </xml>
