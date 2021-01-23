@@ -1,0 +1,59 @@
+---
+serverconfig.xml.j2:
+  # EAC configuration.
+  eac_enabled: true
+
+  # World configuration.
+  game_name: MyGame
+  game_world: Navezgane
+  world_gen_seed: MyGame
+  world_gen_size: 4096
+
+  # Time configuration.
+  day_night_length: 60
+  day_light_length: 18
+
+  # Difficulty configuration.
+  game_difficulty: 3
+  xp_multiplier: 100
+  player_safe_zone_hours: 12
+  player_safe_zone_level: 5
+  bedroll_deadzone_size: 20
+  drop_on_death: 0
+  drop_on_quit: 0
+  enemy_difficulty: 0
+  enemy_spawn_mode: true
+  zombie_bm_move: 2
+  zombie_feral_move: 3
+  zombie_move: 0
+  zombie_move_night: 0
+  block_damage_player: 100
+  block_damage_ai: 80
+  block_damage_ai_bm: 100
+
+  # Blood moon configuration.
+  blood_moon_warning: 16
+  blood_moon_frequency: 6
+  blood_moon_range: 1
+  blood_moon_enemy_count: 8
+
+  # Loot configuration.
+  loot_abundance: 100
+  loot_respawn_days: 30
+  air_drop_frequency: 72 # In hours.
+
+  # Server, meta and access control configuration.
+  server_name: My 7 Days to Die Server
+  server_desc: My 7 Days to Die Server Description.
+  server_website_url: ""
+  server_password: ""
+  server_port: 26900
+  server_visibility: 0
+  server_max_player_count: 8
+  server_max_xfer_speed: 1200
+  control_panel_enabled: true
+  control_panel_port: 8080
+  control_panel_password: password
+  telnet_enabled: true
+  telnet_password: password
+  telnet_port: 8081
