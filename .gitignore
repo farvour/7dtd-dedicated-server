@@ -1,2 +1,8 @@
+# Do not commit override config to VCS.
+config/values-override.yml
+
 # Do not commit these to VCS.
 custom_prefabs/
+
+# Do not commit editor meta files to VCS.
+.vscode/
