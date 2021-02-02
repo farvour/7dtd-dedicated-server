@@ -1,0 +1,14 @@
+<configs>
+  <append xpath="/buffs">
+    <buff name="EntangledBuff" tooltip_key="YOU ARE ENTANGLED!" icon="ui_game_symbol_agility" icon_color="255,0,0" icon_blink="true">
+      <stack_type value="ignore" />
+      <duration value="0.5" />
+      <effect_group>
+        <!--<requirement name="EntityTagCompare" tags="player"/>-->
+        <passive_effect name="BuffBlink" operation="base_set" value="2" duration="0.3" tags="EntangledBuff" />
+        <triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="0.5" effect_name="Cold" />
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="0.1" effect_name="Cold" />
+      </effect_group>
+    </buff>
+  </append>
+</configs>

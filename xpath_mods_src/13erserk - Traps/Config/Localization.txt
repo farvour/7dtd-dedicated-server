@@ -1,0 +1,15 @@
+Key,Source,Context,Changes,English
+ReinforcedSteelSpikes,blocks,blocks,New,Reinforced Steel Spikes
+ReinforcedSteelSpikesDesc,blocks,blocks,New,Hard to destroy and with an excellent damage along with excellent explosion resistance this Spiked trap is one of the best traps in the game.
+ReinforcedSteelWallTrap,blocks,blocks,New,Reinforced Steel Wall Trap
+ReinforcedSteelWallTrapDesc,blocks,blocks,New,Used as armor for your base and as well acting as a trap. Not so damaging as the other traps but it has the best defence properties. The Reinforced Steel Wall is a must have in the mid-late game.
+ReinforcedSteelSpikedWire,blocks,blocks,New,Reinforced Steel Spiked Wire
+ReinforcedSteelSpikedWireDesc,blocks,blocks,New,Far better then the normal Barbed Wire the Reinforce Steel Spiked Wire has 3x Damage of the normal Barbed Wire and is far more resistant. Is like Barbed Wire on steroids.
+ReinforcedSteelArmoredWall,blocks,blocks,New,Reinforced Steel Armored Wall
+ReinforcedSteelArmoredWallDesc,blocks,blocks,New,Used as armor for your base walls the Armored Wall has excellent defence properties and it will be a life saver for sure.
+ReinforcedSteelEntanglementWire,blocks,blocks,New,Reinforced Steel Entanglement Wire
+ReinforcedSteelEntanglementWireDesc,blocks,blocks,New,Doesn't do any damage but it slows down anything that moves. Pray you don't get entangled in one of those really.
+ReinforcedSteelCaltrops,blocks,blocks,New,Reinforced Steel Caltrops
+ReinforcedSteelCaltropsDesc,blocks,blocks,New,Weak damage but this trap will disable the regeneration ability of radiated zombies for 9 seconds.
+ReinforcedSteelGroundSpikes,blocks,blocks,New,Reinforced Steel Ground Spikes
+ReinforcedSteelGroundSpikesDesc,blocks,blocks,New,Decent damage along with applying bleed buff to anything that has the misfortune of being impaled by the Ground Spikes -- this trap is among the best.
