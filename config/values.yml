@@ -14,22 +14,35 @@ serverconfig.xml.j2:
   day_light_length: 18
 
   # Difficulty configuration.
-  game_difficulty: 3
+  game_difficulty: 1
   xp_multiplier: 100
+  party_shared_kill_range: 100
   player_safe_zone_hours: 12
   player_safe_zone_level: 5
+  player_killing_mode: 0
   bedroll_deadzone_size: 20
+  bedroll_expiry_time: 30
   drop_on_death: 0
   drop_on_quit: 0
   enemy_difficulty: 0
   enemy_spawn_mode: true
-  zombie_bm_move: 2
+  zombie_bm_move: 4
   zombie_feral_move: 3
   zombie_move: 0
-  zombie_move_night: 0
+  zombie_move_night: 1
   block_damage_player: 100
   block_damage_ai: 80
   block_damage_ai_bm: 100
+
+  # Land claim configuration.
+  land_claim_count: 2
+  land_claim_size: 40
+  land_claim_deadzone: 100
+  land_claim_expiry_time: 14
+  land_claim_decay_mode: 0
+  land_claim_offline_delay: 30
+  land_claim_online_durability_modifier: 4
+  land_claim_offline_durability_modifier: 32
 
   # Blood moon configuration.
   blood_moon_warning: 16
@@ -40,7 +53,8 @@ serverconfig.xml.j2:
   # Loot configuration.
   loot_abundance: 100
   loot_respawn_days: 30
-  air_drop_frequency: 72 # In hours.
+  air_drop_frequency: 120
+  air_drop_marker: true
 
   # Server, meta and access control configuration.
   server_name: My 7 Days to Die Server
@@ -48,12 +62,16 @@ serverconfig.xml.j2:
   server_website_url: ""
   server_password: ""
   server_port: 26900
-  server_visibility: 0
+  server_visibility: 2
   server_max_player_count: 8
   server_max_xfer_speed: 1200
+  server_max_spawned_zombies: 64
+  server_max_spawned_animals: 50
+  server_max_allowed_view_distance: 10
   control_panel_enabled: true
   control_panel_port: 8080
   control_panel_password: password
   telnet_enabled: true
   telnet_password: password
   telnet_port: 8081
+  persistent_player_profiles: false

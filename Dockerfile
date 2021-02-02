@@ -15,7 +15,7 @@ ENV SERVER_DATA_DIR=/app/7dtd/data
 # Steam still requires 32-bit cross compilation libraries.
 RUN echo "Installing necessary system packages to support steam CLI installation..." && \
     apt-get update && \
-    apt-get install -y bash expect htop tmux lib32gcc1 pigz telnet wget git && \
+    apt-get install -y bash expect htop tmux lib32gcc1 pigz netcat telnet wget git vim && \
     rm -rf /var/lib/apt/lists/*
 
 ENV PROC_UID 7999
