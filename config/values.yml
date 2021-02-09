@@ -29,9 +29,9 @@ serverconfig.xml.j2:
   zombie_bm_move: 4
   zombie_feral_move: 3
   zombie_move: 0
-  zombie_move_night: 1
+  zombie_move_night: 2
   block_damage_player: 100
-  block_damage_ai: 80
+  block_damage_ai: 100
   block_damage_ai_bm: 100
 
   # Land claim configuration.
@@ -48,7 +48,7 @@ serverconfig.xml.j2:
   blood_moon_warning: 16
   blood_moon_frequency: 6
   blood_moon_range: 1
-  blood_moon_enemy_count: 8
+  blood_moon_enemy_count: 9
 
   # Loot configuration.
   loot_abundance: 100
