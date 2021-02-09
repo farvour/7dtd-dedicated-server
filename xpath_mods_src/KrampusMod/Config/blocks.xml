@@ -13,16 +13,16 @@
   <set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='Damage_received']/@value">20</set>
   <set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='MaxDamage']/@value">100</set>
   <set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@class='RepairItems']/property[@name='resourceWood']/@value">25</set>
-  <set xpath="/blocks/block[@name='trapSpikesWoodDmg2']/property[@class='UpgradeBlock']/property[@name='ItemCount'/@value">25</set>
-  <set xpath="/blocks/block[@name='trapSpikesWoodDmg1']/property[@class='UpgradeBlock']/property[@name='ItemCount'/@value">15</set>
-  <set xpath="/blocks/block[@name='trapSpikesWoodDmg0']/property[@class='UpgradeBlock']/property[@name='ItemCount'/@value">10</set>
+  <set xpath="/blocks/block[@name='trapSpikesWoodDmg2']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">25</set>
+  <set xpath="/blocks/block[@name='trapSpikesWoodDmg1']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">15</set>
+  <set xpath="/blocks/block[@name='trapSpikesWoodDmg0']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">10</set>
 
   <set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='Damage']/@value">50</set>
   <set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='Damage_received']/@value">20</set>
   <set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='MaxDamage']/@value">500</set>
   <set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@class='RepairItems']/property[@name='resourceForgedIron']/@value">5</set>
-  <set xpath="/blocks/block[@name='trapSpikesIronDmg2']/property[@class='UpgradeBlock']/property[@name='ItemCount'/@value">10</set>
-  <set xpath="/blocks/block[@name='trapSpikesIronDmg1']/property[@class='UpgradeBlock']/property[@name='ItemCount'/@value">5</set>
+  <set xpath="/blocks/block[@name='trapSpikesIronDmg2']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">10</set>
+  <set xpath="/blocks/block[@name='trapSpikesIronDmg1']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">5</set>
 
   <!-- Prototype new steel type spike blocks (one level above iron). -->
   <!-- <append xpath="/blocks">
