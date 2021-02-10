@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ProjectZ2_XUI>
+  <!--	// Z2 // Compass -->
+
+  <set xpath="/xui/ruleset[@name='default']/window_group[@name='compass']">
+    <window name="windowCompass" anchor="CenterTop" />
+    <window name="windowTargetBar" anchor="CenterTop" />
+    <window name="onScreenIcons" />
+    <window name="dayTimeHUD" anchor="LeftTop" />
+  </set>
+
+  <setattribute xpath="/xui//window_group[@name='compass']" name="actionset">false</setattribute>
+
+
+  <!--	// Z2 // Interaction -->
+
+  <set xpath="/xui/ruleset[@name='default']/window_group[@name='interactionPrompt']">
+    <window name="interactionPrompt" />
+  </set>
+
+  <setattribute xpath="/xui//window_group[@name='interactionPrompt']" name="actionset">false</setattribute>
+
+
+  <!--	// Z2 // Search Timer -->
+
+  <set xpath="/xui/ruleset[@name='default']/window_group[@name='timer']">
+    <window name="windowTimer" />
+  </set>
+
+
+  <!--	// Z2 // Throw Power -->
+
+  <set xpath="/xui/ruleset[@name='default']/window_group[@name='throwpower']">
+    <window name="windowThrow" />
+  </set>
+
+  <setattribute xpath="/xui//window_group[@name='throwpower']" name="actionset">false</setattribute>
+
+
+  <!--	// Z2 // Toolbelt -->
+
+  <set xpath="/xui/ruleset[@name='default']/window_group[@name='toolbelt']">
+    <window name="windowToolbelt" anchor="CenterBottom" />
+    <window name="HUDLeftStatBars" anchor="LeftBottom" />
+    <window name="HUDRightStatBars" anchor="RightBottom" />
+    <window name="windowQuestTracker" anchor="RightTop" />
+    <window name="windowGroupBars" anchor="LeftTop" />
+  </set>
+
+  <setattribute xpath="/xui//window_group[@name='toolbelt']" name="actionset">false</setattribute>
+
+
+  <!--	// Z2 // Radial Menu -->
+
+  <set xpath="/xui/ruleset[@name='default']/window_group[@name='radial']">
+    <window name="windowRadial" />
+  </set>
+
+  <setattribute xpath="/xui//window_group[@name='radial']" name="actionset">keyboard</setattribute>
+  <setattribute xpath="/xui//window_group[@name='radial']" name="controller">Radial</setattribute>
+
+
+  <!--	// Z2 // Chat Output -->
+
+  <set xpath="/xui/ruleset[@name='default']/window_group[@name='chatoutput']">
+    <window name="chatoutput" />
+  </set>
+
+  <setattribute xpath="/xui//window_group[@name='chatoutput']" name="actionset">false</setattribute>
+
+
+  <!--	// Z2 // Chat Input -->
+
+  <set xpath="/xui/ruleset[@name='default']/window_group[@name='chat']">
+    <window name="chat" />
+  </set>
+
+
+  <!--	// Z2 // Day / Time UI Inject -->
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='crafting']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='character']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='map']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='skills']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='players']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='quests']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='journal']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='creative']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='looting']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[contains (@name, 'workstation')]">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='vehicle']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='vehicleStorage']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='assemble']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='trader']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='questTurnIn']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='powersource']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='powertrigger']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='powerrangedtrap']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='powercamera']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+  <append xpath="/xui/ruleset[@name='default']/window_group[@name='powerspotlight']">
+    <window name="dayTimeUI" anchor="LeftTop" />
+  </append>
+
+
+  <!--	// Z2 // In-Game Clean Menu -->
+
+  <set xpath="/xui/ruleset[@name='default']/window_group[@name='ingameMenu']">
+    <window name="ingameMenu" />
+    <window name="cleanMenuBackground" />
+  </set>
+</ProjectZ2_XUI>
