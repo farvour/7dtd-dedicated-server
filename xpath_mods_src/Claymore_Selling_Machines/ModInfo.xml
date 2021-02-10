@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-  <ModInfo>
-    <Name value="Personal Selling Machine" />
-    <Description value="Changes the Player Vending Machine to a sellpoint. You can sell items, but you can not buy any. If you want: You can make anything to brass, because coins melt to brass." />
-    <Author value="Claymore" />
-    <Version value="1.1.0" />
-  </ModInfo>
-</xml>
