@@ -15,7 +15,8 @@ ENV SERVER_DATA_DIR=/app/7dtd/data
 # Steam still requires 32-bit cross compilation libraries.
 RUN echo "Installing necessary system packages to support steam CLI installation..." && \
     apt-get update && \
-    apt-get install -y bash expect htop tmux lib32gcc1 pigz netcat telnet wget git vim && \
+    apt-get install -y \
+    bash expect htop tmux lib32gcc1 pigz netcat telnet wget git vim && \
     rm -rf /var/lib/apt/lists/*
 
 ENV PROC_UID 7999
@@ -88,17 +89,14 @@ RUN echo "Install the backup2l tool and config..." && \
 COPY --chown=z:root config/backup2l.conf ${SERVER_HOME}/backup2l/backup2l.conf
 
 # Install custom startserver script (adds support for template tool below, etc).
-
 COPY --chown=z:root scripts/startserver-1.sh ${SERVER_INSTALL_DIR}/
 
 # Custom prefabs.
-
 COPY --chown=z:root custom_prefabs/ ${SERVER_INSTALL_DIR}/Data/Prefabs/
 
 # Mods and mods related tasks.
 # COPY --chown=z:root server_fixes_v19_22_32/ ${SERVER_INSTALL_DIR}/Mods/
 # COPY --chown=z:root mods/BCManager/ ${SERVER_INSTALL_DIR}/Mods/BCManager/
-
 COPY --chown=z:root xpath_mods_src/ ${SERVER_INSTALL_DIR}/xpath_mods_src/
 COPY --chown=z:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
 
@@ -106,28 +104,22 @@ COPY --chown=z:root xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
 COPY --chown=z:root scripts/start_server_templates.py ${SERVER_HOME}/
 
 # Install configuration templates.
-
 COPY --chown=z:root config/serverconfig.xml.j2 ${SERVER_HOME}/
 COPY --chown=z:root config/values*.yml ${SERVER_HOME}/
 
 # Default web UI control panel port.
-
 EXPOSE 8080/tcp
 
 # Default telnet administrative port.
-
 EXPOSE 8081/tcp
 
 # Default webserver for allocs mod port.
-
 EXPOSE 8082/tcp
 
-# Default game port.
-
+# Default game ports.
 EXPOSE 26900/tcp 26900/udp
 EXPOSE 26901/tcp 26901/udp
 
 # Install custom entrypoint script.
-
 COPY scripts/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
