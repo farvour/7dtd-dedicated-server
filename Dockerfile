@@ -124,10 +124,8 @@ EXPOSE 8082/tcp
 
 # Default game port.
 
-EXPOSE 26900/tcp
-EXPOSE 26900/udp
-EXPOSE 26901/tcp
-EXPOSE 26901/udp
+EXPOSE 26900/tcp 26900/udp
+EXPOSE 26901/tcp 26901/udp
 
 # Install custom entrypoint script.
 
