@@ -15,6 +15,8 @@ __all__ = [
 
 SERVER_HOME = os.environ.get("SERVER_HOME")
 SERVER_INSTALL_DIR = os.environ.get("SERVER_INSTALL_DIR")
+SERVERCONFIG_VALUES_FILE = "serverconfig.xml.values.yml"
+SERVERCONFIG_VALUES_OVERRIDE_FILE = "serverconfig.xml.values.override.yml"
 
 
 def merge_dict(
@@ -86,18 +88,18 @@ class StartServerTemplates(object):
         print("Initializing the configuration file template replacer.")
 
         self.template_config_values = yaml.safe_load(
-            open(os.path.join(SERVER_HOME, "values.yml"), "r")
+            open(os.path.join(SERVER_HOME, SERVERCONFIG_VALUES_FILE), "r")
         )
 
-        print("Values file found and loaded.")
+        print(f"Values file {SERVERCONFIG_VALUES_FILE} found and loaded.")
 
         # This may not exist, trap the error.
         try:
             self.template_config_values_override = yaml.safe_load(
-                open(os.path.join(SERVER_HOME, "values-override.yml"), "r")
+                open(os.path.join(SERVER_HOME, SERVERCONFIG_VALUES_OVERRIDE_FILE), "r")
             )
 
-            print("Values override file found and loaded.")
+            print(f"Values override file {SERVERCONFIG_VALUES_OVERRIDE_FILE} found and loaded.")
 
         except Exception:
             self.template_config_values_override = {}

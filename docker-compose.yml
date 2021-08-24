@@ -12,6 +12,10 @@ services:
         # - type: bind
         # source: /home/z/7DaysToDieData/Saves
         # target: /app/7dtd/data/Saves
+      - type: bind
+        source: ./config/serverconfig.xml.values.override.yml
+        target: /app/7dtd/serverconfig.xml.values.override.yml
+        read_only: true
     ports:
       - 8080:8080/tcp
       - 8081:8081/tcp

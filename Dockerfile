@@ -80,7 +80,7 @@ USER z
 # You can simply run this script in the container and backup the mounted
 # volume to a destination available on the host.
 
-# docker run --rm --entrypoint /bin/bash dedicated-server_7dtd-server:latest -v dedicated-server_7dtd-data:/app/7dtd/data/Saves -v /mnt/backup:/app/7dtd/backups /app/7dtd/backup2l/backup2l -c /app/7dtd/backup2l/backup2l.conf -b
+# docker run --rm --entrypoint /bin/bash -v 7dtd-dedicated-server_7dtd-data:/app/7dtd/data/Saves -v /mnt/backup:/app/7dtd/backups 7dtd-dedicated-server_7dtd-server:latest /app/7dtd/backup2l/backup2l -c /app/7dtd/backup2l/backup2l.conf -b
 
 RUN echo "Install the backup2l tool and config..." && \
     git clone --single-branch --branch master https://github.com/gkiefer/backup2l.git && \
@@ -105,7 +105,7 @@ COPY --chown=z:root scripts/start_server_templates.py ${SERVER_HOME}/
 
 # Install configuration templates.
 COPY --chown=z:root config/serverconfig.xml.j2 ${SERVER_HOME}/
-COPY --chown=z:root config/values*.yml ${SERVER_HOME}/
+COPY --chown=z:root config/serverconfig.xml.values.yml ${SERVER_HOME}/
 
 # Default web UI control panel port.
 EXPOSE 8080/tcp
