@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
   <!-- Gyrocopter speed and fuel adjustment. -->
-  <set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">20, 25</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">15, 20</set>
   <set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='engine']/property[@name='fuelKmPerL']/@value">0.1</set>
 
   <!-- Motorcycle speed and fuel adjustment. -->
-  <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">20, 25</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">15, 20</set>
   <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='engine']/property[@name='fuelKmPerL']/@value">0.1</set>
 
   <!-- Truck speed and fuel adjustment. -->
