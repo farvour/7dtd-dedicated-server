@@ -57,16 +57,16 @@
   <remove xpath="/entitygroups/entitygroup[@name='VultureGroup']/entity[@name='animalZombieVulture']" />
   <append xpath="/entitygroups/entitygroup[@name='VultureGroup']">
     <entity name="invisibleAnimalEnemy" prob="50" />
-    <entity name="zombieSteveCrawler" prob="40" />
-    <entity name="animalZombieVulture" prob="10" />
+    <entity name="zombieSteveCrawler" prob="50" />
+    <!-- <entity name="animalZombieVulture" prob="10" /> -->
   </append>
 
   <!-- Significantly reduce vultures in the desert, they suck. -->
   <remove xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']/entity[@name='animalZombieVulture']" />
   <remove xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']/entity[@name='animalSnake']" />
   <append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsDesert']">
-    <entity name="animalSnake" prob="15" />
-    <entity name="animalZombieVulture" prob="5" />
+    <entity name="animalSnake" prob="20" />
+    <!-- <entity name="animalZombieVulture" prob="5" /> -->
   </append>
 
   <!-- Remove vultures from the wasteland. -->
