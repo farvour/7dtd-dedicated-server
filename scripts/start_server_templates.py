@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
-from typing import Any, Dict
+import logging
+import os
+from pathlib import Path
+from typing import Any, Mapping, Optional
 
 import jinja2
-import os
 import yaml
 
 __all__ = [
@@ -15,13 +17,20 @@ __all__ = [
 
 SERVER_HOME = os.environ.get("SERVER_HOME")
 SERVER_INSTALL_DIR = os.environ.get("SERVER_INSTALL_DIR")
-SERVERCONFIG_VALUES_FILE = "serverconfig.xml.values.yml"
-SERVERCONFIG_VALUES_OVERRIDE_FILE = "serverconfig.xml.values.override.yml"
+SERVER_DATA_DIR = os.environ.get("SERVER_DATA_DIR")
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[logging.FileHandler(filename=f"{__file__}.log"), logging.StreamHandler()],
+)
+
+logger = logging.getLogger("StartServerTemplates")
 
 
 def merge_dict(
-    d1: Dict[Any, Any], d2: Dict[Any, Any], stringify_vals: bool = False
-) -> Dict[Any, Any]:
+    d1: Mapping[Any, Any], d2: Mapping[Any, Any], stringify_vals: bool = False
+) -> Mapping[Any, Any]:
     """
     A simple shallow dictionary merger that replaces/appends values in d1 with
     those overridden or combined in d2 and returns the resulting output dict.
@@ -32,6 +41,7 @@ def merge_dict(
             v = str(v)
         for v in d2.values():
             v = str(v)
+
     return {**d1, **d2}
 
 
@@ -40,14 +50,13 @@ def create_jinja2_template_env(searchpath: str = "./templates") -> jinja2.Enviro
     Creates a usable template environment for Jinja2.
     """
 
-    template_loader = jinja2.FileSystemLoader(searchpath=searchpath)
-    template_env = jinja2.Environment(loader=template_loader)
-
-    return template_env
+    return jinja2.Environment(loader=jinja2.FileSystemLoader(searchpath=searchpath))
 
 
 def template_rendered(
-    template_env: jinja2.Environment, template_file: str, template_data: Dict = {}
+    template_env: jinja2.Environment,
+    template_file: str,
+    template_data: Optional[Mapping[str, str]] = None,
 ) -> str:
     """
     Utilize Jinja2 to produce a data field for a ConfigMap resource.
@@ -56,9 +65,7 @@ def template_rendered(
     """
 
     template = template_env.get_template(template_file)
-    out = template.render(template_data)
-
-    return out
+    return template.render(template_data)
 
 
 class StartServerTemplates(object):
@@ -74,92 +81,112 @@ class StartServerTemplates(object):
 
     TEMPLATES = [
         {
-            "template_file": "serverconfig.xml.j2",
+            "output_file": "serverconfig.xml",
+            "output_dir": SERVER_INSTALL_DIR,
             "template_search_path": SERVER_HOME,
-            "output_file": os.path.join(SERVER_INSTALL_DIR, "serverconfig.xml"),
+        },
+        {
+            "output_file": "serveradmin.xml",
+            "output_dir": os.path.join(SERVER_DATA_DIR, "Saves"),
+            "template_search_path": SERVER_HOME,
         },
     ]
 
-    def __init__(self):
+    def __init__(self, *, output_file: str, template_env: jinja2.Environment):
         """
         Initializes the start server template file writer.
         """
 
-        print("Initializing the configuration file template replacer.")
-
-        self.template_config_values = yaml.safe_load(
-            open(os.path.join(SERVER_HOME, SERVERCONFIG_VALUES_FILE), "r")
+        logger.info(
+            f"Initializing the configuration file template replacer for {output_file}."
         )
 
-        print(f"Values file {SERVERCONFIG_VALUES_FILE} found and loaded.")
+        self.template_env = template_env
+        self.output_file = output_file
+        self.template_file = f"{output_file}.j2"
+
+        template_config_values_file = f"{output_file}.values.yml"
+
+        logger.info(
+            f"Processing {self.output_file} template and writing to {output_file}."
+        )
+
+        try:
+            self.template_config_values = yaml.safe_load(
+                Path(SERVER_HOME, template_config_values_file).open("r")
+            )
+        except Exception:
+            logger.error(
+                f"Missing or unloadable values file {template_config_values_file} for template {self.template_file}."
+            )
+            raise
+
+        logger.info(f"Values file {template_config_values_file} found and loaded.")
+
+        template_config_values_override_file = f"{output_file}.values.override.yml"
 
         # This may not exist, trap the error.
         try:
             self.template_config_values_override = yaml.safe_load(
-                open(os.path.join(SERVER_HOME, SERVERCONFIG_VALUES_OVERRIDE_FILE), "r")
+                Path(SERVER_HOME, template_config_values_override_file).open("r")
             )
 
-            print(f"Values override file {SERVERCONFIG_VALUES_OVERRIDE_FILE} found and loaded.")
+            logger.info(
+                f"Values override file {template_config_values_override_file} found and loaded."
+            )
 
         except Exception:
             self.template_config_values_override = {}
 
-            print("No values override file found.")
+            logger.info("No values override file found.")
 
-    def render_all(self):
+        self.merged_template_data = merge_dict(
+            self.template_config_values,
+            self.template_config_values_override,
+        )
+
+        logger.debug("Merged template data result:")
+        logger.debug(self.merged_template_data)
+
+    @classmethod
+    def render_all(cls):
         """
         Render all templates applicable and output to the base files.
         """
 
-        print("Rendering all templates...")
+        logger.info("Rendering all templates.")
 
-        for t in self.TEMPLATES:
+        for t in cls.TEMPLATES:
             template_search_path = t["template_search_path"]
-            template_file = t["template_file"]
+            template_env = create_jinja2_template_env(searchpath=template_search_path)
             output_file = t["output_file"]
+            output_dir = t["output_dir"]
 
-            print(f"Processing {template_file} and writing to {output_file}.")
+            # template_data = self.override_values_from_env(template_data)
 
-            template_data = merge_dict(
-                self.template_config_values.get(template_file, {}),
-                self.template_config_values_override.get(template_file, {}),
-            )
-
-            template_data = self.override_values_from_env(template_data)
-
-            self.render(
-                template_env=create_jinja2_template_env(
-                    searchpath=template_search_path
-                ),
-                template_file=template_file,
-                template_data=template_data,
+            cls(
                 output_file=output_file,
-            )
+                template_env=template_env,
+            ).render(output_file=str(Path(output_dir, output_file).resolve()))
 
-        print("Rendered all templates.")
+        logger.info("Rendered all templates.")
 
-    def render(
-        self,
-        template_env: jinja2.Environment,
-        template_file: str,
-        template_data: Dict[str, Any],
-        output_file: str,
-    ):
+    def render(self, *, output_file: str) -> None:
         """
         Render a template file.
         """
 
         out = template_rendered(
-            template_env=template_env,
-            template_file=template_file,
-            template_data=template_data,
+            template_env=self.template_env,
+            template_file=self.template_file,
+            template_data=self.merged_template_data,
         )
 
         f = open(output_file, "w")
         f.write(out)
         f.close()
 
-    def override_values_from_env(self, vals: Dict[Any, Any]) -> Dict[Any, Any]:
+    def override_values_from_env(self, vals: Mapping[str, Any]) -> Mapping[str, Any]:
         """
         Iterate through all environment variables w/ prefix to see if
         we are overriding there too.
@@ -184,7 +211,7 @@ class StartServerTemplates(object):
                 cmp_key = f"SDTD_{k.upper()}"
 
                 if env_key.upper() == cmp_key:
-                    print(
+                    logger.info(
                         f"Located override value '{os.environ[env_key]}' for {cmp_key}, using it."
                     )
                     if isinstance(v, bool):
@@ -198,8 +225,7 @@ class StartServerTemplates(object):
 
 
 def main():
-    start_server_templates = StartServerTemplates()
-    start_server_templates.render_all()
+    StartServerTemplates.render_all()
 
 
 if __name__ == "__main__":

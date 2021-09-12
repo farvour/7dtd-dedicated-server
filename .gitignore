@@ -1,6 +1,10 @@
 # Do not commit override config to VCS.
-config/values-override.yml
+config/serverconfig.xml
+config/serveradmin.xml
 config/*.values.override.yml
+
+# Ignore any log files.
+*.log
 
 # Do not commit these to VCS.
 custom_prefabs/
