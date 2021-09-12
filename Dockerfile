@@ -106,6 +106,8 @@ COPY --chown=z:root scripts/start_server_templates.py ${SERVER_HOME}/
 # Install configuration templates.
 COPY --chown=z:root config/serverconfig.xml.j2 ${SERVER_HOME}/
 COPY --chown=z:root config/serverconfig.xml.values.yml ${SERVER_HOME}/
+COPY --chown=z:root config/serveradmin.xml.j2 ${SERVER_HOME}/
+COPY --chown=z:root config/serveradmin.xml.values.yml ${SERVER_HOME}/
 
 # Default web UI control panel port.
 EXPOSE 8080/tcp
