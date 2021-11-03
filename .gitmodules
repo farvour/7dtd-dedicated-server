@@ -1,9 +1,6 @@
 [submodule "xpath_mods_src/s420-simpleui-craftingqueue"]
 	path = xpath_mods_src/s420-simpleui-craftingqueue
 	url = git@gitlab.com:7dtd/modlets/s420-simpleui-craftingqueue.git
-[submodule "xpath_mods_src/claymore-craftable-dyes"]
-	path = xpath_mods_src/claymore-craftable-dyes
-	url = git@gitlab.com:7dtd/modlets/claymore-craftable-dyes.git
 [submodule "xpath_mods_src/claymore-modslots-equals-itemlevel"]
 	path = xpath_mods_src/claymore-modslots-equals-itemlevel
 	url = git@gitlab.com:7dtd/modlets/claymore-modslots-equals-itemlevel.git
