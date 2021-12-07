@@ -8,9 +8,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 # saves or other things, this doesn't really have to change, but is
 # here for clarity and customization in case.
 
-ENV SERVER_HOME=/app/7dtd
-ENV SERVER_INSTALL_DIR=/app/7dtd/dedicated-server
-ENV SERVER_DATA_DIR=/app/7dtd/data
+ENV SERVER_HOME=/opt/7dtd
+ENV SERVER_INSTALL_DIR=/opt/7dtd/7dtd-dedicated-server
+ENV SERVER_DATA_DIR=/var/opt/7dtd/data
 
 # Steam still requires 32-bit cross compilation libraries.
 RUN echo "=== installing necessary system packages to support steam CLI installation..." \
