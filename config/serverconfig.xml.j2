@@ -251,6 +251,24 @@
   <property name="LandClaimOfflineDelay" value="{{ land_claim_offline_delay }}" />
   <!-- The number of minutes after a player logs out that the land claim area hardness transitions from online to offline. Default is 0 -->
 
+  <property name="DynamicMeshEnabled" value="{{ 'true' if dynamic_mesh_enabled else 'false' }}"/>
+  <!-- Is Dynamic Mesh system enabled -->
+
+  <property name="DynamicMeshLandClaimOnly" value="{{ 'true' if dynamic_mesh_land_claim_only else 'false' }}"/>
+  <!-- Is Dynamic Mesh system only active in player LCB areas -->
+
+  <property name="DynamicMeshLandClaimBuffer" value="{{ dynamic_mesh_land_claim_buffer }}"/>
+  <!-- Dynamic Mesh LCB chunk radius -->
+
+  <property name="DynamicMeshMaxItemCache" value="{{ dynamic_mesh_max_item_cache }}"/>
+  <!-- How many items can be processed concurrently, higher values use more RAM -->
+
+  <property name="TwitchServerPermission" value="{{ twitch_server_permission }}"/>
+  <!-- Required permission level to use twitch integration on the server -->
+
+  <property name="TwitchBloodMoonAllowed" value="{{ 'true' if twitch_blood_moon_allowed else 'false' }}"/>
+  <!-- If the server allows twitch actions during a blood moon. This could cause server lag with extra zombies being spawned during blood moon. -->
+
   <!-- There are several game settings that you cannot change when starting a new game.
   You can use console commands to change at least some of them ingame.
   setgamepref BedrollDeadZoneSize 30 -->
