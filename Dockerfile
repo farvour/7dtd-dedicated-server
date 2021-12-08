@@ -100,10 +100,8 @@ COPY --chown=${PROC_USER}:${PROC_GROUP} scripts/startserver-1.sh ${SERVER_INSTAL
 COPY --chown=${PROC_USER}:${PROC_GROUP} custom_prefabs/ ${SERVER_INSTALL_DIR}/Data/Prefabs/
 
 # Mods and mods related tasks.
-# COPY --chown=z:root server_fixes_v19_22_32/ ${SERVER_INSTALL_DIR}/Mods/
-# COPY --chown=z:root mods/BCManager/ ${SERVER_INSTALL_DIR}/Mods/BCManager/
-# COPY --chown=${PROC_USER}:${PROC_GROUP} xpath_mods_src/ ${SERVER_INSTALL_DIR}/xpath_mods_src/
-# COPY --chown=${PROC_USER}:${PROC_GROUP} xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
+COPY --chown=${PROC_USER}:${PROC_GROUP} xpath_mods_src/ ${SERVER_INSTALL_DIR}/xpath_mods_src/
+COPY --chown=${PROC_USER}:${PROC_GROUP} xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
 
 # Install the start server templates tool.
 COPY --chown=${PROC_USER}:${PROC_GROUP} scripts/start_server_templates.py ${SERVER_HOME}/
