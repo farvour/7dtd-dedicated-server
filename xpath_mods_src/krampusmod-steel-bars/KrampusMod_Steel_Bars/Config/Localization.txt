@@ -1,0 +1,4 @@
+Key,Source,Context,Changes,English
+krampusModSteelBars,blocks,Block,--,Steel Bars
+krampusModSteelBarsCentered,blocks,Block,--,Steel Bars Centered
+krampusModSteelBarsDesc,blocks,Block,--,You can see and shoot through steel bars and they offer excellent protection.

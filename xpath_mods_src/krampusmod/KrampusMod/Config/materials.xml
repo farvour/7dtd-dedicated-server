@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <remove xpath="/materials/material[@id='MtrapSpikesWood']/property" />
+  <append xpath="/materials/material[@id='MtrapSpikesWood']">
+    <property name="damage_category" value="wood" />
+    <property name="surface_category" value="wood" />
+    <property name="forge_category" value="wood" />
+    <property name="Hardness" type="float" value="1" />
+    <property name="stepsound" value="wood" />
+    <property name="stability_glue" value="20" />
+    <property name="Mass" type="int" value="5" />
+    <property name="MaxDamage" value="100" />
+    <property name="movement_factor" value="0.18" />
+    <property name="Experience" value="2" />
+  </append>
+
+  <remove xpath="/materials/material[@id='MtrapSpikesIron']/property" />
+  <append xpath="/materials/material[@id='MtrapSpikesIron']">
+    <property name="damage_category" value="metal" />
+    <property name="surface_category" value="metal" />
+    <property name="forge_category" value="iron" />
+    <property name="Hardness" type="float" value="1" />
+    <property name="stepsound" value="metal" />
+    <property name="stability_glue" value="300" />
+    <property name="Mass" type="int" value="20" />
+    <property name="explosionresistance" value="2.2" />
+    <property name="MaxDamage" value="500" />
+    <property name="Experience" value="2" />
+    <property name="movement_factor" value="0.18" />
+  </append>
+
+  <!-- <append xpath="/materials">
+    <material id="krampusMod_Mtrap_Spikes_Steel">
+      <property name="damage_category" value="metal" />
+      <property name="surface_category" value="metal" />
+      <property name="forge_category" value="iron" />
+      <property name="Hardness" type="float" value="1" />
+      <property name="stepsound" value="metal" />
+      <property name="stability_glue" value="300" />
+      <property name="StabilitySupport" value="false" />
+      <property name="Mass" type="int" value="20" />
+      <property name="explosionresistance" value="4" />
+      <property name="Experience" value="25" />
+      <property name="movement_factor" value="0.18" />
+    </material>
+  </append> -->
+</configs>

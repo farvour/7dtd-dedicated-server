@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <append xpath="/recipes">
+    <!-- Create a new flagstone log spike that can be crafted, upgraded to cobblestone and then concrete. -->
+    <recipe name="krampusModFlagstoneSpike" count="1">
+      <ingredient name="resourceCobblestones" count="20" />
+    </recipe>
+
+    <!-- Create a new concrete log spike that can be crafted in a cement mixer. -->
+    <recipe name="krampusModConcreteSpike1" count="1" craft_area="cementMixer" tags="cementMixerCrafting">
+      <ingredient name="resourceConcreteMix" count="20" />
+    </recipe>
+  </append>
+</configs>

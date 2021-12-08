@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <!-- Base size is "18" slots. -->
+  <set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">16,32,48,64,80</set>
+
+  <!-- <set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity' and @value='9']/@value">21</set>
+  <set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity' and @value='15']/@value">32</set>
+  <set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity' and @value='21']/@value">43</set>
+  <set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity' and @value='27']/@value">54</set> -->
+
+  <!-- Patch the nightStalker perk for the new backpack size. -->
+  <set xpath="/progression/perks/perk[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">96</set>
+
+  <!-- Be a better knife guy. -->
+  <!-- <set xpath="/progression/perks/perk[@name='perkNightStalkerComplete']/effect_group/passive_effect[@name='EntityDamage']/@value">10</set> -->
+</configs>

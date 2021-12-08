@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <ModInfo>
+    <Name value="KrampusMod_Easier_Gamestages" />
+    <Description value="Delays the curve a bit on gamestage progression to allow for more time before things get really difficult. Currently it is only adjusting difficulty and bonus multipliers in A19 and not modifying the actual Gamestages." />
+    <Author value="KrazyKrampus" />
+    <Version value="1.0" />
+    <Website value="" />
+  </ModInfo>
+</xml>

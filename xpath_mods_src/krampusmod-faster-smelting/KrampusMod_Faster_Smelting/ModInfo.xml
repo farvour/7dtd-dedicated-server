@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <ModInfo>
+    <Name value="KrampusMod_Faster_Smelting" />
+    <Description value="Increases speed of smelting resources into a forge and crafting of some items out of the forge." />
+    <Author value="KrazyKrampus" />
+    <Version value="2.0" />
+    <Website value="" />
+  </ModInfo>
+</xml>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT2']">
+    <item name="resourceSteelPolishSchematic" />
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='workingStiffsSub']">
+    <item name="resourceSteelPolish" count="3,25" prob="0.1" />
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='forgeLoot']">
+    <item name="resourceSteelPolish" count="3,25" prob="0.1" />
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='chemistryStationLoot']">
+    <item name="resourceSteelPolishSchematic" prob="0.01" />
+    <item name="resourceSteelPolish" count="3,25" prob="0.3" />
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='workbenchLoot']">
+    <item name="resourceSteelPolishSchematic" prob="0.01" />
+    <item name="resourceSteelPolish" count="3,25" prob="0.3" />
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='junk']">
+    <item name="resourceSteelPolish" count="3,25" prob="0.05" />
+  </append>
+</configs>

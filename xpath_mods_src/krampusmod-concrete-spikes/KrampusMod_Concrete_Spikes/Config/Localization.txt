@@ -1,0 +1,5 @@
+Key,Source,Context,Changes,English
+krampusModConcreteSpike1,blocks,Block,New,Concrete Spike
+krampusModConcreteSpike1Desc,blocks,Block,New,Spikes made of concrete that offer great defense. Upradeable to reinforced concrete.
+krampusModFlagstoneSpike,blocks,Block,New,Flagstone Spike
+krampusModFlagstoneSpikeDesc,blocks,Block,New,Spikes made of flagstone that offer fair defense. Upgradeable to cobblestone and ultimately concrete.
