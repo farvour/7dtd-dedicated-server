@@ -2,7 +2,7 @@
 <configs>
   <!-- Change all non-bundle stacks of more than 1 (to avoid mod issues w/ clothes, engines, etc) to a fixed 10,000. -->
   <!-- Skip items that begin with "unit_" since they are the forge-smelted unit values. -->
-  <set xpath='/items/item[not (contains(@name, "Bundle")) and not (starts-with(@name, "unit_"))]/property[@name="Stacknumber" and @value &gt; 1]/@value'>10000</set>
+  <set xpath="/items/item[not (contains(@name, 'Bundle')) and not (starts-with(@name, 'unit_'))]/property[@name='Stacknumber' and @value &gt; 1]/@value">10000</set>
 
   <!-- Set all bundle stack-sizes to a fixed 50 and create 10K stacks on unpack. -->
   <set xpath="/items/item[starts-with(@name, 'resource') and contains(@name, 'Bundle')]/property[@name='Stacknumber']/@value">50</set>

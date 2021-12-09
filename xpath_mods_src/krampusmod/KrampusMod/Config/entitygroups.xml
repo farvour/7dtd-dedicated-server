@@ -57,8 +57,8 @@
   <!-- Replace vultures with crawlers most of the time. -->
   <remove xpath="/entitygroups/entitygroup[@name='VultureGroup']/entity[@name='animalZombieVulture']" />
   <append xpath="/entitygroups/entitygroup[@name='VultureGroup']">
-    <entity name="invisibleAnimalEnemy" prob="50" />
-    <entity name="zombieSteveCrawler" prob="50" />
+    <!-- <entity name="invisibleAnimalEnemy" prob="50" /> -->
+    <entity name="zombieSteveCrawler" />
     <!-- <entity name="animalZombieVulture" prob="10" /> -->
   </append>
 
@@ -78,8 +78,8 @@
     <entity name="animalSnake" prob="35" />
     <entity name="animalZombieDog" prob="45" />
   </append>
-  <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/entity[@name='animalZombieVulture']" />
-  <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/entity[@name='animalZombieVultureRadiated']" />
+  <!-- <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/entity[@name='animalZombieVulture']" />
+  <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/entity[@name='animalZombieVultureRadiated']" /> -->
   <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNightNoBears']/entity[@name='animalZombieVulture']" />
   <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNightNoBears']/entity[@name='animalZombieVultureRadiated']" />
   <remove xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight2']/entity[@name='animalZombieVulture']" />
