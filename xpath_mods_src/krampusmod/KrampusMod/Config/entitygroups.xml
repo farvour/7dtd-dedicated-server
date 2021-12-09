@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
-  <remove xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieStripper']" />
-  <!-- <set xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieStripper']/@prob">0.0</set> -->
+  <remove xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombiePartyGirl']" />
+  <!-- <set xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombiePartyGirl']/@prob">0.0</set> -->
 
   <!-- <append xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS')]">
-    <entity name="zombieStripper" prob="0.1" />
-    <entity name="zombieStripperFeral" prob="0.1" />
+    <entity name="zombiePartyGirl" prob="0.1" />
+    <entity name="zombiePartyGirlFeral" prob="0.1" />
   </append> -->
 
   <!-- <append xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStage')]">
-    <entity name="zombieStripper" prob="0.1" />
-    <entity name="zombieStripperFeral" prob="0.1" />
+    <entity name="zombiePartyGirl" prob="0.1" />
+    <entity name="zombiePartyGirlFeral" prob="0.1" />
   </append> -->
 
   <!-- Reduce utility worker zombies in general population. -->
