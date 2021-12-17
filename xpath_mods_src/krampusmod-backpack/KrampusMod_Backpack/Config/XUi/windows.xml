@@ -6,31 +6,31 @@
   <set xpath="/windows/window[@name='windowLooting']/rect[@name='content']/grid[@depth='12' and @rows='10']/@rows">15</set>
 
   <!-- Adjust the info/inspect panels to match bigger backpack size on bottom panel. -->
-  <set xpath="/windows/window[@name='emptyInfoPanel']/@width">738</set>
-  <set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@name='backgroundMain']/@width">738</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/@width">741</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/panel[@name='header']/label[@pos='575,-8']/@pos">713,-8</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/panel[@name='header']/sprite[@name='costIcon']/@pos">715,-8</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/sprite[@name='backgroundMain' and @width='603']/@width">741</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/sprite[@name='backgroundMain' and @width='453']/@width">590</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect[@visible='{showdescription}']/label[@name='descriptionText']/@width">580</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/@width">587</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/label[@name='descriptionText']/@width">580</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect[@visible='{showstats}']/@width">590</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect[@visible='{showstats}']/rect/label[@width='430']/@width">567</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@cols">7</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{iscomparing}']/@width">587</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/@width">587</set>
-  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/sprite[@width='449']/@width">587</set>
-  <set xpath="/windows/window[@name='buffInfoPanel']/@width">741</set>
-  <set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/sprite[@name='backgroundMain' and @width='603']/@width">741</set>
-  <set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/@width">587</set>
-  <set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/sprite[@name='backgroundMain']/@width">590</set>
-  <set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/rect/label[@name='descriptionText']/@width">570</set>
+  <set xpath="/windows/window[@name='emptyInfoPanel']/@width">876</set>
+  <set xpath="/windows/window[@name='emptyInfoPanel']/rect[@name='contentCraftingInfo']/sprite[@name='backgroundMain']/@width">876</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/@width">876</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/panel[@name='header']/label[@pos='575,-8']/@pos">848,-8</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/panel[@name='header']/sprite[@name='costIcon']/@pos">850,-8</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/sprite[@name='backgroundMain' and @width='603']/@width">876</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/sprite[@name='backgroundMain' and @width='453']/@width">725</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect[@visible='{showdescription}']/label[@name='descriptionText']/@width">715</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/@width">722</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/label[@name='descriptionText']/@width">715</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect[@visible='{showstats}']/@width">725</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='description']/rect[@visible='{showstats}']/rect/label[@width='430']/@width">705</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/grid[@name='parts']/@cols">9</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@visible='{iscomparing}']/@width">722</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/@width">722</set>
+  <set xpath="/windows/window[@name='itemInfoPanel']/rect[@name='contentInfo']/rect[@name='searchControls']/sprite[@width='449']/@width">722</set>
+  <set xpath="/windows/window[@name='buffInfoPanel']/@width">876</set>
+  <set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/sprite[@name='backgroundMain' and @width='603']/@width">876</set>
+  <set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/@width">722</set>
+  <set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/sprite[@name='backgroundMain']/@width">725</set>
+  <set xpath="/windows/window[@name='buffInfoPanel']/rect[@name='contentBuffInfo']/rect/rect[@name='description']/rect/label[@name='descriptionText']/@width">705</set>
 
   <!-- Replace the original backpack window with the larger one. -->
   <append xpath="/windows">
-    <window name="windowBackpack" width="741" height="349" pos="0,15" backgroundcolor="[black]" panel="Center" controller="BackpackWindow" cursor_area="true">
+    <window name="windowBackpack" width="876" height="349" pos="0,15" backgroundcolor="[black]" panel="Center" controller="BackpackWindow" cursor_area="true">
 
       <!-- Header display and titlebar. -->
       <panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
@@ -55,10 +55,10 @@
       </panel>
 
       <!-- Actual backpack content. -->
-      <panel name="content" width="100%" height="303" depth="0" pos="0,-46" disableautobackground="true">
+      <panel name="content" width="100%" height="336" depth="0" pos="0,-46" disableautobackground="true">
         <!-- <sprite name="background" color="[black]" type="sliced" globalopacity="true" /> -->
-        <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="741" height="336" color="[black]" type="sliced" fillcenter="false" on_press="true" />
-        <grid depth="10" name="inventory" rows="5" cols="11" pos="3,-3" cell_width="67" cell_height="67" controller="Backpack" repeat_content="true">
+        <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="876" height="338" color="[black]" type="sliced" fillcenter="false" on_press="true" />
+        <grid depth="10" name="inventory" rows="5" cols="13" pos="3,-3" cell_width="67" cell_height="67" controller="Backpack" repeat_content="true">
           <KrampusMod_Backpack_ItemStack name="0" />
         </grid>
       </panel>
