@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <!-- Define the new flagstone, cobblestone and concrete log "spike" blocks. -->
+  <append xpath="/blocks">
+    <block name="krampusModFlagstoneSpike">
+      <property name="Class" value="TrunkTip" />
+      <property name="BlockTag" value="Spike" />
+      <property name="Damage" value="15" />
+      <property name="Damage_received" value="20" />
+      <property name="Material" value="Mstone" />
+      <property name="Shape" value="New" />
+      <property name="LightOpacity" value="6" />
+      <property name="Path" value="solid" />
+      <property name="Model" value="cone1m" />
+      <property name="CustomIcon" value="flagstonePyramid" />
+      <property name="Texture" value="226" />
+      <property name="UseGlobalUV" value="Local" />
+      <property name="ImposterExchange" value="imposterPyramid" param1="10" />
+      <property name="ImposterDontBlock" value="true" />
+      <property name="FuelValue" value="0" />
+      <property class="RepairItems">
+        <property name="resourceCobblestones" value="20" />
+      </property>
+      <property class="UpgradeBlock">
+        <property name="ToBlock" value="krampusModCobblestoneSpike" />
+        <property name="Item" value="resourceCobblestones" />
+        <property name="ItemCount" value="40" />
+        <property name="UpgradeHitCount" value="5" />
+      </property>
+      <property name="CustomUpgradeSound" value="place_block_concrete" />
+      <drop event="Harvest" name="resourceRockSmall" count="15" tag="allHarvest" />
+      <drop event="Destroy" count="0" />
+      <drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1" />
+      <property name="Group" value="Tools/Traps" />
+      <property name="DescriptionKey" value="krampusModFlagstoneSpikeDesc" />
+      <property name="EconomicValue" value="50" />
+      <property name="EconomicBundleSize" value="20" />
+      <property name="FilterTags" value="fdecor,ftraps" />
+      <property name="SortOrder1" value="70g0" />
+    </block>
+
+    <block name="krampusModCobblestoneSpike">
+      <property name="Class" value="TrunkTip" />
+      <property name="BlockTag" value="Spike" />
+      <property name="Damage" value="15" />
+      <property name="Damage_received" value="20" />
+      <property name="Material" value="Mcobblestone" />
+      <property name="Shape" value="New" />
+      <property name="LightOpacity" value="6" />
+      <property name="Path" value="solid" />
+      <property name="Model" value="cone1m" />
+      <property name="CustomIcon" value="cobblestonePyramid" />
+      <property name="Texture" value="328" />
+      <property name="UseGlobalUV" value="Local" />
+      <property name="ImposterExchange" value="imposterPyramid" param1="10" />
+      <property name="ImposterDontBlock" value="true" />
+      <property name="FuelValue" value="0" />
+      <property class="RepairItems">
+        <property name="resourceCobblestones" value="40" />
+      </property>
+      <property class="UpgradeBlock">
+        <property name="ToBlock" value="krampusModConcreteSpike1" />
+        <property name="Item" value="resourceConcreteMix" />
+        <property name="ItemCount" value="20" />
+        <property name="UpgradeHitCount" value="5" />
+      </property>
+      <property name="CustomUpgradeSound" value="place_block_concrete" />
+      <drop event="Harvest" name="resourceRockSmall" count="15" tag="allHarvest" />
+      <drop event="Destroy" count="0" />
+      <drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1" />
+    </block>
+
+    <block name="krampusModConcreteSpike1">
+      <property name="Class" value="TrunkTip" />
+      <property name="BlockTag" value="Spike" />
+      <property name="Damage" value="40" />
+      <property name="Damage_received" value="30" />
+      <property name="Material" value="Mconcrete" />
+      <property name="Shape" value="New" />
+      <property name="LightOpacity" value="6" />
+      <property name="Path" value="solid" />
+      <property name="Model" value="cone1m" />
+      <property name="CustomIcon" value="pouredConcretePyramid" />
+      <property name="Texture" value="8" />
+      <property name="UseGlobalUV" value="Local" />
+      <property name="ImposterExchange" value="imposterPyramid" param1="10" />
+      <property name="ImposterDontBlock" value="true" />
+      <property name="FuelValue" value="0" />
+      <property class="RepairItems">
+        <property name="resourceConcreteMix" value="20" />
+      </property>
+      <property class="UpgradeBlock">
+        <property name="ToBlock" value="krampusModConcreteSpike2" />
+        <property name="Item" value="resourceConcreteMix" />
+        <property name="ItemCount" value="20" />
+        <property name="UpgradeHitCount" value="5" />
+      </property>
+      <property name="CustomUpgradeSound" value="place_block_concrete" />
+      <drop event="Harvest" name="resourceRockSmall" count="25" tag="allHarvest" />
+      <drop event="Destroy" count="0" />
+      <drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1" />
+      <property name="Group" value="Tools/Traps" />
+      <property name="DescriptionKey" value="krampusModConcreteSpike1Desc" />
+      <property name="EconomicValue" value="75" />
+      <property name="EconomicBundleSize" value="20" />
+      <property name="FilterTags" value="fdecor,ftraps" />
+      <property name="SortOrder1" value="70g0" />
+    </block>
+
+    <block name="krampusModConcreteSpike2">
+      <property name="Class" value="TrunkTip" />
+      <property name="BlockTag" value="Spike" />
+      <property name="Damage" value="55" />
+      <property name="Damage_received" value="20" />
+      <property name="Material" value="MrConcrete" />
+      <property name="Shape" value="New" />
+      <property name="LightOpacity" value="6" />
+      <property name="Path" value="solid" />
+      <property name="Model" value="cone1m" />
+      <property name="CustomIcon" value="pouredConcretePyramid" />
+      <property name="Texture" value="315,315,315,315,315,315" />
+      <property name="UseGlobalUV" value="Local" />
+      <property name="ImposterExchange" value="imposterPyramid" param1="10" />
+      <property name="ImposterDontBlock" value="true" />
+      <property name="FuelValue" value="0" />
+      <property class="RepairItems">
+        <property name="resourceConcreteMix" value="20" />
+      </property>
+      <property class="UpgradeBlock">
+        <property name="ToBlock" value="steelLogSpike6" />
+        <property name="Item" value="resourceForgedSteel" />
+        <property name="ItemCount" value="10" />
+        <property name="UpgradeHitCount" value="5" />
+      </property>
+      <property name="CustomUpgradeSound" value="place_block_metal" />
+      <drop event="Harvest" name="resourceRockSmall" count="25" tag="allHarvest" />
+      <drop event="Destroy" count="0" />
+      <drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1" />
+    </block>
+  </append>
+</configs>

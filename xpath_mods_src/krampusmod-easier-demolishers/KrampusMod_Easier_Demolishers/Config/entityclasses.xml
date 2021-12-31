@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <!-- Adjust maximum health for the demolition zombie. -->
+  <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='base_set']/@value">500</set>
+
+  <!-- Nerf the block damage. -->
+  <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.BlockDamage']/@value">3000</set>
+  <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.DamageBonus.earth']/@value">.088</set>
+
+  <!-- Slow down this zombie, becauase all of its heavy armor shouldn't allow it to move so fast anyway. -->
+  <append xpath="/entity_classes/entity_class[@name='zombieDemolition']">
+    <property name="MoveSpeedAggro" value=".15, .2" />
+  </append>
+</configs>

@@ -2,19 +2,21 @@
 version: "3.8"
 
 services:
-  7dtd-server:
+  server:
     build: .
-    #image: omicron:32000/7dtd-dedicated-server:${GIT_COMMIT_SHA1_SHORT}
+    env_file:
+      - .env
     volumes:
       - type: volume # You could also bind-mount this to your local FS (see below)
-        source: 7dtd-data
-        target: /app/7dtd/data/Saves
-        # - type: bind
-        # source: /home/z/7DaysToDieData/Saves
-        # target: /app/7dtd/data/Saves
+        source: data
+        target: /var/opt/7dtd/data/Saves
+      - type: bind
+        source: ./config/serveradmin.xml.values.override.yml
+        target: /opt/7dtd/serveradmin.xml.values.override.yml
+        read_only: true
       - type: bind
         source: ./config/serverconfig.xml.values.override.yml
-        target: /app/7dtd/serverconfig.xml.values.override.yml
+        target: /opt/7dtd/serverconfig.xml.values.override.yml
         read_only: true
     ports:
       - 8080:8080/tcp
@@ -26,4 +28,4 @@ services:
       - 26902:26902/udp
 
 volumes:
-  7dtd-data:
+  data: null

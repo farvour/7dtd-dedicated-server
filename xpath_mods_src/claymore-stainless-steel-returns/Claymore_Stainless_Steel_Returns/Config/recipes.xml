@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <append xpath="/recipes">
+    <recipe name="resourceSteelPolish" count="10" craft_time="10" craft_area="workbench" tags="learnable,workbenchCrafting">
+      <ingredient name="resourceOil" count="1" />
+      <ingredient name="resourceCrushedSand" count="10" />
+      <ingredient name="resourceCoal" count="5" />
+    </recipe>
+  </append>
+</configs>

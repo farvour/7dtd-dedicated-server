@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+  <ModInfo>
+    <Name value="Claymore Stainless Steel Returns" />
+    <Description value="Adds back steel polish and polished steel. You have to find a recipe, or learn it via perk. Modified the explosion resistance. You can now find polish in various containers, but rare!" />
+    <Author value="Claymore" />
+    <Version value="2.1.0" />
+  </ModInfo>
+</xml>

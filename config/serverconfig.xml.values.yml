@@ -12,6 +12,16 @@ world_gen_size: 4096
 day_night_length: 60
 day_light_length: 18
 
+# Dynamic mesh configuration.
+dynamic_mesh_enabled: true
+dynamic_mesh_land_claim_only: false
+dynamic_mesh_land_claim_buffer: 3
+dynamic_mesh_max_item_cache: 3
+
+# Twitch configuration.
+twitch_server_permission: 90
+twitch_blood_moon_allowed: false
+
 # Difficulty configuration.
 game_difficulty: 1
 xp_multiplier: 100
@@ -44,10 +54,10 @@ land_claim_online_durability_modifier: 4
 land_claim_offline_durability_modifier: 32
 
 # Blood moon configuration.
-blood_moon_warning: 16
-blood_moon_frequency: 6
-blood_moon_range: 1
-blood_moon_enemy_count: 9
+blood_moon_warning: 12
+blood_moon_frequency: 7
+blood_moon_range: 0
+blood_moon_enemy_count: 8
 
 # Loot configuration.
 loot_abundance: 100
