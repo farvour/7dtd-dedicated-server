@@ -66,18 +66,18 @@ RUN echo "=== installing necessary system packages to support run-time and entry
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
+ENV PIPENV_VENV_IN_PROJECT=1
+
 RUN echo "=== ensure pipenv is installed..." \
     && python3 -V \
-    && pip3 install pipenv \
-    && mkdir -p /pipenv/buildroot
+    && pip3 install pipenv
 
-COPY Pipfile /pipenv/buildroot/
-COPY Pipfile.lock /pipenv/buildroot/
+COPY Pipfile ${SERVER_HOME}
+COPY Pipfile.lock ${SERVER_HOME}
 
 RUN echo "=== install Pipfile requirements..." \
     && python3 -V \
-    && cd /pipenv/buildroot \
-    && pipenv install --deploy --system
+    && pipenv install --deploy
 
 USER ${PROC_USER}
 
@@ -93,38 +93,36 @@ RUN echo "=== install the backup2l tool and config..." \
 
 COPY --chown=${PROC_USER}:${PROC_GROUP} config/backup2l.conf ${SERVER_HOME}/backup2l/backup2l.conf
 
-# Install custom startserver script (adds support for template tool below, etc).
+# Install custom startserver script (adds support for generator tool below, etc)
 COPY --chown=${PROC_USER}:${PROC_GROUP} scripts/startserver-1.sh ${SERVER_INSTALL_DIR}/
 
-# Custom prefabs.
+# Custom prefabs
 COPY --chown=${PROC_USER}:${PROC_GROUP} custom_prefabs/ ${SERVER_INSTALL_DIR}/Data/Prefabs/
 
-# Mods and mods related tasks.
+# Mods and mods related tasks
 COPY --chown=${PROC_USER}:${PROC_GROUP} xpath_mods_src/ ${SERVER_INSTALL_DIR}/xpath_mods_src/
 COPY --chown=${PROC_USER}:${PROC_GROUP} xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
 
-# Install the start server templates tool.
-COPY --chown=${PROC_USER}:${PROC_GROUP} scripts/start_server_templates.py ${SERVER_HOME}/
+# Install the server configuration generator tool
+COPY --chown=${PROC_USER}:${PROC_GROUP} scripts/generate_server_config.py ${SERVER_HOME}/
 
-# Install configuration templates.
-COPY --chown=${PROC_USER}:${PROC_GROUP} config/serverconfig.xml.j2 ${SERVER_HOME}/
-COPY --chown=${PROC_USER}:${PROC_GROUP} config/serverconfig.xml.values.yml ${SERVER_HOME}/
-COPY --chown=${PROC_USER}:${PROC_GROUP} config/serveradmin.xml.j2 ${SERVER_HOME}/
-COPY --chown=${PROC_USER}:${PROC_GROUP} config/serveradmin.xml.values.yml ${SERVER_HOME}/
+# Install configuration base value input files
+COPY --chown=${PROC_USER}:${PROC_GROUP} config/serverconfig.xml.values.in.yaml ${SERVER_HOME}/
+COPY --chown=${PROC_USER}:${PROC_GROUP} config/serveradmin.xml.values.in.yaml ${SERVER_HOME}/
 
-# Default web UI control panel port.
+# Default web UI control panel port
 EXPOSE 8080/tcp
 
-# Default telnet administrative port.
+# Default telnet administrative port
 EXPOSE 8081/tcp
 
-# Default webserver for allocs mod port.
+# Default webserver for allocs mod port
 EXPOSE 8082/tcp
 
-# Default game ports.
+# Default game ports
 EXPOSE 26900/tcp 26900/udp
 EXPOSE 26901/tcp 26901/udp
 
-# Install custom entrypoint script.
+# Install custom entrypoint script
 COPY scripts/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

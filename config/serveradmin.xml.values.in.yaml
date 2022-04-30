@@ -2,7 +2,7 @@
 # These properties attempt to follow the order in which they appear in the
 # stock XML configuration file from the game.
 adminTools:
-  admins:
+  admins: []
     # # KrazyKrampus
     # - { user: { platform: Steam, userid: "76561198003021188", permission_level: 0 } }
     # # Amalee215
@@ -32,10 +32,10 @@ adminTools:
     - { permission: { cmd: say, permission_level: 100 } }
     - { permission: { cmd: teleport, permission_level: 10 } }
     - { permission: { cmd: teleportplayer, permission_level: 10 } }
-  whitelist:
+  whitelist: []
     # KrazyKrampus
     # - { whitelisted: { steamId: "76561198003021188" } }
-  blacklist:
+  blacklist: []
     # - blacklisted:
     #     platform: Steam
     #     userid: "76561198325217275"
