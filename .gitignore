@@ -1,13 +1,21 @@
-# Do not commit override config to VCS.
+# Python virtualenvs
+.venv/
+venv/
+
+# Python intermediates
+*.pyc
+
+# No config/override configs to VCS
 config/serverconfig.xml
 config/serveradmin.xml
 config/*.values.override.yml
+config/*.values.in.override.yaml
 
-# Ignore any log files.
+# Any log files
 *.log
 
-# Do not commit these to VCS.
+# Custom prefabs (too big)
 custom_prefabs/
 
-# Do not commit editor meta files to VCS.
+# Editor meta files
 .vscode/
