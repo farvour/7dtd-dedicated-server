@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 LABEL maintainer="Thomas Farvour <tom@farvour.com>"
 
 ARG DEBIAN_FRONTEND=noninteractive
