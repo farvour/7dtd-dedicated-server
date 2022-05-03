@@ -1,0 +1,43 @@
+---
+# These properties attempt to follow the order in which they appear in the
+# stock XML configuration file from the game.
+adminTools:
+  admins: []
+    # # KrazyKrampus
+    # - { user: { platform: Steam, userid: "76561198003021188", permission_level: 0 } }
+    # # Amalee215
+    # - { user: { platform: Steam, userid: "76561198889951492", permission_level: 1 } }
+    # # GreenMonkeymax
+    # - { user: { platform: Steam, userid: "76561198839118278", permission_level: 50 } }
+  permissions:
+    - { permission: { cmd: ban, permission_level: 10 } }
+    - { permission: { cmd: dm, permission_level: 1 } }
+    - { permission: { cmd: cm, permission_level: 1 } }
+    - { permission: { cmd: kick, permission_level: 10 } }
+    - { permission: { cmd: giveselfxp, permission_level: 5 } }
+    - { permission: { cmd: buff, permission_level: 10 } }
+    - { permission: { cmd: debuff, permission_level: 10 } }
+    - { permission: { cmd: chunkcache, permission_level: 10 } }
+    - { permission: { cmd: debugweather, permission_level: 1 } }
+    - { permission: { cmd: getgamepref, permission_level: 10 } }
+    - { permission: { cmd: getgamestat, permission_level: 10 } }
+    - { permission: { cmd: gettime, permission_level: 1000 } }
+    - { permission: { cmd: gfx, permission_level: 1000 } }
+    - { permission: { cmd: help, permission_level: 1000 } }
+    - { permission: { cmd: listknownplayers, permission_level: 10 } }
+    - { permission: { cmd: listplayerids, permission_level: 10 } }
+    - { permission: { cmd: listthreads, permission_level: 10 } }
+    - { permission: { cmd: memcl, permission_level: 1 } }
+    - { permission: { cmd: settempunit, permission_level: 1 } }
+    - { permission: { cmd: say, permission_level: 100 } }
+    - { permission: { cmd: teleport, permission_level: 10 } }
+    - { permission: { cmd: teleportplayer, permission_level: 10 } }
+  whitelist: []
+    # KrazyKrampus
+    # - { whitelisted: { steamId: "76561198003021188" } }
+  blacklist: []
+    # - blacklisted:
+    #     platform: Steam
+    #     userid: "76561198325217275"
+    #     unbandate: "2030-01-01 00:00:00"
+    #     reason: Griefing/stealing server owner supplies.

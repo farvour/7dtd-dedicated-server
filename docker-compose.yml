@@ -11,12 +11,12 @@ services:
         source: data
         target: /var/opt/7dtd/data/Saves
       - type: bind
-        source: ./config/serveradmin.xml.values.override.yml
-        target: /opt/7dtd/serveradmin.xml.values.override.yml
+        source: ./config/serveradmin.xml.values.in.override.yaml
+        target: /opt/7dtd/serveradmin.xml.values.in.override.yaml
         read_only: true
       - type: bind
-        source: ./config/serverconfig.xml.values.override.yml
-        target: /opt/7dtd/serverconfig.xml.values.override.yml
+        source: ./config/serverconfig.xml.values.in.override.yaml
+        target: /opt/7dtd/serverconfig.xml.values.in.override.yaml
         read_only: true
     ports:
       - 8080:8080/tcp
