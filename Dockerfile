@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM debian:bullseye
 LABEL maintainer="Thomas Farvour <tom@farvour.com>"
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -15,7 +15,7 @@ ENV SERVER_DATA_DIR=/var/opt/7dtd/data
 # Steam still requires 32-bit cross compilation libraries.
 RUN echo "=== installing necessary system packages to support steam CLI installation..." \
     && apt-get update \
-    && apt-get install -y bash expect htop tmux lib32gcc1 pigz netcat telnet wget git vim
+    && apt-get install -y bash expect htop tmux lib32gcc-s1 pigz netcat telnet wget git vim
 
 ENV PROC_UID 7999
 ENV PROC_USER z
