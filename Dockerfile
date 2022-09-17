@@ -12,11 +12,19 @@ ENV SERVER_HOME=/opt/7dtd
 ENV SERVER_INSTALL_DIR=/opt/7dtd/7dtd-dedicated-server
 ENV SERVER_DATA_DIR=/var/opt/7dtd/data
 
+# Use root user to install system packages and setup users.
+USER root
+
 # Steam still requires 32-bit cross compilation libraries.
 RUN echo "=== installing necessary system packages to support steam CLI installation..." \
     && apt-get update \
-    && apt-get install -y bash expect htop tmux lib32gcc-s1 pigz netcat telnet wget git vim
+    && apt-get -yy --no-install-recommends install \
+    bash ca-certificates curl dumb-init expect git gosu htop \
+    lib32gcc-s1 net-tools netcat pigz rsync telnet tmux unzip \
+    vim wget \
+    && apt clean -y && rm -rf /var/lib/apt/lists/*
 
+# Non-privileged user.
 ENV PROC_UID 7999
 ENV PROC_USER z
 ENV PROC_GROUP nogroup
@@ -61,7 +69,11 @@ USER root
 
 RUN echo "=== installing necessary system packages to support run-time and entrypoint of server..." \
     && apt-get update \
-    && apt-get install -y python3 python3-dev python3-pip libbz2-dev libffi-dev libssl-dev wget
+    && apt-get -yy --no-install-recommends install \
+    libbz2-dev libffi-dev libssl-dev \
+    python3 python3-dev python3-pip \
+    wget \
+    && apt clean -y && rm -rf /var/lib/apt/lists/*
 
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
@@ -93,36 +105,40 @@ RUN echo "=== install the backup2l tool and config..." \
 
 COPY --chown=${PROC_USER}:${PROC_GROUP} config/backup2l.conf ${SERVER_HOME}/backup2l/backup2l.conf
 
-# Install custom startserver script (adds support for generator tool below, etc)
+# Install custom startserver script (adds support for generator tool below, etc).
 COPY --chown=${PROC_USER}:${PROC_GROUP} scripts/startserver-1.sh ${SERVER_INSTALL_DIR}/
 
-# Custom prefabs
+# Custom prefabs.
 COPY --chown=${PROC_USER}:${PROC_GROUP} custom_prefabs/ ${SERVER_INSTALL_DIR}/Data/Prefabs/
 
-# Mods and mods related tasks
+# Mods and mods related tasks.
 COPY --chown=${PROC_USER}:${PROC_GROUP} xpath_mods_src/ ${SERVER_INSTALL_DIR}/xpath_mods_src/
 COPY --chown=${PROC_USER}:${PROC_GROUP} xpath_mods/ ${SERVER_INSTALL_DIR}/Mods/
 
-# Install the server configuration generator tool
+# Install the server configuration generator tool.
 COPY --chown=${PROC_USER}:${PROC_GROUP} scripts/generate_server_config.py ${SERVER_HOME}/
 
-# Install configuration base value input files
+# Install configuration base value input files.
 COPY --chown=${PROC_USER}:${PROC_GROUP} config/serverconfig.xml.values.in.yaml ${SERVER_HOME}/
 COPY --chown=${PROC_USER}:${PROC_GROUP} config/serveradmin.xml.values.in.yaml ${SERVER_HOME}/
 
-# Default web UI control panel port
+# Switch back to root user to allow entrypoint to drop privileges.
+USER root
+
+# Default web UI control panel port.
 EXPOSE 8080/tcp
 
-# Default telnet administrative port
+# Default telnet administrative port.
 EXPOSE 8081/tcp
 
-# Default webserver for allocs mod port
+# Default webserver for allocs mod port.
 EXPOSE 8082/tcp
 
-# Default game ports
+# Default game ports.
 EXPOSE 26900/tcp 26900/udp
 EXPOSE 26901/tcp 26901/udp
 
-# Install custom entrypoint script
+# Install custom entrypoint script.
 COPY scripts/entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/usr/bin/dumb-init", "--rewrite", "15:2", "--", "/entrypoint.sh"]
+CMD ["./startserver-1.sh", "-configfile=serverconfig.xml"]
