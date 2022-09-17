@@ -34,7 +34,7 @@
 
   <!-- Add demolishers to the general population. -->
   <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
-    <entity name="zombieDemolition" prob="0.2" />
+    <entity name="zombieDemolition" prob="0.1" />
   </append>
 
   <!-- Add demolishers to the wandering hordes. -->
