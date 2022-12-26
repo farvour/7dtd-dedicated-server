@@ -15,9 +15,9 @@ __all__ = [
     "StartServerTemplates",
 ]
 
-SERVER_HOME = os.environ.get("SERVER_HOME")
-SERVER_INSTALL_DIR = os.environ.get("SERVER_INSTALL_DIR")
-SERVER_DATA_DIR = os.environ.get("SERVER_DATA_DIR")
+SERVER_HOME: str = os.environ.get("SERVER_HOME", "")
+SERVER_INSTALL_DIR: str = os.environ.get("SERVER_INSTALL_DIR", "")
+SERVER_DATA_DIR: str = os.environ.get("SERVER_DATA_DIR", "")
 
 logging.basicConfig(
     level=logging.DEBUG,
