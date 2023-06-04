@@ -9,9 +9,9 @@ from xml.dom import minidom
 import mergedeep
 import yaml
 
-SERVER_HOME = os.environ.get("SERVER_HOME")
-SERVER_INSTALL_DIR = os.environ.get("SERVER_INSTALL_DIR")
-SERVER_DATA_DIR = os.environ.get("SERVER_DATA_DIR")
+SERVER_HOME: str = os.environ.get("SERVER_HOME", "")
+SERVER_INSTALL_DIR: str = os.environ.get("SERVER_INSTALL_DIR", "")
+SERVER_DATA_DIR: str = os.environ.get("SERVER_DATA_DIR", "")
 
 
 logging.basicConfig(
@@ -146,7 +146,7 @@ class ServerConfigGenerator(object):
             out_file = c["out_file"]
             cls(
                 values_in_file=values_in_file,
-                values_in_override_file=values_in_override_file,
+                values_in_override_file=values_in_override_file or "",
                 out_file=out_file,
             ).generate()
         logger.info("Generated all configurations")

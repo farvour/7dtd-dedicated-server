@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <!-- Make 4x4 turbo faster. -->
+  <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">10, 16</set>
+
+  <!-- Make motorcycle turbo faster. -->
+  <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">14, 22</set>
+
+  <!-- Make gyro turbo faster. -->
+  <set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">10, 18</set>
+</configs>
