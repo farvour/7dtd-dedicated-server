@@ -125,8 +125,8 @@ COPY --chown=${PROC_USER}:${PROC_GROUP} config/serveradmin.xml.values.in.yaml ${
 # Switch back to root user to allow entrypoint to drop privileges.
 USER root
 
-# Default web UI control panel port.
-EXPOSE 8080/tcp
+# Default web UI panel port.
+EXPOSE 8000/tcp
 
 # Default telnet administrative port.
 EXPOSE 8081/tcp
