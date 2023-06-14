@@ -58,7 +58,7 @@ RUN echo "=== downloading and installing 7dtd server with steamcmd..." \
     && ${SERVER_HOME}/Steam/steamcmd.sh \
     +force_install_dir ${SERVER_INSTALL_DIR} \
     +login anonymous \
-    +app_update 294420 \
+    +app_update 294420 -beta latest_experimental \
     +quit
 
 # Additional system packages for everything not for the Steam installation.

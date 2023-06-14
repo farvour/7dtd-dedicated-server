@@ -18,9 +18,10 @@ ServerSettings:
   ServerReservedSlotsPermission: 100
   ServerAdminSlots: 0
   ServerAdminSlotsPermission: 0
-  ControlPanelEnabled: false
-  ControlPanelPort: 8080
-  ControlPanelPassword: CHANGEME
+  WebDashboardEnabled: false
+  WebDashboardPort: 8000
+  WebDashboardUrl: ""
+  EnableMapRendering: false
   TelnetEnabled: true
   TelnetPort: 8081
   TelnetPassword: ""
@@ -33,6 +34,9 @@ ServerSettings:
   EACEnabled: true
   HideCommandExecutionLog: 0 # show everything
   MaxUncoveredMapChunksPerPlayer: 131072
+  MaxQueuedMeshLayers: 1000
+  MaxChunkAge: -1
+  SaveDataLimit: -1
   PersistentPlayerProfiles: false
   GameWorld: Navezgane
   WorldGenSeed: asdf
@@ -51,6 +55,7 @@ ServerSettings:
   DayLightLength: 18
   DropOnDeath: 1 # everything
   DropOnQuit: 0 # nothing
+  AllowSpawnNearBackpack: false
   BedrollDeadZoneSize: 15
   BedrollExpiryTime: 45
   MaxSpawnedZombies: 64
@@ -70,7 +75,7 @@ ServerSettings:
   LootAbundance: 100
   LootRespawnDays: 7
   AirDropFrequency: 72
-  AirDropMarker: false
+  AirDropMarker: true
   PartySharedKillRange: 100
   PlayerKillingMode: 3 # kill everyone
   LandClaimCount: 1
