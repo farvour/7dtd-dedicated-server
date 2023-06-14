@@ -33,6 +33,7 @@ adminTools:
     - { permission: { cmd: settempunit, permission_level: 1 } }
     - { permission: { cmd: say, permission_level: 100 } }
     - { permission: { cmd: teleport, permission_level: 10 } }
+    - { permission: { cmd: teleportpoirelative, permission_level: 10 } }
     - { permission: { cmd: teleportplayer, permission_level: 10 } }
   whitelist: []
     # KrazyKrampus
