@@ -19,7 +19,7 @@ ServerSettings:
   ServerAdminSlots: 0
   ServerAdminSlotsPermission: 0
   WebDashboardEnabled: false
-  WebDashboardPort: 8000
+  WebDashboardPort: 8080
   WebDashboardUrl: ""
   EnableMapRendering: false
   TelnetEnabled: true

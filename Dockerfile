@@ -126,7 +126,7 @@ COPY --chown=${PROC_USER}:${PROC_GROUP} config/serveradmin.xml.values.in.yaml ${
 USER root
 
 # Default web UI panel port.
-EXPOSE 8000/tcp
+EXPOSE 8080/tcp
 
 # Default telnet administrative port.
 EXPOSE 8081/tcp

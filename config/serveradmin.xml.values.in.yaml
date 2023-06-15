@@ -14,6 +14,7 @@ adminTools:
     - { permission: { cmd: damagereset, permission_level: 5 } }
     - { permission: { cmd: dm, permission_level: 1 } }
     - { permission: { cmd: cm, permission_level: 1 } }
+    - { permission: { cmd: createwebuser, permission_level: 1 } }
     - { permission: { cmd: kick, permission_level: 10 } }
     - { permission: { cmd: exportcurrentconfigs, permission_level: 1000 } }
     - { permission: { cmd: giveselfxp, permission_level: 5 } }
