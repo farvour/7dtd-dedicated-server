@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
-  <!-- Adjust multiplier/bonuses. -->
+  <!-- Adjust gamestage multiplier/bonuses. -->
   <set xpath="/gamestages/config/@daysAliveChangeWhenKilled">5</set>
   <set xpath="/gamestages/config/@difficultyBonus">1.05</set>
   <set xpath="/gamestages/config/@startingWeight">1.00</set>
   <set xpath="/gamestages/config/@diminishingReturns">0.5</set>
+
+  <!-- Adjust loot multiplier/bonuses. -->
+  <set xpath="/gamestages/config/@lootBonusEvery">10</set>
+  <set xpath="/gamestages/config/@lootBonusMaxCount">20</set>
+  <set xpath="/gamestages/config/@lootBonusScale">30</set>
+  <set xpath="/gamestages/config/@lootWanderingBonusEvery">2</set>
+  <set xpath="/gamestages/config/@lootWanderingBonusScale">20</set>
 </configs>

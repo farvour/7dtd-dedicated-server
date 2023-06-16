@@ -6,5 +6,4 @@
   <set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular']/property[@name='TimeStayAfterDeath']/@value">3600</set> <!-- 60 minutes. -->
   <set xpath="/entity_classes/entity_class[@name='EntityLootContainerStrong']/property[@name='TimeStayAfterDeath']/@value">3600</set> <!-- 60 minutes. -->
   <set xpath="/entity_classes/entity_class[@name='EntityLootContainerBoss']/property[@name='TimeStayAfterDeath']/@value">3600</set> <!-- 60 minutes. -->
-  <set xpath="/entity_classes/entity_class[@name='EntityLootContainerBandit']/property[@name='TimeStayAfterDeath']/@value">3600</set> <!-- 60 minutes. -->
 </configs>
