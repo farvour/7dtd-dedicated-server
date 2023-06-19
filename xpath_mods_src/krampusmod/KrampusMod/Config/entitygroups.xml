@@ -19,13 +19,20 @@
   </append>
 
   <!-- Remove vultures from wandering hordes. -->
-  <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]/entity[@name='animalZombieVulture']" />
-  <!-- <remove xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]/entity[@name='animalZombieVultureRadiated']" /> -->
+  <csv xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]/@value" op="Remove">
+    animalZombieVulture*
+  </csv>
+  <csv xpath="/entitygroups/entitygroup[starts-with(@name, 'FwanderingHordeStage')]/@value" op="Remove">
+    animalZombieVulture*
+  </csv>
 
-  <!-- Replace vultures with crawlers. -->
+  <!-- Replace vultures with crawlers most of the time. -->
   <remove xpath="/entitygroups/entitygroup[@name='VultureGroup']" />
   <append xpath="/entitygroups">
-    <entitygroup name="VultureGroup">zombieSteveCrawler</entitygroup>
+    <entitygroup name="VultureGroup">
+      zombieSteveCrawler
+      animalZombieVulture, .1
+    </entitygroup>
   </append>
 
   <!-- Significantly reduce vultures in the desert. -->
