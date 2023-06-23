@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xml>
-  <ModInfo>
-    <Name value="KrampusMod_Power_Tool_Harvest_Boost" />
-    <Description value="Makes power tools such as the auger and chainsaw actually 'useful' by increasing harvest rate, speed and fuel capacity by 2x." />
-    <Author value="KrazyKrampus" />
-    <Version value="2.0" />
-    <Website value="" />
-  </ModInfo>
+  <Name value="KrampusMod_Power_Tool_Harvest_Boost" />
+  <DisplayName value="KrampusMod Power Tool Harvest Boost" />
+  <Description value="Makes power tools such as the auger and chainsaw actually 'useful' by increasing harvest rate, speed and fuel capacity by 2x." />
+  <Author value="KrazyKrampus" />
+  <Version value="3.0" />
+  <Website value="" />
 </xml>
