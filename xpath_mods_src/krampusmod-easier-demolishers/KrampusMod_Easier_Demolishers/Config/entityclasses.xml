@@ -7,6 +7,9 @@
   <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.BlockDamage']/@value">3000</set>
   <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.DamageBonus.earth']/@value">.088</set>
 
+  <!-- Disable spike stomping. -->
+  <remove xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='StompsSpikes']" />
+
   <!-- Slow down this zombie, because all of its heavy armor shouldn't allow it to move so fast anyway. -->
   <append xpath="/entity_classes/entity_class[@name='zombieDemolition']">
     <property name="MoveSpeedAggro" value=".15, .25" />
