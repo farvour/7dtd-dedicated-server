@@ -1,4 +1,4 @@
-# Makefile for building, tagging, publishing and releasing a container.
+# Makefile for building, tagging, publishing and releasing projects.
 #
 # Import build-time configuration.
 # You can change the default config with `make env="config_special.env" build`.
@@ -42,24 +42,28 @@ help: ## This halp!
 docker-all: docker docker-push ## Creates custom docker image, tags and pushes it.
 
 docker: ## Creates custom docker image with compose.
-	@echo '============================================'
 	@echo 'Building custom docker image and tagging it.'
-	@echo '============================================'
 	GIT_COMMIT_SHA1_SHORT=$(GIT_COMMIT_SHA1_SHORT) $(DOCKER_COMPOSE_CMD) build
 	@$(DONE)
 
 docker-push: ## Pushes custom docker image to registry defined in image field of compose spec.
-	@echo '============================'
-	@echo 'Pushing custom docker image.'
-	@echo '============================'
+	@echo 'Pushing custom docker image'
 	GIT_COMMIT_SHA1_SHORT=$(GIT_COMMIT_SHA1_SHORT) $(DOCKER_COMPOSE_CMD) push
 	@$(DONE)
 
 docker-up: ## Runs the custom docker image in the background.
-	@echo '============================'
-	@echo 'Running custom docker image.'
-	@echo '============================'
+	@echo 'Running custom docker image'
 	GIT_COMMIT_SHA1_SHORT=$(GIT_COMMIT_SHA1_SHORT) $(DOCKER_COMPOSE_CMD) up --detach
+	@$(DONE)
+
+server-config-generator: ## Builds the server configuration generator tool.
+	@echo 'Building server-config-generator tool'
+	cd tools/server-config-generator && go build -o bin/server-config-generator main.go
+	@$(DONE)
+
+server-config-generator-docs: ## Builds the server configuration generator tool docs.
+	@echo 'Building server-config-generator tool docs'
+	cd tools/server-config-generator && go doc
 	@$(DONE)
 
 version: ## Output the current version.
