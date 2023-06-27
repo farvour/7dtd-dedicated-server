@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
-  <!-- Make bicycle fast pedal faster. -->
+  <!-- Make bicycle faster. -->
   <set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">8, 12</set>
 
-  <!-- Make 4x4 turbo faster. -->
-  <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">10, 16</set>
+  <!-- Make minibike faster. -->
+  <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='velocityMax']/@value">8, 12</set>
 
-  <!-- Make motorcycle turbo faster. -->
+  <!-- Make motorcycle faster. -->
   <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">14, 22</set>
 
-  <!-- Make gyro turbo faster. -->
+  <!-- Make 4x4 faster. -->
+  <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">10, 16</set>
+
+  <!-- Make gyro faster. -->
   <set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">10, 18</set>
 </configs>
