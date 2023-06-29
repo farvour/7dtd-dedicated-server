@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
   <!-- Make bicycle faster. -->
-  <set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">8, 12</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='motorTorque']/@value">600, 200</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='turboScale']/@value">1.5, 1</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">9, 6</set>
 
   <!-- Make minibike faster. -->
-  <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='velocityMax']/@value">8, 12</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='motorTorque']/@value">500, 300</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='turboScale']/@value">1.65, 1</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='velocityMax']/@value">9, 6</set>
 
   <!-- Make motorcycle faster. -->
-  <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">14, 22</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='motorTorque']/@value">1650, 700</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='turboScale']/@value">1.8, 1.3</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">12, 6</set>
 
   <!-- Make 4x4 faster. -->
-  <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">10, 16</set>
+  <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='motorTorque']/@value">2200, 1000</set>
+  <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='turboScale']/@value">1.8, 1.4</set>
+  <set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">11.5, 9.5</set>
 
   <!-- Make gyro faster. -->
-  <set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">10, 18</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='motorTorque']/@value">1, 1</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='turboScale']/@value">1.8, 1</set>
+  <set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">12, 9</set>
 </configs>
