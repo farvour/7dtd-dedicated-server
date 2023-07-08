@@ -18,21 +18,25 @@ ServerSettings:
   ServerReservedSlotsPermission: 100
   ServerAdminSlots: 0
   ServerAdminSlotsPermission: 0
-  ControlPanelEnabled: false
-  ControlPanelPort: 8080
-  ControlPanelPassword: CHANGEME
+  WebDashboardEnabled: false
+  WebDashboardPort: 8080
+  WebDashboardUrl: ""
+  EnableMapRendering: false
   TelnetEnabled: true
   TelnetPort: 8081
   TelnetPassword: ""
   TelnetFailedLoginLimit: 10
   TelnetFailedLoginsBlocktime: 10
   TerminalWindowEnabled: true
-  AdminFileName: serveradmin.xml # if you want to change this, update the python tool as it is hardcoded during generation for now.
+  AdminFileName: serveradmin.xml # if you want to change this, update the server config generation tool as it is hardcoded during generation for now.
   SaveGameFolder: /var/opt/7dtd/data/Saves # stock override: this is the default location for the container/volumes
   UserDataFolder: /var/opt/7dtd/data/Saves # stock override: this is the default location for the container/volumes
   EACEnabled: true
   HideCommandExecutionLog: 0 # show everything
   MaxUncoveredMapChunksPerPlayer: 131072
+  MaxQueuedMeshLayers: 1000
+  MaxChunkAge: -1
+  SaveDataLimit: -1
   PersistentPlayerProfiles: false
   GameWorld: Navezgane
   WorldGenSeed: asdf
@@ -51,6 +55,7 @@ ServerSettings:
   DayLightLength: 18
   DropOnDeath: 1 # everything
   DropOnQuit: 0 # nothing
+  AllowSpawnNearBackpack: false
   BedrollDeadZoneSize: 15
   BedrollExpiryTime: 45
   MaxSpawnedZombies: 64
@@ -70,7 +75,7 @@ ServerSettings:
   LootAbundance: 100
   LootRespawnDays: 7
   AirDropFrequency: 72
-  AirDropMarker: false
+  AirDropMarker: true
   PartySharedKillRange: 100
   PlayerKillingMode: 3 # kill everyone
   LandClaimCount: 1

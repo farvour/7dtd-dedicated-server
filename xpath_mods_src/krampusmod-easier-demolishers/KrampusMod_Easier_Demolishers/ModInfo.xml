@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xml>
-  <ModInfo>
-    <Name value="KrampusMod_Easier_Demolishers" />
-    <Description value="Changes demolition zombies to be easier to kill since their destructive payload trade-off is already quite high." />
-    <Author value="KrazyKrampus" />
-    <Version value="1.2" />
-    <Website value="" />
-  </ModInfo>
+  <Name value="KrampusMod_Easier_Demolishers" />
+  <DisplayName value="KrampusMod Easier Demolishers" />
+  <Description value="Changes demolition zombies to be easier to kill since their destructive payload trade-off is already quite high." />
+  <Author value="KrazyKrampus" />
+  <Version value="2.1" />
+  <Website value="" />
 </xml>

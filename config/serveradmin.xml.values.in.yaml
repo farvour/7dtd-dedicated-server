@@ -11,9 +11,12 @@ adminTools:
     # - { user: { platform: Steam, userid: "76561198839118278", permission_level: 50 } }
   permissions:
     - { permission: { cmd: ban, permission_level: 10 } }
+    - { permission: { cmd: damagereset, permission_level: 5 } }
     - { permission: { cmd: dm, permission_level: 1 } }
     - { permission: { cmd: cm, permission_level: 1 } }
+    - { permission: { cmd: createwebuser, permission_level: 1 } }
     - { permission: { cmd: kick, permission_level: 10 } }
+    - { permission: { cmd: exportcurrentconfigs, permission_level: 1000 } }
     - { permission: { cmd: giveselfxp, permission_level: 5 } }
     - { permission: { cmd: buff, permission_level: 10 } }
     - { permission: { cmd: debuff, permission_level: 10 } }
@@ -31,6 +34,7 @@ adminTools:
     - { permission: { cmd: settempunit, permission_level: 1 } }
     - { permission: { cmd: say, permission_level: 100 } }
     - { permission: { cmd: teleport, permission_level: 10 } }
+    - { permission: { cmd: teleportpoirelative, permission_level: 10 } }
     - { permission: { cmd: teleportplayer, permission_level: 10 } }
   whitelist: []
     # KrazyKrampus
