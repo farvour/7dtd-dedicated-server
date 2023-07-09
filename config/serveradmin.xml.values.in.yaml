@@ -9,6 +9,12 @@ adminTools:
     # - { user: { platform: Steam, userid: "76561198889951492", permission_level: 1 } }
     # # GreenMonkeymax
     # - { user: { platform: Steam, userid: "76561198839118278", permission_level: 50 } }
+  blacklist: []
+    # - blacklisted:
+    #     platform: Steam
+    #     userid: "76561198325217275"
+    #     unbandate: "2030-01-01 00:00:00"
+    #     reason: Griefing/stealing server owner supplies.
   permissions:
     - { permission: { cmd: ban, permission_level: 10 } }
     - { permission: { cmd: damagereset, permission_level: 5 } }
@@ -39,9 +45,3 @@ adminTools:
   whitelist: []
     # KrazyKrampus
     # - { whitelisted: { steamId: "76561198003021188" } }
-  blacklist: []
-    # - blacklisted:
-    #     platform: Steam
-    #     userid: "76561198325217275"
-    #     unbandate: "2030-01-01 00:00:00"
-    #     reason: Griefing/stealing server owner supplies.
