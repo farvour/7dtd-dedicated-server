@@ -2,93 +2,93 @@
 # These properties attempt to follow the order in which they appear in the
 # stock XML configuration file from the game.
 ServerSettings:
-  ServerName: My Game Host
-  ServerDescription: A 7 Days to Die server
-  ServerWebsiteURL: ""
-  ServerPassword: ""
-  ServerLoginConfirmationText: ""
-  Region: NorthAmericaEast
-  Language: English
-  ServerPort: 26900
-  ServerVisibility: 2 # public
-  ServerDisabledNetworkProtocols: SteamNetworking
-  ServerMaxWorldTransferSpeedKiBs: 512
-  ServerMaxPlayerCount: 8
-  ServerReservedSlots: 0
-  ServerReservedSlotsPermission: 100
-  ServerAdminSlots: 0
-  ServerAdminSlotsPermission: 0
-  WebDashboardEnabled: false
-  WebDashboardPort: 8080
-  WebDashboardUrl: ""
-  EnableMapRendering: false
-  TelnetEnabled: true
-  TelnetPort: 8081
-  TelnetPassword: ""
-  TelnetFailedLoginLimit: 10
-  TelnetFailedLoginsBlocktime: 10
-  TerminalWindowEnabled: true
   AdminFileName: serveradmin.xml # if you want to change this, update the server config generation tool as it is hardcoded during generation for now.
-  SaveGameFolder: /var/opt/7dtd/data/Saves # stock override: this is the default location for the container/volumes
-  UserDataFolder: /var/opt/7dtd/data/Saves # stock override: this is the default location for the container/volumes
-  EACEnabled: true
-  HideCommandExecutionLog: 0 # show everything
-  MaxUncoveredMapChunksPerPlayer: 131072
-  MaxQueuedMeshLayers: 1000
-  MaxChunkAge: -1
-  SaveDataLimit: -1
-  PersistentPlayerProfiles: false
-  GameWorld: Navezgane
-  WorldGenSeed: asdf
-  WorldGenSize: 6144
-  GameName: My Game
-  GameMode: GameModeSurvival
-  GameDifficulty: 2
-  BlockDamagePlayer: 100
-  BlockDamageAI: 100
-  BlockDamageAIBM: 100
-  XPMultiplier: 100
-  PlayerSafeZoneLevel: 5
-  PlayerSafeZoneHours: 5
-  BuildCreate: false
-  DayNightLength: 60
-  DayLightLength: 18
-  DropOnDeath: 1 # everything
-  DropOnQuit: 0 # nothing
+  AirDropFrequency: 72
+  AirDropMarker: true
   AllowSpawnNearBackpack: false
   BedrollDeadZoneSize: 15
   BedrollExpiryTime: 45
-  MaxSpawnedZombies: 64
-  MaxSpawnedAnimals: 50
-  ServerMaxAllowedViewDistance: 12
-  EnemySpawnMode: true
-  EnemyDifficulty: 0 # normal
-  ZombieFeralSense: 0 # off
-  ZombieMove: 0
-  ZombieMoveNight: 3
-  ZombieFeralMove: 3
-  ZombieBMMove: 3
+  BlockDamageAI: 100
+  BlockDamageAIBM: 100
+  BlockDamagePlayer: 100
+  BloodMoonEnemyCount: 8
   BloodMoonFrequency: 7
   BloodMoonRange: 0
   BloodMoonWarning: 8
-  BloodMoonEnemyCount: 8
+  BuildCreate: false
+  DayLightLength: 18
+  DayNightLength: 60
+  DropOnDeath: 1 # everything
+  DropOnQuit: 0 # nothing
+  DynamicMeshEnabled: true
+  DynamicMeshLandClaimBuffer: 3
+  DynamicMeshLandClaimOnly: true
+  DynamicMeshMaxItemCache: 3
+  EACEnabled: true
+  EnableMapRendering: false
+  EnemyDifficulty: 0 # normal
+  EnemySpawnMode: true
+  GameDifficulty: 2
+  GameMode: GameModeSurvival
+  GameName: My Game
+  GameWorld: Navezgane
+  HideCommandExecutionLog: 0 # show everything
+  LandClaimCount: 1
+  LandClaimDeadZone: 30
+  LandClaimDecayMode: 0
+  LandClaimExpiryTime: 7
+  LandClaimOfflineDelay: 0
+  LandClaimOfflineDurabilityModifier: 4
+  LandClaimOnlineDurabilityModifier: 4
+  LandClaimSize: 41
+  Language: English
   LootAbundance: 100
   LootRespawnDays: 7
-  AirDropFrequency: 72
-  AirDropMarker: true
+  MaxChunkAge: -1
+  MaxQueuedMeshLayers: 1000
+  MaxSpawnedAnimals: 50
+  MaxSpawnedZombies: 64
+  MaxUncoveredMapChunksPerPlayer: 131072
   PartySharedKillRange: 100
+  PersistentPlayerProfiles: false
   PlayerKillingMode: 3 # kill everyone
-  LandClaimCount: 1
-  LandClaimSize: 41
-  LandClaimDeadZone: 30
-  LandClaimExpiryTime: 7
-  LandClaimDecayMode: 0
-  LandClaimOnlineDurabilityModifier: 4
-  LandClaimOfflineDurabilityModifier: 4
-  LandClaimOfflineDelay: 0
-  DynamicMeshEnabled: true
-  DynamicMeshLandClaimOnly: true
-  DynamicMeshLandClaimBuffer: 3
-  DynamicMeshMaxItemCache: 3
-  TwitchServerPermission: 90
+  PlayerSafeZoneHours: 5
+  PlayerSafeZoneLevel: 5
+  Region: NorthAmericaEast
+  SaveDataLimit: -1
+  SaveGameFolder: /var/opt/7dtd/data/Saves # stock override: this is the default location for the container/volumes
+  ServerAdminSlots: 0
+  ServerAdminSlotsPermission: 0
+  ServerDescription: A 7 Days to Die server
+  ServerDisabledNetworkProtocols: SteamNetworking
+  ServerLoginConfirmationText: ""
+  ServerMaxAllowedViewDistance: 12
+  ServerMaxPlayerCount: 8
+  ServerMaxWorldTransferSpeedKiBs: 512
+  ServerName: My Game Host
+  ServerPassword: ""
+  ServerPort: 26900
+  ServerReservedSlots: 0
+  ServerReservedSlotsPermission: 100
+  ServerVisibility: 2 # public
+  ServerWebsiteURL: ""
+  TelnetEnabled: true
+  TelnetFailedLoginLimit: 10
+  TelnetFailedLoginsBlocktime: 10
+  TelnetPassword: ""
+  TelnetPort: 8081
+  TerminalWindowEnabled: true
   TwitchBloodMoonAllowed: false
+  TwitchServerPermission: 90
+  UserDataFolder: /var/opt/7dtd/data/Saves # stock override: this is the default location for the container/volumes
+  WebDashboardEnabled: false
+  WebDashboardPort: 8080
+  WebDashboardUrl: ""
+  WorldGenSeed: asdf
+  WorldGenSize: 6144
+  XPMultiplier: 100
+  ZombieBMMove: 3
+  ZombieFeralMove: 3
+  ZombieFeralSense: 0 # off
+  ZombieMove: 0
+  ZombieMoveNight: 3
