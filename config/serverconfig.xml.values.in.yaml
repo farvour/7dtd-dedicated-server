@@ -28,7 +28,7 @@ ServerSettings:
   EnableMapRendering: false
   EnemyDifficulty: 0 # normal
   EnemySpawnMode: true
-  GameDifficulty: 2
+  GameDifficulty: 1
   GameMode: GameModeSurvival
   GameName: My Game
   GameWorld: Navezgane
