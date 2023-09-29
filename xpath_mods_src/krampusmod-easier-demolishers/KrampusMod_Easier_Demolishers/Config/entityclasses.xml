@@ -12,6 +12,6 @@
 
   <!-- Slow down this zombie, because all of its heavy armor shouldn't allow it to move so fast anyway. -->
   <append xpath="/entity_classes/entity_class[@name='zombieDemolition']">
-    <property name="MoveSpeedAggro" value=".15, .25" />
+    <property name="MoveSpeedAggro" value=".4, .5" />
   </append>
 </configs>
