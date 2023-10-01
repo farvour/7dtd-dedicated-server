@@ -6,8 +6,4 @@
   <set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='BlockDamage']/@value">15000</set>
   <set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='EntityDamage']/@value">2000</set>
   <set xpath="/items/item[@name='thrownDynamite']/effect_group/display_value[@name='dExRadius']/@value">15</set>
-
-  <!-- Increase economic value of brass. -->
-  <set xpath="/items/item[@name='resourceScrapBrass']/property[@name='EconomicValue']/@value">250</set>
-  <set xpath="/items/item[@name='resourceRadiator']/property[@name='EconomicValue']/@value">500</set>
 </configs>

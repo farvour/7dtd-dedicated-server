@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <!-- Increase economic value of brass. -->
+  <set xpath="/items/item[@name='resourceScrapBrass']/property[@name='EconomicValue']/@value">250</set>
+  <set xpath="/items/item[@name='resourceRadiator']/property[@name='EconomicValue']/@value">500</set>
+</config>
