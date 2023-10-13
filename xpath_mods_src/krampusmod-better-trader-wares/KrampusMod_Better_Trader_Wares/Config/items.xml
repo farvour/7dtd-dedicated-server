@@ -3,4 +3,8 @@
   <!-- Increase economic value of brass. -->
   <set xpath="/items/item[@name='resourceScrapBrass']/property[@name='EconomicValue']/@value">250</set>
   <set xpath="/items/item[@name='resourceRadiator']/property[@name='EconomicValue']/@value">500</set>
+
+  <!-- Trader buys your old sandwiches. -->
+  <set xpath="/items/item[@name='foodShamSandwich']/property[@name='EconomicValue']/@value">150</set>
+  <set xpath="/items/item[@name='foodShamSandwich']/property[@name='SellableToTrader']/@value">true</set>
 </configs>

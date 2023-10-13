@@ -16,7 +16,7 @@ ENV SERVER_DATA_DIR=/var/opt/7dtd/data
 USER root
 
 # Steam still requires 32-bit cross compilation libraries.
-RUN echo "=== installing necessary system packages to support steam CLI installation..." \
+RUN echo "=== Installing necessary system packages to support steam CLI installation" \
     && apt-get update \
     && apt-get -yy --no-install-recommends install \
     bash ca-certificates curl dumb-init expect git gosu htop \
@@ -29,10 +29,10 @@ ENV PROC_UID 7999
 ENV PROC_USER z
 ENV PROC_GROUP nogroup
 
-RUN echo "=== create a non-privileged user to run with." \
+RUN echo "=== Create a non-privileged user to run with" \
     && useradd -u ${PROC_UID} -d ${SERVER_HOME} -g ${PROC_GROUP} ${PROC_USER}
 
-RUN echo "=== create server directories..." \
+RUN echo "=== Create server directories" \
     && mkdir -p ${SERVER_HOME} \
     && mkdir -p ${SERVER_INSTALL_DIR} \
     && mkdir -p ${SERVER_INSTALL_DIR}/Mods \
@@ -44,7 +44,7 @@ USER ${PROC_USER}
 
 WORKDIR ${SERVER_HOME}
 
-RUN echo "=== downloading and installing steamcmd..." \
+RUN echo "=== Downloading and installing steamcmd" \
     && cd Steam \
     && wget https://media.steampowered.com/installer/steamcmd_linux.tar.gz \
     && tar -zxvf steamcmd_linux.tar.gz \
@@ -54,7 +54,7 @@ RUN echo "=== downloading and installing steamcmd..." \
 # This is most likely going to be the largest layer created; all the game
 # files for the dedicated server. NOTE: It is a good idea to do as much as
 # possible _beyond_ this point to avoid Docker having to re-create it.
-RUN echo "=== downloading and installing 7dtd server with steamcmd..." \
+RUN echo "=== Downloading and installing 7dtd server with steamcmd" \
     && ${SERVER_HOME}/Steam/steamcmd.sh \
     +force_install_dir ${SERVER_INSTALL_DIR} \
     +login anonymous \
