@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <!-- Traders want to buy all the tree seeds. -->
+  <set xpath="/blocks/block[@name='treePlantedOak1m']/property[@name='EconomicValue']/@value">50</set>
+  <set xpath="/blocks/block[@name='treePlantedOak1m']/property[@name='SellableToTrader']/@value">true</set>
+</configs>

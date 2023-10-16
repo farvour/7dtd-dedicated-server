@@ -7,4 +7,8 @@
   <!-- Trader buys your old sandwiches. -->
   <set xpath="/items/item[@name='foodShamSandwich']/property[@name='EconomicValue']/@value">150</set>
   <set xpath="/items/item[@name='foodShamSandwich']/property[@name='SellableToTrader']/@value">true</set>
+
+  <!-- Traders like bones. -->
+  <set xpath="/items/item[@name='resourceBone']/property[@name='EconomicValue']/@value">200</set>
+  <set xpath="/items/item[@name='resourceBone']/property[@name='SellableToTrader']/@value">true</set>
 </configs>
