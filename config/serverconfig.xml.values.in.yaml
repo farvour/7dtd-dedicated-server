@@ -1,6 +1,6 @@
 ---
-# These properties attempt to follow the order in which they appear in the
-# stock XML configuration file from the game.
+# These properties attempt to retain default values in the stock XML configuration
+# file from the game.
 ServerSettings:
   AdminFileName: serveradmin.xml # if you want to change this, update the server config generation tool as it is hardcoded during generation for now.
   AirDropFrequency: 72
