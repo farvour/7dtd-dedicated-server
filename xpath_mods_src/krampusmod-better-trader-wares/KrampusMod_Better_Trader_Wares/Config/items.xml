@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
   <!-- Increase economic value of brass. -->
-  <set xpath="/items/item[@name='resourceScrapBrass']/property[@name='EconomicValue']/@value">250</set>
+  <set xpath="/items/item[@name='resourceScrapBrass']/property[@name='EconomicValue']/@value">200</set>
+
+  <!-- Increase economic value of radiators. -->
   <set xpath="/items/item[@name='resourceRadiator']/property[@name='EconomicValue']/@value">500</set>
 
   <!-- Trader buys your old sandwiches. -->
-  <set xpath="/items/item[@name='foodShamSandwich']/property[@name='EconomicValue']/@value">150</set>
+  <set xpath="/items/item[@name='foodShamSandwich']/property[@name='EconomicValue']/@value">100</set>
   <set xpath="/items/item[@name='foodShamSandwich']/property[@name='SellableToTrader']/@value">true</set>
 
   <!-- Traders like bones. -->
-  <set xpath="/items/item[@name='resourceBone']/property[@name='EconomicValue']/@value">200</set>
+  <set xpath="/items/item[@name='resourceBone']/property[@name='EconomicValue']/@value">100</set>
   <set xpath="/items/item[@name='resourceBone']/property[@name='SellableToTrader']/@value">true</set>
 </configs>
