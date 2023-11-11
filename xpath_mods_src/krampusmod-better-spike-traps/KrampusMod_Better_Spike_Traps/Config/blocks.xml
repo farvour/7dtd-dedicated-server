@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
-  <!-- Use a different sound for the autoTurret (quieter). -->
-  <!-- <set xpath="/blocks/block[@name='autoTurret']/property[@name='FireSound']/@value">mp5_s_fire</set> -->
-  <!-- <set xpath="/blocks/block[@name='autoTurret']/property[@name='BlockDamage']/@value">0</set> -->
-
-  <!-- Use silenced sound for shotgunTurret (quieter). -->
-  <!-- <set xpath="/blocks/block[@name='shotgunTurret']/property[@name='FireSound']/@value">pump_shotgun_s_fire</set> -->
-  <!-- <set xpath="/blocks/block[@name='shotgunTurret']/property[@name='BlockDamage']/@value">0</set> -->
-
   <!-- Increase durability wood & iron spikes, but make more expensive. -->
   <set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='Damage']/@value">25</set>
   <set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='Damage_received']/@value">40</set>
