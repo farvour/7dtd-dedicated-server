@@ -2,8 +2,8 @@
 <xml>
   <Name value="KrampusMod_Faster_Vehicles" />
   <DisplayName value="KrampusMod Faster Vehicles" />
-  <Description value="Increases speed of vehicles ." />
+  <Description value="Increases speed of vehicles." />
   <Author value="KrazyKrampus" />
-  <Version value="0.2" />
+  <Version value="1.0" />
   <Website value="" />
 </xml>
