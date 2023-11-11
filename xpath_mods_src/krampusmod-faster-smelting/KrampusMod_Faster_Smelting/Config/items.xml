@@ -11,11 +11,11 @@
   <set xpath="/items/item[@name='resourceScrapBrass']/property[@name='MeltTimePerUnit']/@value">0.4</set>
 
   <!-- Speed up extraction of smelted resources. This is to make moving forges easier/faster. -->
-  <set xpath="/items/item[@name='resourceScrapIron']/property[@name='CraftingIngredientTime']/@value">0.05</set>
-  <set xpath="/items/item[@name='resourceClayLump']/property[@name='CraftingIngredientTime']/@value">0.05</set>
-  <setattribute xpath="/items/item[@name='resourceCrushedSand']" name="CraftingIngredientTime">0.05</setattribute>
-  <setattribute xpath="/items/item[@name='resourceScrapBrass']" name="CraftingIngredientTime">0.05</setattribute>
-  <setattribute xpath="/items/item[@name='resourceScrapLead']" name="CraftingIngredientTime">0.05</setattribute>
+  <set xpath="/items/item[@name='resourceScrapIron']/property[@name='CraftingIngredientTime']/@value">0.01</set>
+  <set xpath="/items/item[@name='resourceClayLump']/property[@name='CraftingIngredientTime']/@value">0.01</set>
+  <setattribute xpath="/items/item[@name='resourceCrushedSand']" name="CraftingIngredientTime">0.01</setattribute>
+  <setattribute xpath="/items/item[@name='resourceScrapBrass']" name="CraftingIngredientTime">0.01</setattribute>
+  <setattribute xpath="/items/item[@name='resourceScrapLead']" name="CraftingIngredientTime">0.01</setattribute>
 
   <!-- Speed up craft of iron and steel. -->
   <!-- <set xpath="/items/item[@name='resourceForgedIron']/property[@name='CraftingIngredientTime']/@value">5</set>
@@ -27,6 +27,6 @@
 
   <!-- Speed up mixing of concrete. -->
   <insertAfter xpath="/items/item[@name='resourceConcreteMix']/property[@name='Weight']">
-    <property name="CraftingIngredientTime" value="1.3" />
+    <property name="CraftingIngredientTime" value="1.1" />
   </insertAfter>
 </configs>
