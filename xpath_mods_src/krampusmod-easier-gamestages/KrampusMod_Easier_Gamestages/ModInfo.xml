@@ -2,8 +2,8 @@
 <xml>
   <Name value="KrampusMod_Easier_Gamestages" />
   <DisplayName value="KrampusMod Easier Gamestages" />
-  <Description value="Delays the curve a bit on gamestage progression to allow for more time before things get really difficult. Currently it is only adjusting difficulty and bonus multipliers in A21 and not modifying the actual gamestages." />
+  <Description value="Delays the curve a bit on gamestage progression to allow for more time before things get really difficult. Currently it is only adjusting difficulty and bonus multipliers and not modifying the actual gamestages." />
   <Author value="KrazyKrampus" />
-  <Version value="3.0" />
+  <Version value="3.1" />
   <Website value="" />
 </xml>
