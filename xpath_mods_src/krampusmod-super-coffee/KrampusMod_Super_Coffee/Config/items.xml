@@ -42,7 +42,7 @@
   </append>
 
   <remove xpath="/items/item[@name='drinkJarBlackStrapCoffee']" />
-  <append>
+  <append xpath="/items">
     <item name="drinkJarBlackStrapCoffee">
       <property name="Extends" value="drinkJarCoffee" />
       <property name="EconomicValue" value="200" />
