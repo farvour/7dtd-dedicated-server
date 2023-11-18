@@ -39,7 +39,10 @@
       </effect_group>
     </item>
 
-    <remove xpath="/items/item[@name='drinkJarBlackStrapCoffee']" />
+  </append>
+
+  <remove xpath="/items/item[@name='drinkJarBlackStrapCoffee']" />
+  <append>
     <item name="drinkJarBlackStrapCoffee">
       <property name="Extends" value="drinkJarCoffee" />
       <property name="EconomicValue" value="200" />
