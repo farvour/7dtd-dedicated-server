@@ -27,8 +27,8 @@
       <effect_group>
         <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="@$buffCoffeeBSDuration" />
 
-        <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="543">
-          <requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="543" />
+        <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="2403">
+          <requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="2403" />
         </triggered_effect>
 
         <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBlackStrapCoffee" />
