@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+  <remove xpath="/items/item[@name='drinkJarCoffee']" />
+  <append xpath="/items">
+    <item name="drinkJarCoffee">
+      <property name="Tags" value="drinks,foodSkill" />
+      <property name="HoldType" value="3" />
+      <property name="DisplayType" value="waterCoffee" />
+      <property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab" />
+      <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab" />
+      <property name="Material" value="Mglass" />
+      <!-- <property name="Weight" value="10"/> -->
+      <property name="Stacknumber" value="10" /> <!-- STK drink -->
+      <property name="EconomicValue" value="96" />
+      <property name="UnlockedBy" value="craftingFood" /><!-- perkMasterChef,drinkJarCoffeeSchematic, -->
+      <property class="Action0">
+        <property name="Class" value="Eat" />
+        <property name="Delay" value="1.0" />
+        <property name="Sound_start" value="player_drinking" />
+        <!-- <property name="Create_item" value="drinkJarEmpty"/> -->
+      </property>
+      <property name="Group" value="Food/Cooking,CFDrink/Cooking" />
+      <effect_group tiered="false" name="Drink Tier 1">
+        <requirement name="NotHasBuff" buff="buffIsOnFire" />
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24" />
+        <display_value name="dStaminaRegen" value=".4" />
+        <display_value name="dHypothermalResist" value="5" />
+        <display_value name="dDuration" value="360" />
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="363" />
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="2403">
+          <requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="2403" />
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffCoffee" />
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire" />
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire" />
+      </effect_group>
+    </item>
+
+  </append>
+
+  <remove xpath="/items/item[@name='drinkJarBlackStrapCoffee']" />
+  <append xpath="/items">
+    <item name="drinkJarBlackStrapCoffee">
+      <property name="Extends" value="drinkJarCoffee" />
+      <property name="EconomicValue" value="200" />
+      <property name="UnlockedBy" value="perkArtOfMiningBlackStrap" /> <!-- BOOK_PERK -->
+
+      <effect_group tiered="false" name="Drink Tier Found">
+        <requirement name="NotHasBuff" buff="buffIsOnFire" />
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24" />
+        <display_value name="dStaminaRegen" value=".6" />
+        <display_value name="dHypothermalResist" value="10" />
+        <display_value name="dDuration" value="720" />
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="add" value="723" />
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="set" value="3003">
+          <requirement name="CVarCompare" cvar="$buffCoffeeBSDuration" operation="GT" value="3003" />
+        </triggered_effect>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffBlackStrapCoffee" />
+      </effect_group>
+
+      <effect_group tiered="false">
+        <requirement name="HasBuff" buff="buffIsOnFire" />
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire" />
+      </effect_group>
+    </item>
+  </append>
+</configs>

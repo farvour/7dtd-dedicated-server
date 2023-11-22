@@ -19,10 +19,12 @@
   </append>
 
   <!-- Remove vultures from wandering hordes. -->
-  <csv xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]/@value" op="Remove">
+  <csv xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]/@value"
+    op="Remove">
     animalZombieVulture*
   </csv>
-  <csv xpath="/entitygroups/entitygroup[starts-with(@name, 'FwanderingHordeStage')]/@value" op="Remove">
+  <csv xpath="/entitygroups/entitygroup[starts-with(@name, 'FwanderingHordeStage')]/@value"
+    op="Remove">
     animalZombieVulture*
   </csv>
 

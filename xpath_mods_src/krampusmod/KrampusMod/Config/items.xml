@@ -6,4 +6,10 @@
   <set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='BlockDamage']/@value">15000</set>
   <set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='EntityDamage']/@value">2000</set>
   <set xpath="/items/item[@name='thrownDynamite']/effect_group/display_value[@name='dExRadius']/@value">15</set>
+
+  <!-- Large 7.62 ammo stacks. -->
+  <set xpath="/items/item[starts-with(@name, 'ammo762mmBullet') and not (starts-with(@name, 'ammoBundle'))]/property[@name='Stacknumber']/@value">1000</set>
+
+  <!-- Large 9mm ammo stacks. -->
+  <set xpath="/items/item[starts-with(@name, 'ammo9mmBullet') and not (starts-with(@name, 'ammoBundle'))]/property[@name='Stacknumber']/@value">1000</set>
 </configs>
