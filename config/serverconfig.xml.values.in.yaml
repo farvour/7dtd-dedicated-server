@@ -18,7 +18,7 @@ ServerSettings:
   BuildCreate: false
   DayLightLength: 18
   DayNightLength: 60
-  # DeathPenalty: 1 # classic, XP
+  DeathPenalty: 1 # classic, XP
   DropOnDeath: 1 # everything
   DropOnQuit: 0 # nothing
   DynamicMeshEnabled: true
