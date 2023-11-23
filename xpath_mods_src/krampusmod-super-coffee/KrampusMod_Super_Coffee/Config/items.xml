@@ -26,9 +26,11 @@
         <display_value name="dStaminaRegen" value=".4" />
         <display_value name="dHypothermalResist" value="5" />
         <display_value name="dDuration" value="360" />
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="363" />
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="2403">
-          <requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="2403" />
+        <!-- 606 is about 10 minutes. -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="606" />
+        <!-- 3606 is about 60 minutes. -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="3606">
+          <requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="3606" />
         </triggered_effect>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffCoffee" />
       </effect_group>
@@ -54,9 +56,11 @@
         <display_value name="dStaminaRegen" value=".6" />
         <display_value name="dHypothermalResist" value="10" />
         <display_value name="dDuration" value="720" />
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="add" value="723" />
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="set" value="3003">
-          <requirement name="CVarCompare" cvar="$buffCoffeeBSDuration" operation="GT" value="3003" />
+        <!-- 1806 is about 30 minutes. -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="add" value="1806" />
+        <!-- 5406 is about 90 minutes. -->
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="set" value="5406">
+          <requirement name="CVarCompare" cvar="$buffCoffeeBSDuration" operation="GT" value="5406" />
         </triggered_effect>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffBlackStrapCoffee" />
       </effect_group>

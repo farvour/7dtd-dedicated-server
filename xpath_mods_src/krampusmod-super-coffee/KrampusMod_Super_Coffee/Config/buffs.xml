@@ -27,21 +27,22 @@
       <effect_group>
         <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="@$buffCoffeeBSDuration" />
 
-        <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="2403">
-          <requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="2403" />
+        <!-- 3606 is about 60 minutes. -->
+        <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="3606">
+          <requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="3606" />
         </triggered_effect>
 
         <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBlackStrapCoffee" />
 
-        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.4">
+        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.5">
           <requirement name="!HasBuff" buff="buffHealWaterMax" />
         </passive_effect>
 
-        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.2">
+        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.25">
           <requirement name="HasBuff" buff="buffHealWaterMax" />
         </passive_effect>
 
-        <passive_effect name="HypothermalResist" operation="base_add" value="5" />
+        <passive_effect name="HypothermalResist" operation="base_add" value="10" />
       </effect_group>
     </buff>
   </append>
@@ -76,15 +77,15 @@
         <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".dummy" operation="set" value="0" />
         <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffCoffee" />
 
-        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.6">
+        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.75">
           <requirement name="!HasBuff" buff="buffHealWaterMax" />
         </passive_effect>
 
-        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.3">
+        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.5">
           <requirement name="HasBuff" buff="buffHealWaterMax" />
         </passive_effect>
 
-        <passive_effect name="HypothermalResist" operation="base_add" value="10" />
+        <passive_effect name="HypothermalResist" operation="base_add" value="15" />
       </effect_group>
     </buff>
   </append>
