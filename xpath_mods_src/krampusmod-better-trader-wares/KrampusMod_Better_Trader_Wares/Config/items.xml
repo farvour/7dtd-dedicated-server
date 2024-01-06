@@ -13,4 +13,12 @@
   <!-- Traders like bones. -->
   <set xpath="/items/item[@name='resourceBone']/property[@name='EconomicValue']/@value">100</set>
   <set xpath="/items/item[@name='resourceBone']/property[@name='SellableToTrader']/@value">true</set>
+
+  <!-- Traders like to eat smelly food. -->
+  <set xpath="/items/item[@name='foodRottingFlesh']/property[@name='EconomicValue']/@value">50</set>
+  <set xpath="/items/item[@name='foodRottingFlesh']/property[@name='SellableToTrader']/@value">true</set>
+
+  <!-- Traders drink blood. -->
+  <set xpath="/items/item[@name='medicalBloodBag']/property[@name='EconomicValue']/@value">150</set>
+  <set xpath="/items/item[@name='medicalBloodBag']/property[@name='SellableToTrader']/@value">true</set>
 </configs>
