@@ -2,6 +2,9 @@
 .venv/
 venv/
 
+# Direnv
+.envrc
+
 # Python intermediates
 *.pyc
 
