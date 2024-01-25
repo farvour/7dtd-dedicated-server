@@ -24,8 +24,8 @@ logger = logging.getLogger("ServerConfigGenerator")
 
 class ServerConfigGenerator(object):
     """
-    A server configuration generator that creates compatible XML for
-    the 7 Days to Die Server to consume for its configuration.
+    A server configuration generator that creates compatible XML for the 7 Days
+    to Die Server to consume for its configuration.
     """
 
     CONFIGURATION_FILES = [
