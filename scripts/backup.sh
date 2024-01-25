@@ -13,4 +13,4 @@ docker run \
 		--volume 7dtd_data:/var/opt/7dtd/data/Saves \
 		--volume ${LOCAL_BACKUP_MOUNT_PATH}:/opt/7dtd/backups \
 		7dtd-server /opt/7dtd/backup2l/backup2l \
-		-c /opt/7dtd/backup2l/backup2l.conf -b
+		-c /opt/7dtd/backup2l/backup2l.conf "$@"
