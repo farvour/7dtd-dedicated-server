@@ -2,8 +2,8 @@
 <xml>
   <Name value="KrampusMod_Easier_Demolishers" />
   <DisplayName value="KrampusMod Easier Demolishers" />
-  <Description value="Changes demolition zombies to be easier to kill since their destructive payload trade-off is already quite high." />
+  <Description value="Changes demolition zombies to be easier to kill in exchange for their destructive payload trade-off being quite high." />
   <Author value="KrazyKrampus" />
-  <Version value="2.2" />
+  <Version value="2.4" />
   <Website value="" />
 </xml>

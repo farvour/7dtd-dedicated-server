@@ -34,11 +34,11 @@
 
         <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBlackStrapCoffee" />
 
-        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.5">
+        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.3">
           <requirement name="!HasBuff" buff="buffHealWaterMax" />
         </passive_effect>
 
-        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.25">
+        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.2">
           <requirement name="HasBuff" buff="buffHealWaterMax" />
         </passive_effect>
 
@@ -77,11 +77,11 @@
         <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".dummy" operation="set" value="0" />
         <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffCoffee" />
 
-        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.75">
+        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.5">
           <requirement name="!HasBuff" buff="buffHealWaterMax" />
         </passive_effect>
 
-        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.5">
+        <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.3">
           <requirement name="HasBuff" buff="buffHealWaterMax" />
         </passive_effect>
 
