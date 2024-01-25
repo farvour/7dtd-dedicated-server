@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configs>
   <!-- Adjust maximum health for the demolition zombie. -->
-  <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='base_set']/@value">500</set>
+  <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/effect_group[@name='Base Effects']/passive_effect[@name='HealthMax' and @operation='base_set']/@value">750</set>
 
   <!-- Nerf the block damage. -->
   <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.BlockDamage']/@value">3000</set>
-  <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.DamageBonus.earth']/@value">.088</set>
+  <!-- <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.RadiusBlocks']/@value">7</set> -->
+  <!-- <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.DamageBonus.earth']/@value">.2</set> -->
+  <!-- <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.EntityDamage']/@value">1200</set> -->
+  <!-- <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Explosion.RadiusEntities']/@value">10</set> -->
 
   <!-- Disable spike stomping. -->
   <remove xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='StompsSpikes']" />
