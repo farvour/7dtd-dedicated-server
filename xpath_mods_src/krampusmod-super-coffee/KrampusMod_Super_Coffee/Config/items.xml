@@ -23,8 +23,8 @@
       <effect_group tiered="false" name="Drink Tier 1">
         <requirement name="NotHasBuff" buff="buffIsOnFire" />
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24" />
-        <display_value name="dStaminaRegen" value=".4" />
-        <display_value name="dHypothermalResist" value="5" />
+        <display_value name="dStaminaRegen" value=".3" />
+        <display_value name="dHypothermalResist" value="10" />
         <display_value name="dDuration" value="360" />
         <!-- 606 is about 10 minutes. -->
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="606" />
@@ -53,8 +53,8 @@
       <effect_group tiered="false" name="Drink Tier Found">
         <requirement name="NotHasBuff" buff="buffIsOnFire" />
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24" />
-        <display_value name="dStaminaRegen" value=".6" />
-        <display_value name="dHypothermalResist" value="10" />
+        <display_value name="dStaminaRegen" value=".5" />
+        <display_value name="dHypothermalResist" value="15" />
         <display_value name="dDuration" value="720" />
         <!-- 1806 is about 30 minutes. -->
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="add" value="1806" />
