@@ -3,10 +3,10 @@ LABEL maintainer="Thomas Farvour <tom@farvour.com>"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-# Top level directory where everything related to the 7dtd server
-# is installed to. Since you can bind-mount data volumes for worlds,
-# saves or other things, this doesn't really have to change, but is
-# here for clarity and customization in case.
+# Top level directory where everything related to the 7dtd server is installed
+# to. Since you can bind-mount data volumes for worlds, saves or other things,
+# this doesn't really have to change, but is here for clarity and customization
+# in case.
 
 ENV SERVER_HOME=/opt/7dtd
 ENV SERVER_INSTALL_DIR=/opt/7dtd/7dtd-dedicated-server
@@ -51,9 +51,9 @@ RUN echo "=== Downloading and installing steamcmd" \
     && chown -R ${PROC_USER}:${PROC_GROUP} . \
     && cd -
 
-# This is most likely going to be the largest layer created; all the game
-# files for the dedicated server. NOTE: It is a good idea to do as much as
-# possible _beyond_ this point to avoid Docker having to re-create it.
+# This is most likely going to be the largest layer created; all the game files
+# for the dedicated server. NOTE: It is a good idea to do as much as possible
+# _beyond_ this point to avoid Docker having to re-create it.
 RUN echo "=== Downloading and installing 7dtd server with steamcmd" \
     && ${SERVER_HOME}/Steam/steamcmd.sh \
     +force_install_dir ${SERVER_INSTALL_DIR} \
@@ -61,9 +61,9 @@ RUN echo "=== Downloading and installing 7dtd server with steamcmd" \
     +app_update 294420 \
     +quit
 
-# Additional system packages for everything not for the Steam installation.
-# This includes Python, pipenv, and the correct Pipfile lock deployed to the
-# system installation of Python 3.
+# Additional system packages for everything not for the Steam installation. This
+# includes Python, pipenv, and the correct Pipfile lock deployed to the system
+# installation of Python 3.
 
 USER root
 
@@ -124,9 +124,9 @@ RUN echo "=== Install Pipfile requirements" \
 
 USER ${PROC_USER}
 
-# Install the backup2l script for automatic backup assistance.
-# You can simply run this script in the container and backup the mounted
-# volume to a destination available on the host.
+# Install the backup2l script for automatic backup assistance. You can simply
+# run this script in the container and backup the mounted volume to a
+# destination available on the host.
 
 # docker run --rm --entrypoint /bin/bash -v 7dtd-dedicated-server_7dtd-data:/app/7dtd/data/Saves -v /mnt/backup:/app/7dtd/backups 7dtd-dedicated-server_7dtd-server:latest /app/7dtd/backup2l/backup2l -c /app/7dtd/backup2l/backup2l.conf -b
 
